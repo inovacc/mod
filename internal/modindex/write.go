@@ -7,7 +7,7 @@ package modindex
 import (
 	"encoding/binary"
 	"github.com/inovacc/mod/internal/base"
-	"go/token"
+	"github.com/inovacc/mod/internal/go/token"
 	"sort"
 )
 
