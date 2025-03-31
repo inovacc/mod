@@ -7,6 +7,9 @@ package trace
 import (
 	"bufio"
 	"fmt"
+	"github.com/inovacc/mod/internal/trace/event/go122"
+	"github.com/inovacc/mod/internal/trace/internal/oldtrace"
+	"github.com/inovacc/mod/internal/trace/version"
 	"io"
 	"slices"
 	"strings"

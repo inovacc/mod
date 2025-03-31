@@ -501,7 +501,8 @@ func large(x int) int {
 	} else if x == 241 {
 		x += 241
 	} else if x == 242 {
-		x += 242
+		x +=
+			242
 	} else if x == 243 {
 		x += 243
 	} else if x == 244 {

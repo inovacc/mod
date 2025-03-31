@@ -4,5 +4,6 @@ is a module extracted from the golang original codebase into a separate reposito
 
 ## Version
 
-The version of this module is the same as the version of the original codebase. The version is defined in the `go.mod` file.
+The version of this module is the same as the version of the original codebase. The version is defined in the `go.mod`
+file.
 

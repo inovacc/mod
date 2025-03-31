@@ -30,6 +30,9 @@ package trace
 import (
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event/go122"
+	"github.com/inovacc/mod/internal/trace/internal/oldtrace"
 	"io"
 )
 

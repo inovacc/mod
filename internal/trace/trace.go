@@ -8,7 +8,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"github.com/inovacc/mod/github.com/inovacc/mod/internal/trace/traceviewer/format"
+	"github.com/inovacc/mod/internal/trace/traceviewer/format"
 	"os"
 	"strings"
 	"sync/atomic"

@@ -12,7 +12,7 @@ type Value struct {
 	scalar uint64
 }
 
-// ValueKind is the type of a dynamically-typed value from a trace.
+// ValueKind is the type of dynamically-typed value from a trace.
 type ValueKind uint8
 
 const (

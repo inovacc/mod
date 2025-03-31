@@ -62,7 +62,7 @@ func _() { var _ = new(foo9[int]) }
 var u, i [func /* ERROR "used as value" */ /* ERROR "used as value" */ (u /* ERROR "u is not a type" */ /* ERROR "u is not a type" */, c /* ERROR "undefined" */ /* ERROR "undefined" */) {}(0, len /* ERROR "must be called" */ /* ERROR "must be called" */)]c /* ERROR "undefined" */ /* ERROR "undefined" */
 
 // crash 15
-func y15()        { var a /* ERROR "declared and not used" */ interface{ p() } = G15[string]{} }
+func y15() { var a /* ERROR "declared and not used" */ interface{ p() } = G15[string]{} }
 
 type G15[X any] s /* ERROR "undefined" */
 func (G15 /* ERRORx `generic type .* without instantiation` */) p()

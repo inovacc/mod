@@ -9,6 +9,9 @@ package trace
 
 import (
 	"fmt"
+	"github.com/inovacc/mod/internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event/go122"
+	"github.com/inovacc/mod/internal/trace/version"
 	"math"
 	"strings"
 )

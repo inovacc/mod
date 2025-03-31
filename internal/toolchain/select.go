@@ -18,6 +18,7 @@ import (
 	"github.com/inovacc/mod/internal/modfetch"
 	"github.com/inovacc/mod/internal/modload"
 	"github.com/inovacc/mod/internal/pathcache"
+	"github.com/inovacc/mod/internal/telemetry/counter"
 	"github.com/inovacc/mod/internal/work"
 	"go/build"
 	"io"

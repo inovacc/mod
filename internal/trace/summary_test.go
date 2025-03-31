@@ -5,8 +5,8 @@
 package trace_test
 
 import (
-	"github.com/inovacc/mod/github.com/inovacc/mod/internal/trace"
-	"github.com/inovacc/mod/github.com/inovacc/mod/internal/trace/testtrace"
+	"github.com/inovacc/mod/internal/trace"
+	"github.com/inovacc/mod/internal/trace/testtrace"
 	"io"
 	"testing"
 )
