@@ -20,8 +20,8 @@
 package runtime
 
 import (
-	"internal/cpu"
-	"internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/cpu"
+	"github.com/inovacc/mod/internal/runtime/atomic"
 	"unsafe"
 )
 

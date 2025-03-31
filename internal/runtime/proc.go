@@ -6,8 +6,8 @@ package runtime
 
 import (
 	"github.com/inovacc/mod/internal/abi"
-	"internal/cpu"
-	"internal/goarch"
+	"github.com/inovacc/mod/internal/cpu"
+	"github.com/inovacc/mod/internal/goarch"
 	"internal/goos"
 	"internal/runtime/atomic"
 	"internal/runtime/exithook"

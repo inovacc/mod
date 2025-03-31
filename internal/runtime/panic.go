@@ -5,11 +5,11 @@
 package runtime
 
 import (
-	"internal/abi"
-	"internal/goarch"
-	"internal/runtime/atomic"
-	"internal/runtime/sys"
-	"internal/stringslite"
+	"github.com/inovacc/mod/internal/abi"
+	"github.com/inovacc/mod/internal/goarch"
+	"github.com/inovacc/mod/internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/runtime/sys"
+	"github.com/inovacc/mod/internal/stringslite"
 	"unsafe"
 )
 

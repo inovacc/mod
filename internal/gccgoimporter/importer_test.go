@@ -5,8 +5,8 @@
 package gccgoimporter
 
 import (
+	"github.com/inovacc/mod/internal/testenv"
 	"go/types"
-	"internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

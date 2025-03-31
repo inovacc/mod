@@ -8,8 +8,8 @@ package runtime
 
 import (
 	"github.com/inovacc/mod/internal/abi"
-	"internal/runtime/atomic"
-	"internal/runtime/sys"
+	"github.com/inovacc/mod/internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/runtime/sys"
 	"unsafe"
 )
 

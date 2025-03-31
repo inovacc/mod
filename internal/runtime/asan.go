@@ -7,7 +7,7 @@
 package runtime
 
 import (
-	"internal/runtime/sys"
+	"github.com/inovacc/mod/internal/runtime/sys"
 	"unsafe"
 )
 

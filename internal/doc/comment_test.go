@@ -6,9 +6,9 @@ package doc
 
 import (
 	"bytes"
+	"github.com/inovacc/mod/internal/diff"
 	"go/parser"
 	"go/token"
-	"internal/diff"
 	"testing"
 )
 

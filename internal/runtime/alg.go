@@ -5,10 +5,10 @@
 package runtime
 
 import (
-	"internal/abi"
-	"internal/cpu"
-	"internal/goarch"
-	"internal/runtime/sys"
+	"github.com/inovacc/mod/internal/abi"
+	"github.com/inovacc/mod/internal/cpu"
+	"github.com/inovacc/mod/internal/goarch"
+	"github.com/inovacc/mod/internal/runtime/sys"
 	"unsafe"
 )
 

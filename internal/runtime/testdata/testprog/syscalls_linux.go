@@ -7,7 +7,7 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"io"
 	"os"
 	"syscall"

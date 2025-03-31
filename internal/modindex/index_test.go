@@ -7,8 +7,8 @@ package modindex
 import (
 	"encoding/hex"
 	"encoding/json"
+	"github.com/inovacc/mod/internal/build"
 	"github.com/inovacc/mod/internal/diff"
-	"github.com/inovacc/mod/internal/go/build"
 	"path/filepath"
 	"reflect"
 	"runtime"

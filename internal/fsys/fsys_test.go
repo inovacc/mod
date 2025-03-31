@@ -315,78 +315,78 @@ func TestReadDir(t *testing.T) {
 	}{
 		{
 			".", []entry{
-			{"other", 0, true},
-			{"overlayfiles", 0, true},
-			{"parentoverwritten", 0, true},
-			{"subdir1", 0, true},
-			{"subdir10", 0, true},
-			{"subdir11", 0, false},
-			{"subdir2", 0, true},
-			{"subdir3", 0, true},
-			{"subdir4", 2, false},
-			// no subdir5.
-			{"subdir6", 0, true},
-			{"subdir7", 0, true},
-			{"subdir8", 0, true},
-			{"subdir9", 0, true},
-			{"textfile.txt", 0, true},
-		},
+				{"other", 0, true},
+				{"overlayfiles", 0, true},
+				{"parentoverwritten", 0, true},
+				{"subdir1", 0, true},
+				{"subdir10", 0, true},
+				{"subdir11", 0, false},
+				{"subdir2", 0, true},
+				{"subdir3", 0, true},
+				{"subdir4", 2, false},
+				// no subdir5.
+				{"subdir6", 0, true},
+				{"subdir7", 0, true},
+				{"subdir8", 0, true},
+				{"subdir9", 0, true},
+				{"textfile.txt", 0, true},
+			},
 		},
 		{
 			"subdir1", []entry{
-			{"file1.txt", 1, false},
-		},
+				{"file1.txt", 1, false},
+			},
 		},
 		{
 			"subdir2", []entry{
-			{"file2.txt", 2, false},
-		},
+				{"file2.txt", 2, false},
+			},
 		},
 		{
 			"subdir3", []entry{
-			{"file3a.txt", 3, false},
-			{"file3b.txt", 6, false},
-		},
+				{"file3a.txt", 3, false},
+				{"file3b.txt", 6, false},
+			},
 		},
 		{
 			"subdir6", []entry{
-			{"anothersubsubdir", 0, true},
-			{"asubsubdir", 0, true},
-			{"file.txt", 0, false},
-			{"zsubsubdir", 0, true},
-		},
+				{"anothersubsubdir", 0, true},
+				{"asubsubdir", 0, true},
+				{"file.txt", 0, false},
+				{"zsubsubdir", 0, true},
+			},
 		},
 		{
 			"subdir6/asubsubdir", []entry{
-			{"afile.txt", 0, false},
-			{"file.txt", 0, false},
-			{"zfile.txt", 0, false},
-		},
+				{"afile.txt", 0, false},
+				{"file.txt", 0, false},
+				{"zfile.txt", 0, false},
+			},
 		},
 		{
 			"subdir8", []entry{
-			{"doesntexist", 0, false}, // entry is returned even if destination file doesn't exist
-		},
+				{"doesntexist", 0, false}, // entry is returned even if destination file doesn't exist
+			},
 		},
 		{
 			// check that read dir actually redirects files that already exist
 			// the original this_file_is_overlaid.txt is empty
 			"subdir9", []entry{
-			{"this_file_is_overlaid.txt", 9, false},
-		},
+				{"this_file_is_overlaid.txt", 9, false},
+			},
 		},
 		{
 			"subdir10", []entry{},
 		},
 		{
 			"parentoverwritten", []entry{
-			{"subdir1", 2, false},
-		},
+				{"subdir1", 2, false},
+			},
 		},
 		{
 			"textfile.txt", []entry{
-			{"file.go", 2, false},
-		},
+				{"file.go", 2, false},
+			},
 		},
 	}
 

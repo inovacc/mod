@@ -8,9 +8,9 @@ package runtime
 
 import (
 	"github.com/inovacc/mod/internal/abi"
-	"internal/goarch"
-	"internal/goexperiment"
-	"internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/goarch"
+	"github.com/inovacc/mod/internal/goexperiment"
+	"github.com/inovacc/mod/internal/runtime/atomic"
 	"unsafe"
 )
 

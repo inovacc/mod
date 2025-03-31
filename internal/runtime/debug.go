@@ -5,7 +5,7 @@
 package runtime
 
 import (
-	"internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/runtime/atomic"
 	"unsafe"
 )
 

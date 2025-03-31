@@ -45,19 +45,19 @@ package coverage
 // as opposed to a fixed list.
 
 var rtPkgs = [...]string{
-	"internal/cpu",
-	"internal/goarch",
-	"internal/runtime/atomic",
-	"internal/goos",
-	"internal/chacha8rand",
-	"internal/runtime/sys",
-	"internal/abi",
-	"internal/runtime/maps",
-	"internal/runtime/math",
-	"internal/bytealg",
-	"internal/goexperiment",
-	"internal/runtime/syscall",
-	"internal/stringslite",
+	"github.com/inovacc/mod/internal/cpu",
+	"github.com/inovacc/mod/internal/goarch",
+	"github.com/inovacc/mod/internal/runtime/atomic",
+	"github.com/inovacc/mod/internal/goos",
+	"github.com/inovacc/mod/internal/chacha8rand",
+	"github.com/inovacc/mod/internal/runtime/sys",
+	"github.com/inovacc/mod/internal/abi",
+	"github.com/inovacc/mod/internal/runtime/maps",
+	"github.com/inovacc/mod/internal/runtime/math",
+	"github.com/inovacc/mod/internal/bytealg",
+	"github.com/inovacc/mod/internal/goexperiment",
+	"github.com/inovacc/mod/internal/runtime/syscall",
+	"github.com/inovacc/mod/internal/stringslite",
 	"runtime",
 }
 

@@ -5,7 +5,7 @@
 package pkgpath
 
 import (
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"testing"
 )

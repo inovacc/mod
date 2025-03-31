@@ -8,7 +8,7 @@ package runtime
 
 import (
 	"github.com/inovacc/mod/internal/byteorder"
-	"internal/chacha8rand"
+	"github.com/inovacc/mod/internal/chacha8rand"
 	"internal/goarch"
 	"internal/runtime/math"
 	"unsafe"

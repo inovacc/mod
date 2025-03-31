@@ -5,7 +5,7 @@
 package runtime
 
 import (
-	"internal/abi"
+	"github.com/inovacc/mod/internal/abi"
 	"unsafe"
 )
 

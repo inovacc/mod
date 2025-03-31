@@ -6,7 +6,7 @@ package modload
 
 import (
 	"context"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"regexp"
 	"strings"
 	"testing"

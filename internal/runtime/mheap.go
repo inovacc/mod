@@ -9,10 +9,10 @@
 package runtime
 
 import (
-	"internal/cpu"
-	"internal/goarch"
-	"internal/runtime/atomic"
-	"internal/runtime/sys"
+	"github.com/inovacc/mod/internal/cpu"
+	"github.com/inovacc/mod/internal/goarch"
+	"github.com/inovacc/mod/internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/runtime/sys"
 	"unsafe"
 )
 

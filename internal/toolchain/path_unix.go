@@ -8,7 +8,7 @@ package toolchain
 
 import (
 	"github.com/inovacc/mod/internal/gover"
-	"internal/syscall/unix"
+	"github.com/inovacc/mod/internal/syscall/unix"
 	"io/fs"
 	"os"
 	"path/filepath"

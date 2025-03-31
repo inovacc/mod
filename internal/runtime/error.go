@@ -5,9 +5,9 @@
 package runtime
 
 import (
-	"internal/abi"
-	"internal/bytealg"
-	"internal/runtime/sys"
+	"github.com/inovacc/mod/internal/abi"
+	"github.com/inovacc/mod/internal/bytealg"
+	"github.com/inovacc/mod/internal/runtime/sys"
 )
 
 // The Error interface identifies a run time error.

@@ -7,7 +7,7 @@
 package modindex
 
 import (
-	"github.com/inovacc/mod/internal/go/build"
+	"github.com/inovacc/mod/internal/build"
 	"runtime"
 	"testing"
 )
