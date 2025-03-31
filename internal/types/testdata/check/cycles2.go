@@ -27,7 +27,6 @@ func _() {
 	u.f(u)
 }
 
-
 // Test case for issues #6589, #33656.
 
 type A interface {
@@ -60,7 +59,6 @@ var y interface {
 }
 
 var _ = x == y
-
 
 // Test case for issue 6638.
 

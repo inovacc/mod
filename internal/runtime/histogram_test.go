@@ -6,7 +6,6 @@ package runtime_test
 
 import (
 	"math"
-	. "runtime"
 	"testing"
 )
 

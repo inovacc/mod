@@ -12,23 +12,23 @@ type E3[P any] struct{ _ *P }
 type E5[P any] struct{ _ [10]P }
 
 type T0 struct {
-        _ E0[T0]
+	_ E0[T0]
 }
 
 type T0_ struct {
-        E0[T0_]
+	E0[T0_]
 }
 
 type T1 struct {
-        _ E1[T1]
+	_ E1[T1]
 }
 
 type T2 /* ERROR "invalid recursive type" */ struct {
-        _ E2[T2]
+	_ E2[T2]
 }
 
 type T3 struct {
-        _ E3[T3]
+	_ E3[T3]
 }
 
 type T4 /* ERROR "invalid recursive type" */ [10]E5[T4]

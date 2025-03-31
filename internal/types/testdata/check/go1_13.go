@@ -10,7 +10,7 @@ package p
 
 // interface embedding
 
-type I interface { m() }
+type I interface{ m() }
 
 type _ interface {
 	m()

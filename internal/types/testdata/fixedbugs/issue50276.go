@@ -7,7 +7,7 @@ package p
 // simplified test case
 
 type transform[T any] struct{}
-type pair[S any] struct {}
+type pair[S any] struct{}
 
 var _ transform[step]
 

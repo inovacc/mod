@@ -12,7 +12,7 @@ type (
 	T2 struct {
 		x int
 	}
-	T3 interface{
+	T3 interface {
 		m() T2
 	}
 	T4 func(int, T0) chan T2
@@ -31,7 +31,7 @@ type (
 	A12 = struct {
 		x int
 	}
-	A13 = interface{
+	A13 = interface {
 		m() A2
 	}
 	A14 = func(int, A0) chan A2
@@ -40,7 +40,7 @@ type (
 // check assignment compatibility due to equality of types
 var (
 	xi_ int
-	ai Ai = xi_
+	ai  Ai = xi_
 
 	x0 T0
 	a0 A0 = x0
@@ -60,49 +60,56 @@ var (
 
 // alias receiver types
 func (Ai /* ERRORx "cannot define new methods on non-local type (int|Ai)" */) m1() {}
-func (T0) m1() {}
-func (A0) m1 /* ERROR "already declared" */ () {}
-func (A0) m2 () {}
-func (A3 /* ERROR "invalid receiver" */ ) m1 () {}
-func (A10 /* ERROR "invalid receiver" */ ) m1() {}
+func (T0) m1()                                                                     {}
+func (A0) m1 /* ERROR "already declared" */ ()                                     {}
+func (A0) m2()                                                                     {}
+func (A3 /* ERROR "invalid receiver" */) m1()                                      {}
+func (A10 /* ERROR "invalid receiver" */) m1()                                     {}
 
 // x0 has methods m1, m2 declared via receiver type names T0 and A0
-var _ interface{ m1(); m2() } = x0
+var _ interface {
+	m1()
+	m2()
+} = x0
 
 // alias receiver types (test case for issue #23042)
 type T struct{}
 
 var (
-	_ = T.m
-	_ = T{}.m
-	_ interface{m()} = T{}
+	_                  = T.m
+	_                  = T{}.m
+	_ interface{ m() } = T{}
 )
 
 var (
 	_ = T.n
 	_ = T{}.n
-	_ interface{m(); n()} = T{}
+	_ interface {
+		m()
+		n()
+	} = T{}
 )
 
 type U = T
+
 func (U) m() {}
 
 // alias receiver types (long type declaration chains)
 type (
 	V0 = V1
 	V1 = (V2)
-	V2 = ((V3))
+	V2 = (V3)
 	V3 = T
 )
 
 func (V0) m /* ERROR "already declared" */ () {}
-func (V1) n() {}
+func (V1) n()                                 {}
 
 // alias receiver types (invalid due to cycles)
 type (
-	W0 /* ERROR "invalid recursive type" */ = W1
+	W0 = /* ERROR "invalid recursive type" */ W1
 	W1 = (W2)
-	W2 = ((W0))
+	W2 = (W0)
 )
 
 func (W0) m() {} // no error expected (due to above cycle error)
@@ -115,19 +122,19 @@ type (
 	B2 = int
 )
 
-func (B0 /* ERRORx "cannot define new methods on non-local type (int|B)" */ ) m() {}
-func (B1 /* ERRORx "cannot define new methods on non-local type (int|B)" */ ) n() {}
+func (B0 /* ERRORx "cannot define new methods on non-local type (int|B)" */) m() {}
+func (B1 /* ERRORx "cannot define new methods on non-local type (int|B)" */) n() {}
 
 // cycles
 type (
-	C2 /* ERROR "invalid recursive type" */ = C2
-	C3 /* ERROR "invalid recursive type" */ = C4
+	C2 = /* ERROR "invalid recursive type" */ C2
+	C3 = /* ERROR "invalid recursive type" */ C4
 	C4 = C3
 	C5 struct {
 		f *C6
 	}
 	C6 = C5
-	C7 /* ERROR "invalid recursive type" */  struct {
+	C7/* ERROR "invalid recursive type" */ struct {
 		f C8
 	}
 	C8 = C7
@@ -135,20 +142,20 @@ type (
 
 // embedded fields
 var (
-	s0 struct { T0 }
-	s1 struct { A0 } = s0 /* ERROR "cannot use" */ // embedded field names are different
+	s0 struct{ T0 }
+	s1 struct{ A0 } = s0 /* ERROR "cannot use" */ // embedded field names are different
 )
 
 // embedding and lookup of fields and methods
-func _(s struct{A0}) { s.A0 = x0 }
+func _(s struct{ A0 }) { s.A0 = x0 }
 
-type eX struct{xf int}
+type eX struct{ xf int }
 
 func (eX) xm()
 
-type eY = struct{eX} // field/method set of eY includes xf, xm
+type eY = struct{ eX } // field/method set of eY includes xf, xm
 
-type eZ = *struct{eX} // field/method set of eZ includes xf, xm
+type eZ = *struct{ eX } // field/method set of eZ includes xf, xm
 
 type eA struct {
 	eX // eX contributes xf, xm to eA

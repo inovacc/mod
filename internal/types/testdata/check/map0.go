@@ -23,7 +23,7 @@ type node[K, V any] struct {
 
 // New returns a new map.
 func New[K, V any](compare func(K, K) int) *Map[K, V] {
-        return &Map[K, V]{compare: compare}
+	return &Map[K, V]{compare: compare}
 }
 
 // find looks up key in the map, and returns either a pointer
@@ -53,7 +53,7 @@ func (m *Map[K, V]) Insert(key K, val V) bool {
 		(*pn).val = val
 		return false
 	}
-        *pn = &node[K, V]{key: key, val: val}
+	*pn = &node[K, V]{key: key, val: val}
 	return true
 }
 
@@ -85,7 +85,7 @@ func (m *Map[K, V]) InOrder() *Iterator[K, V] {
 		// Stop sending values if sender.Send returns false,
 		// meaning that nothing is listening at the receiver end.
 		return f(n.left) &&
-                        sender.Send(keyValue[K, V]{n.key, n.val}) &&
+			sender.Send(keyValue[K, V]{n.key, n.val}) &&
 			f(n.right)
 	}
 	go func() {

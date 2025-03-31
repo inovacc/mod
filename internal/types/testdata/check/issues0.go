@@ -8,9 +8,8 @@ package p // don't permit non-interface elements in interfaces
 
 import (
 	"fmt"
-	syn "regexp/syntax"
-	t1 "text/template"
 	t2 "html/template"
+	syn "regexp/syntax"
 )
 
 func issue7035() {
@@ -25,7 +24,7 @@ func issue7035() {
 func issue8066() {
 	const (
 		_ = float32(340282356779733661637539395458142568447)
-		_ = float32(340282356779733661637539395458142568448 /* ERROR "cannot convert" */ )
+		_ = float32(340282356779733661637539395458142568448 /* ERROR "cannot convert" */)
 	)
 }
 
@@ -48,9 +47,9 @@ func issue9182() {
 	_ = Point{x: 1, y: 2}
 }
 
-func f0() (a []int)         { return }
-func f1() (a []int, b int)  { return }
-func f2() (a, b []int)      { return }
+func f0() (a []int)        { return }
+func f1() (a []int, b int) { return }
+func f2() (a, b []int)     { return }
 
 func append_([]int, ...int) {}
 
@@ -60,7 +59,7 @@ func issue9473(a []int, b ...int) {
 	_ = append(f0(), f0()...)
 	_ = append(f1())
 	_ = append(f2 /* ERRORx `cannot use .* in argument` */ ())
-	_ = append(f2()... /* ERROR "cannot use ..." */ )
+	_ = append(f2()... /* ERROR "cannot use ..." */)
 	_ = append(f0(), f1 /* ERROR "multiple-value f1" */ ())
 	_ = append(f0(), f2 /* ERROR "multiple-value f2" */ ())
 	_ = append(f0(), f1 /* ERROR "multiple-value f1" */ ()...)
@@ -71,7 +70,7 @@ func issue9473(a []int, b ...int) {
 	append_(f0(), f0()...)
 	append_(f1())
 	append_(f2 /* ERRORx `cannot use .* in argument` */ ())
-	append_(f2()... /* ERROR "cannot use ..." */ )
+	append_(f2()... /* ERROR "cannot use ..." */)
 	append_(f0(), f1 /* ERROR "multiple-value f1" */ ())
 	append_(f0(), f2 /* ERROR "multiple-value f2" */ ())
 	append_(f0(), f1 /* ERROR "multiple-value f1" */ ()...)
@@ -104,9 +103,9 @@ func issue10979() {
 
 // issue11347
 // These should not crash.
-var a1, b1, c1 /* ERROR "cycle" */ b1 /* ERROR "b1 is not a type" */ = 0 > 0<<""[""[c1]]>c1
+var a1, b1, c1 /* ERROR "cycle" */ b1 /* ERROR "b1 is not a type" */ = 0 > 0<<""[""[c1]] > c1
 var a2, b2 /* ERROR "cycle" */ = 0 /* ERROR "assignment mismatch" */ /* ERROR "assignment mismatch" */ > 0<<""[b2]
-var a3, b3 /* ERROR "cycle" */ = int /* ERROR "assignment mismatch" */ /* ERROR "assignment mismatch" */ (1<<""[b3])
+var a3, b3 /* ERROR "cycle" */ = int /* ERROR "assignment mismatch" */ /* ERROR "assignment mismatch" */ (1 << ""[b3])
 
 // issue10260
 // Check that error messages explain reason for interface assignment failures.
@@ -119,7 +118,7 @@ type (
 	T2 struct{}
 )
 
-func (*T1) foo() {}
+func (*T1) foo()      {}
 func (*T2) foo(x int) {}
 
 func issue10260() {
@@ -157,15 +156,15 @@ func issue10260() {
 
 	// a few more - less exhaustive now
 
-	f := func(I1, I2){}
-	f(i0 /* ERROR "missing method foo" */ , i1 /* ERROR "wrong type for method foo" */ )
+	f := func(I1, I2) {}
+	f(i0 /* ERROR "missing method foo" */, i1 /* ERROR "wrong type for method foo" */)
 
-	_ = [...]I1{i0 /* ERRORx `cannot use i0 .* as I1 value in array or slice literal: I0 does not implement I1 \(missing method foo\)` */ }
-	_ = [...]I1{i2 /* ERRORx `cannot use i2 .* as I1 value in array or slice literal: I2 does not implement I1 \(wrong type for method foo\)\n\t\thave foo\(int\)\n\t\twant foo\(\)` */ }
-	_ = []I1{i0 /* ERROR "missing method foo" */ }
-	_ = []I1{i2 /* ERROR "wrong type for method foo" */ }
-	_ = map[int]I1{0: i0 /* ERROR "missing method foo" */ }
-	_ = map[int]I1{0: i2 /* ERROR "wrong type for method foo" */ }
+	_ = [...]I1{i0 /* ERRORx `cannot use i0 .* as I1 value in array or slice literal: I0 does not implement I1 \(missing method foo\)` */}
+	_ = [...]I1{i2 /* ERRORx `cannot use i2 .* as I1 value in array or slice literal: I2 does not implement I1 \(wrong type for method foo\)\n\t\thave foo\(int\)\n\t\twant foo\(\)` */}
+	_ = []I1{i0 /* ERROR "missing method foo" */}
+	_ = []I1{i2 /* ERROR "wrong type for method foo" */}
+	_ = map[int]I1{0: i0 /* ERROR "missing method foo" */}
+	_ = map[int]I1{0: i2 /* ERROR "wrong type for method foo" */}
 
 	make(chan I1) <- i0 /* ERROR "missing method foo" */
 	make(chan I1) <- i2 /* ERROR "wrong type for method foo" */
@@ -180,11 +179,11 @@ func issue14229() {
 	// related
 	const (
 		a int = 3
-		b = 4.0
-		_ = a / b
-		_ = a % b
-		_ = b / a
-		_ = b % a
+		b     = 4.0
+		_     = a / b
+		_     = a % b
+		_     = b / a
+		_     = b % a
 	)
 }
 
@@ -229,7 +228,7 @@ func issue20358() {
 // declarations before we type-check function literals on the
 // rhs.
 func issue24026() {
-	f := func() int { f(0) /* must refer to outer f */; return 0 }
+	f := func() int { f(0) /* must refer to outer f */ ; return 0 }
 	_ = f
 
 	_ = func() {
@@ -240,7 +239,7 @@ func issue24026() {
 	// b and c must not be visible inside function literal
 	a := 0
 	a, b, c := func() (int, int, int) {
-		return a, b /* ERROR "undefined" */ , c /* ERROR "undefined" */
+		return a, b /* ERROR "undefined" */, c /* ERROR "undefined" */
 	}()
 	_, _ = b, c
 }
@@ -250,20 +249,24 @@ func f(int) {} // for issue24026
 // Test that we don't report a "missing return statement" error
 // (due to incorrect context when type-checking interfaces).
 func issue24140(x interface{}) int {
-        switch x.(type) {
-        case interface{}:
-                return 0
-        default:
-                panic(0)
-        }
+	switch x.(type) {
+	case interface{}:
+		return 0
+	default:
+		panic(0)
+	}
 }
 
 // Test that we don't crash when the 'if' condition is missing.
 func issue25438() {
-	if { /* ERROR "missing condition" */ }
-	if x := 0; /* ERROR "missing condition" */ { _ = x }
+	if { /* ERROR "missing condition" */
+	}
+	if x := 0; /* ERROR "missing condition" */ {
+		_ = x
+	}
 	if
-	{ /* ERROR "missing condition" */ }
+	{ /* ERROR "missing condition" */
+	}
 }
 
 // Test that we can embed alias type names in interfaces.
@@ -290,13 +293,18 @@ type notE = struct{}
 // Test that method declarations don't introduce artificial cycles
 // (issue #26124).
 const CC TT = 1
+
 type TT int
+
 func (TT) MM() [CC]TT
 
 // Reduced test case from issue #26124.
 const preloadLimit LNumber = 128
+
 type LNumber float64
+
 func (LNumber) assertFunction() *LFunction
+
 type LFunction struct {
 	GFunction LGFunction
 }
@@ -325,9 +333,9 @@ func issue28281a(int, int, ...int)
 func issue28281b(a, b int, c ...int)
 func issue28281c(a, b, c ... /* ERROR "can only use ... with final parameter" */ int)
 func issue28281d(... /* ERROR "can only use ... with final parameter" */ int, int)
-func issue28281e(a, b, c  ... /* ERROR "can only use ... with final parameter" */ int, d int)
+func issue28281e(a, b, c ... /* ERROR "can only use ... with final parameter" */ int, d int)
 func issue28281f(... /* ERROR "can only use ... with final parameter" */ int, ... /* ERROR "can only use ... with final parameter" */ int, int)
-func (... /* ERROR "invalid use of '...'" */ TT) f()
+func ( ... /* ERROR "invalid use of '...'" */ TT) f()
 func issue28281g() (... /* ERROR "can only use ... with final parameter" */ TT)
 
 // Issue #26234: Make various field/method lookup errors easier to read by matching cmd/compile's output

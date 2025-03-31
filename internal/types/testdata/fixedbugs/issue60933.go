@@ -14,7 +14,7 @@ func g[T any](...T) {}
 // Interface and non-interface types do not match.
 func _() {
 	var file *os.File
-	g(file, io /* ERROR "type io.Writer of io.Discard does not match inferred type *os.File for T" */ .Discard)
+	g(file, io. /* ERROR "type io.Writer of io.Discard does not match inferred type *os.File for T" */ Discard)
 	g(file, os.Stdout)
 }
 
@@ -38,14 +38,14 @@ func _() {
 // Different named interface types do not match.
 func _() {
 	g(io.ReadWriter(nil), io.ReadWriter(nil))
-	g(io.ReadWriter(nil), io /* ERROR "does not match" */ .Writer(nil))
-	g(io.Writer(nil), io /* ERROR "does not match" */ .ReadWriter(nil))
+	g(io.ReadWriter(nil), io. /* ERROR "does not match" */ Writer(nil))
+	g(io.Writer(nil), io. /* ERROR "does not match" */ ReadWriter(nil))
 }
 
 // Named and unnamed interface types match if they have the same methods.
 func _() {
 	g(io.Writer(nil), writer)
-	g(io.ReadWriter(nil), writer /* ERROR "does not match" */ )
+	g(io.ReadWriter(nil), writer /* ERROR "does not match" */)
 }
 
 // There must be no order dependency for named and unnamed interfaces.

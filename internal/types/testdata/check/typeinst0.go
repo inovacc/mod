@@ -12,8 +12,8 @@ type myInt int
 type T1[P any] P // ERROR "cannot use a type parameter as RHS in type declaration"
 
 type T2[P any] struct {
-        f P
-        g int // int should still be in scope chain
+	f P
+	g int // int should still be in scope chain
 }
 
 type List[P any] []P
@@ -25,14 +25,16 @@ var _ A2[int]
 var _ A2
 
 type A3 = List[int]
+
 var _ A3
 
 // Parameterized type instantiations
 
 var x int
+
 type _ x /* ERROR "not a type" */ [int]
 
-type _ int /* ERROR "not a generic type" */ [] // ERROR "expected type argument list"
+type _ int /* ERROR "not a generic type" */ []   // ERROR "expected type argument list"
 type _ myInt /* ERROR "not a generic type" */ [] // ERROR "expected type argument list"
 
 // TODO(gri) better error messages

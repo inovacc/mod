@@ -69,7 +69,8 @@ L:
 }
 
 func _() {
-L: L1:
+L:
+L1:
 	x := 1
 	_ = x
 	goto L
@@ -110,7 +111,8 @@ func _() {
 		goto L
 		goto L1
 	}
-L: L1:
+L:
+L1:
 }
 
 // goto backward into outer block okay
@@ -122,7 +124,8 @@ L:
 }
 
 func _() {
-L: L1:
+L:
+L1:
 	{
 		goto L
 		goto L1
@@ -138,10 +141,11 @@ func _() {
 }
 
 func _() {
-	goto L /* ERROR "goto L jumps into block" */
+	goto L  /* ERROR "goto L jumps into block" */
 	goto L1 /* ERROR "goto L1 jumps into block" */
 	{
-	L: L1:
+	L:
+	L1:
 	}
 }
 
@@ -155,9 +159,10 @@ func _() {
 
 func _() {
 	{
-	L: L1:
+	L:
+	L1:
 	}
-	goto L /* ERROR "goto L jumps into block" */
+	goto L  /* ERROR "goto L jumps into block" */
 	goto L1 /* ERROR "goto L1 jumps into block" */
 }
 
@@ -280,13 +285,13 @@ func _() {
 	if true {
 		goto L /* ERROR "goto L jumps into block" */
 	} else {
-		L:
+	L:
 	}
 }
 
 func _() {
 	if true {
-		L:
+	L:
 	} else {
 		goto L /* ERROR "goto L jumps into block" */
 	}
