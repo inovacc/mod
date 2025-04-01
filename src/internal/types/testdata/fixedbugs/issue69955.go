@@ -30,7 +30,9 @@ var (
 const (
 	_ = i // ERROR "i (variable of type int) is not constant"
 	_ = s // ERROR "s (variable of struct type S) is not constant"
-	_ = struct /* ERROR "struct{}{} (value of type struct{}) is not constant" */ {}{}
+	_ = struct /* ERROR "struct{}{} (value of type struct{}) is not constant" */ {
+
+	}{}
 	_ = n // ERROR "n (variable of int type N) is not constant"
 
 	_ = a // ERROR "a (variable of struct type A) is not constant"

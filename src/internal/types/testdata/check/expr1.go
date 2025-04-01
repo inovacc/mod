@@ -114,7 +114,7 @@ func _(x, y string, z mystring) {
 	x = x /* ERROR "mismatched types string and untyped int" */ + 1
 	x = x + y
 	x = x /* ERROR "not defined" */ - y
-	x = x /* ERROR "mismatched types string and untyped int" */* 10
+	x = x /* ERROR "mismatched types string and untyped int" */ * 10
 }
 
 func f() (a, b int) { return }

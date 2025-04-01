@@ -20,11 +20,11 @@ func f(x int, m map[string]int) {
 	const c1 = 991
 	const c2 float32 = 0.5
 	const c3 = "foo"
-	0 // ERROR "0 (untyped int constant) is not used"
-	0.5 // ERROR "0.5 (untyped float constant) is not used"
+	0     // ERROR "0 (untyped int constant) is not used"
+	0.5   // ERROR "0.5 (untyped float constant) is not used"
 	"foo" // ERROR `"foo" (untyped string constant) is not used`
-	c1 // ERROR "c1 (untyped int constant 991) is not used"
-	c2 // ERROR "c2 (constant 0.5 of type float32) is not used"
+	c1    // ERROR "c1 (untyped int constant 991) is not used"
+	c2    // ERROR "c2 (constant 0.5 of type float32) is not used"
 	c1 /* ERROR "c1 + c2 (constant 991.5 of type float32) is not used" */ + c2
 	c3 // ERROR `c3 (untyped string constant "foo") is not used`
 
@@ -53,14 +53,16 @@ func _() {
 // Don't report spurious errors as a consequence of earlier errors.
 // Add more tests as needed.
 func _() {
-	if err := foo /* ERROR "undefined" */ (); err != nil /* "no error here" */ {}
+	if err := foo /* ERROR "undefined" */ (); err != nil /* "no error here" */ {
+	}
 }
 
 // Use unqualified names for package-local objects.
 type T struct{}
+
 var _ int = T /* ERROR "value of struct type T" */ {} // use T in error message rather than errors.T
 
 // Don't report errors containing "invalid type" (issue #24182).
-func _(x *missing /* ERROR "undefined: missing" */ ) {
+func _(x *missing /* ERROR "undefined: missing" */) {
 	x.m() // there shouldn't be an error here referring to *invalid type
 }

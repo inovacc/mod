@@ -3,4 +3,3 @@
 
 package x
 
-import "import4"

@@ -10,14 +10,20 @@ import "unsafe"
 
 // constants declarations must be initialized by constants
 var x = 0
+
 const c0 = x /* ERROR "not constant" */
 
 // typed constants must have constant types
-const _ interface /* ERROR "invalid constant type" */ {} = 0
+const _ interface /* ERROR "invalid constant type" */ {
 
-func _ () {
-	const _ interface /* ERROR "invalid constant type" */ {} = 0
-	for i := 0; i < 10; i++ {} // don't crash with non-nil iota here
+} = 0
+
+func _() {
+	const _ interface /* ERROR "invalid constant type" */ {
+
+	} = 0
+	for i := 0; i < 10; i++ {
+	} // don't crash with non-nil iota here
 }
 
 // untyped constants
@@ -42,11 +48,11 @@ const (
 	ui8 = ui3 / ui3
 	ui9 = ui3 % ui3
 
-	ui10 = 1 / 0 /* ERROR "division by zero" */
-	ui11 = ui1 / 0 /* ERROR "division by zero" */
+	ui10 = 1 / 0     /* ERROR "division by zero" */
+	ui11 = ui1 / 0   /* ERROR "division by zero" */
 	ui12 = ui3 / ui0 /* ERROR "division by zero" */
-	ui13 = 1 % 0 /* ERROR "division by zero" */
-	ui14 = ui1 % 0 /* ERROR "division by zero" */
+	ui13 = 1 % 0     /* ERROR "division by zero" */
+	ui14 = ui1 % 0   /* ERROR "division by zero" */
 	ui15 = ui3 % ui0 /* ERROR "division by zero" */
 
 	ui16 = ui2 & ui3
@@ -67,8 +73,8 @@ const (
 	uf8 = uf3 / uf3
 	uf9 = uf3 /* ERROR "not defined" */ % uf3
 
-	uf10 = 1 / 0 /* ERROR "division by zero" */
-	uf11 = uf1 / 0 /* ERROR "division by zero" */
+	uf10 = 1 / 0     /* ERROR "division by zero" */
+	uf11 = uf1 / 0   /* ERROR "division by zero" */
 	uf12 = uf3 / uf0 /* ERROR "division by zero" */
 
 	uf16 = uf2 /* ERROR "not defined" */ & uf3
@@ -88,8 +94,8 @@ const (
 	uc8 = uc3 / uc3
 	uc9 = uc3 /* ERROR "not defined" */ % uc3
 
-	uc10 = 1 / 0 /* ERROR "division by zero" */
-	uc11 = uc1 / 0 /* ERROR "division by zero" */
+	uc10 = 1 / 0     /* ERROR "division by zero" */
+	uc11 = uc1 / 0   /* ERROR "division by zero" */
 	uc12 = uc3 / uc0 /* ERROR "division by zero" */
 
 	uc16 = uc2 /* ERROR "not defined" */ & uc3
@@ -98,22 +104,22 @@ const (
 )
 
 type (
-	mybool bool
-	myint int
-	myfloat float64
+	mybool    bool
+	myint     int
+	myfloat   float64
 	mycomplex complex128
 )
 
 // typed constants
 const (
 	// boolean values
-	tb0 bool = false
-	tb1 bool = true
+	tb0 bool   = false
+	tb1 bool   = true
 	tb2 mybool = 2 < 1
 	tb3 mybool = ti1 == tf1 /* ERROR "mismatched types" */
 
 	// integer values
-	ti0 int8 = ui0
+	ti0 int8  = ui0
 	ti1 int32 = ui1
 	ti2 int64 = ui2
 	ti3 myint = ui3 /* ERROR "overflows" */
@@ -125,10 +131,10 @@ const (
 	ti8 = ti3 / ti3
 	ti9 = ti3 % ti3
 
-	ti10 = 1 / 0 /* ERROR "division by zero" */
+	ti10 = 1 / 0   /* ERROR "division by zero" */
 	ti11 = ti1 / 0 /* ERROR "division by zero" */
 	ti12 = ti3 /* ERROR "mismatched types" */ / ti0
-	ti13 = 1 % 0 /* ERROR "division by zero" */
+	ti13 = 1 % 0   /* ERROR "division by zero" */
 	ti14 = ti1 % 0 /* ERROR "division by zero" */
 	ti15 = ti3 /* ERROR "mismatched types" */ % ti0
 
@@ -149,7 +155,7 @@ const (
 	tf8 = tf3 / tf3
 	tf9 = tf3 /* ERROR "not defined" */ % tf3
 
-	tf10 = 1 / 0 /* ERROR "division by zero" */
+	tf10 = 1 / 0   /* ERROR "division by zero" */
 	tf11 = tf1 / 0 /* ERROR "division by zero" */
 	tf12 = tf3 /* ERROR "mismatched types" */ / tf0
 
@@ -170,8 +176,8 @@ const (
 	tc8 = tc3 / tc3
 	tc9 = tc3 /* ERROR "not defined" */ % tc3
 
-	tc10 = 1 / 0 /* ERROR "division by zero" */
-	tc11 = tc1 / 0 /* ERROR "division by zero" */
+	tc10 = 1 / 0     /* ERROR "division by zero" */
+	tc11 = tc1 / 0   /* ERROR "division by zero" */
 	tc12 = tc3 / tc0 /* ERROR "division by zero" */
 
 	tc16 = tc2 /* ERROR "not defined" */ & tc3
@@ -181,37 +187,37 @@ const (
 
 // initialization cycles
 const (
-	a /* ERROR "initialization cycle" */ = a
-	b /* ERROR "initialization cycle" */ , c /* ERROR "initialization cycle" */, d, e = e, d, c, b // TODO(gri) should only have one cycle error
-	f float64 = d
+	a                                                                                        = /* ERROR "initialization cycle" */ a
+	b /* ERROR "initialization cycle" */, c /* ERROR "initialization cycle" */, d, e         = e, d, c, b // TODO(gri) should only have one cycle error
+	f                                                                                float64 = d
 )
 
 // multiple initialization
 const (
 	a1, a2, a3 = 7, 3.1415926, "foo"
 	b1, b2, b3 = b3, b1, 42
-	c1, c2, c3  /* ERROR "missing init expr for c3" */ = 1, 2
+	c1, c2, c3 = /* ERROR "missing init expr for c3" */ 1, 2
 	d1, d2, d3 = 1, 2, 3, 4 /* ERROR "extra init expr 4" */
-	_p0 = assert(a1 == 7)
-	_p1 = assert(a2 == 3.1415926)
-	_p2 = assert(a3 == "foo")
-	_p3 = assert(b1 == 42)
-	_p4 = assert(b2 == 42)
-	_p5 = assert(b3 == 42)
+	_p0        = assert(a1 == 7)
+	_p1        = assert(a2 == 3.1415926)
+	_p2        = assert(a3 == "foo")
+	_p3        = assert(b1 == 42)
+	_p4        = assert(b2 == 42)
+	_p5        = assert(b3 == 42)
 )
 
 func _() {
 	const (
 		a1, a2, a3 = 7, 3.1415926, "foo"
 		b1, b2, b3 = b3, b1, 42
-		c1, c2, c3  /* ERROR "missing init expr for c3" */ = 1, 2
+		c1, c2, c3 = /* ERROR "missing init expr for c3" */ 1, 2
 		d1, d2, d3 = 1, 2, 3, 4 /* ERROR "extra init expr 4" */
-		_p0 = assert(a1 == 7)
-		_p1 = assert(a2 == 3.1415926)
-		_p2 = assert(a3 == "foo")
-		_p3 = assert(b1 == 42)
-		_p4 = assert(b2 == 42)
-		_p5 = assert(b3 == 42)
+		_p0        = assert(a1 == 7)
+		_p1        = assert(a2 == 3.1415926)
+		_p2        = assert(a3 == "foo")
+		_p3        = assert(b1 == 42)
+		_p4        = assert(b2 == 42)
+		_p5        = assert(b3 == 42)
 	)
 }
 
@@ -219,11 +225,11 @@ func _() {
 const (
 	iota0 = iota
 	iota1 = iota
-	iota2 = iota*2
-	_a0 = assert(iota0 == 0)
-	_a1 = assert(iota1 == 1)
-	_a2 = assert(iota2 == 4)
-	iota6 = iota*3
+	iota2 = iota * 2
+	_a0   = assert(iota0 == 0)
+	_a1   = assert(iota1 == 1)
+	_a2   = assert(iota2 == 4)
+	iota6 = iota * 3
 
 	iota7
 	iota8
@@ -233,13 +239,13 @@ const (
 
 const (
 	_b0 = iota
-	_b1 = assert(iota + iota2 == 5)
+	_b1 = assert(iota+iota2 == 5)
 	_b2 = len([iota]int{}) // iota may appear in a type!
 	_b3 = assert(_b2 == 2)
 	_b4 = len(A{})
 )
 
-type A [iota /* ERROR "cannot use iota" */ ]int
+type A [iota] /* ERROR "cannot use iota" */ int
 
 // constant expressions with operands across different
 // constant declarations must use the right iota values
@@ -264,11 +270,12 @@ var _ = assert(_x == 3)
 // special cases
 const (
 	_n0 = nil /* ERROR "not constant" */
-	_n1 = [ /* ERROR "not constant" */ ]int{}
+	_n1 = [] /* ERROR "not constant" */ int{}
 )
 
 // iotas must not be usable in expressions outside constant declarations
-type _ [iota /* ERROR "iota outside constant decl" */ ]byte
+type _ [iota] /* ERROR "iota outside constant decl" */ byte
+
 var _ = iota /* ERROR "iota outside constant decl" */
 func _() {
 	_ = iota /* ERROR "iota outside constant decl" */
@@ -305,22 +312,23 @@ const (
 			Zero = iota
 			One
 			Two
-			_ = unsafe.Sizeof([iota-1]int{} == x) // assert types are equal
-			_ = unsafe.Sizeof([Two]int{} == x)    // assert types are equal
+			_ = unsafe.Sizeof([iota - 1]int{} == x) // assert types are equal
+			_ = unsafe.Sizeof([Two]int{} == x)      // assert types are equal
 		)
-		var z [iota]int                           // [2]int
-		_ = unsafe.Sizeof([2]int{} == z)          // assert types are equal
+		var z [iota]int                  // [2]int
+		_ = unsafe.Sizeof([2]int{} == z) // assert types are equal
 	})
 	three = iota // the sequence continues
 )
+
 var _ [three]int = [3]int{} // assert 'three' has correct value
 
 var (
 	_ = iota /* ERROR "iota outside constant decl" */
-	_ = unsafe.Sizeof(iota  /* ERROR "iota outside constant decl" */ )
+	_ = unsafe.Sizeof(iota /* ERROR "iota outside constant decl" */)
 	_ = unsafe.Sizeof(func() { _ = iota /* ERROR "iota outside constant decl" */ })
 	_ = unsafe.Sizeof(func() { var _ = iota /* ERROR "iota outside constant decl" */ })
-	_ = unsafe.Sizeof(func() { type _ [iota /* ERROR "iota outside constant decl" */ ]byte })
+	_ = unsafe.Sizeof(func() { type _ [iota] /* ERROR "iota outside constant decl" */ byte })
 	_ = unsafe.Sizeof(func() { func() int { return iota /* ERROR "iota outside constant decl" */ }() })
 )
 
@@ -342,8 +350,8 @@ const _ = unsafe.Sizeof(func() {
 	_ = iota
 
 	const (
-	   zero = iota
-	   one
+		zero = iota
+		one
 	)
 	assert(one == 1)
 	assert(iota == 0)
@@ -369,7 +377,7 @@ func _() {
 }
 
 // untyped constants must not get arbitrarily large
-const prec = 512 // internal maximum precision for integers
+const prec = 512                                     // internal maximum precision for integers
 const maxInt = (1<<(prec/2) - 1) * (1<<(prec/2) + 1) // == 1<<prec - 1
 
 const _ = maxInt + /* ERROR "constant addition overflow" */ 1

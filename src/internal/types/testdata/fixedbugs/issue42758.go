@@ -4,7 +4,7 @@
 
 package p
 
-func _[T any](x interface{}){
+func _[T any](x interface{}) {
 	switch x.(type) {
 	case T: // ok to use a type parameter
 	case int:
@@ -20,14 +20,14 @@ type constraint interface {
 	~int
 }
 
-func _[T constraint](x interface{}){
+func _[T constraint](x interface{}) {
 	switch x.(type) {
 	case T: // ok to use a type parameter even if type set contains int
 	case int:
 	}
 }
 
-func _(x constraint /* ERROR "contains type constraints" */ ) {
+func _(x constraint /* ERROR "contains type constraints" */) {
 	switch x.(type) { // no need to report another error
 	}
 }

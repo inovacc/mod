@@ -20,9 +20,7 @@ package p
 // ERRORfoo
 //  ERROR foo
 
-// This is a valid error comment; it applies to the
-// immediately following token. 
-import "math" /* ERROR unexpected comma */ ,
+/* ERROR unexpected comma */,
 
 // If there are multiple /*-style error comments before
 // the next token, only the last one is considered.

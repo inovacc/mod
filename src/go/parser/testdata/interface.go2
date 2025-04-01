@@ -10,7 +10,7 @@ package p
 type _ interface {
 	m()
 	~int
-	~int|string
+	~int | string
 	E
 }
 

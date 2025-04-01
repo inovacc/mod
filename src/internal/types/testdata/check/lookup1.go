@@ -11,7 +11,7 @@ func _() {
 		x, aBc int
 	}
 	_ = s.x
-	_ = s /* ERROR "invalid operation: cannot call non-function s.x (variable of type int)" */ .x()
+	_ = s. /* ERROR "invalid operation: cannot call non-function s.x (variable of type int)" */ x()
 	_ = s.X // ERROR "s.X undefined (type struct{x int; aBc int} has no field or method X, but does have field x)"
 	_ = s.X /* ERROR "s.X undefined (type struct{x int; aBc int} has no field or method X, but does have field x)" */ ()
 
@@ -26,7 +26,7 @@ func _() {
 	}
 	var s S
 	_ = s.x
-	_ = s /* ERROR "invalid operation: cannot call non-function s.x (variable of type int)" */ .x()
+	_ = s. /* ERROR "invalid operation: cannot call non-function s.x (variable of type int)" */ x()
 	_ = s.X // ERROR "s.X undefined (type S has no field or method X, but does have field x)"
 	_ = s.X /* ERROR "s.X undefined (type S has no field or method X, but does have field x)" */ ()
 }

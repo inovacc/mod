@@ -11,7 +11,7 @@ import "unsafe"
 // all methods of T).
 
 type T interface {
-	m() interface {T}
+	m() interface{ T }
 	E
 }
 
@@ -29,7 +29,7 @@ var _ int = C.m(nil).m().e()
 type A B
 
 type B interface {
-	m() interface{C}
+	m() interface{ C }
 	E
 }
 
@@ -39,11 +39,11 @@ type C A
 // does not recur endlessly.
 
 type T1 interface {
-	m() interface{T1}
+	m() interface{ T1 }
 }
 
 type T2 interface {
-	m() interface{T2}
+	m() interface{ T2 }
 }
 
 func _(x T1, y T2) {
@@ -58,11 +58,11 @@ func _(x T1, y T2) {
 }
 
 type T3 interface {
-	m() interface{T4}
+	m() interface{ T4 }
 }
 
 type T4 interface {
-	m() interface{T3}
+	m() interface{ T3 }
 }
 
 func _(x T1, y T3) {
@@ -115,7 +115,7 @@ type Event interface {
 // to follow-on errors due to an incorrectly computed type set.
 
 type T8 interface {
-	m() [unsafe.Sizeof(T8.m /* ERROR "undefined" */ )]int
+	m() [unsafe.Sizeof(T8.m /* ERROR "undefined" */)]int
 }
 
 var _ = T8.m // no error expected here

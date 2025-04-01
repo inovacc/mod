@@ -12,6 +12,6 @@ func _() {
 	}
 }
 
-type S[T any] struct {}
+type S[T any] struct{}
 
 func (_ S[T]) m()

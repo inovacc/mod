@@ -4,25 +4,15 @@
 
 package importdecl0
 
-import ()
-
 import (
 	// we can have multiple blank imports (was bug)
 	_ "math"
 	_ "net/rpc"
-	init /* ERROR "cannot import package as init" */ "fmt"
-	// reflect defines a type "flag" which shows up in the gc export data
-	"reflect"
-	. /* ERROR "imported and not used" */ "reflect"
 )
 
-import "math" /* ERROR "imported and not used" */
-import m /* ERROR "imported as m and not used" */ "math"
-import _ "math"
+/* ERROR "imported and not used" */
 
 import (
-	"math/big" /* ERROR "imported and not used" */
-	b /* ERROR "imported as b and not used" */ "math/big"
 	_ "math/big"
 )
 

@@ -4,10 +4,15 @@
 
 package p
 
-type T interface{ m[ /* ERROR "must have no type parameters" */ P any]() }
+type T interface {
+	m[ /* ERROR "must have no type parameters" */ P any]()
+}
 
 func _(t T) {
-	var _ interface{ m[ /* ERROR "must have no type parameters" */ P any](); n() } = t
+	var _ interface {
+		m[ /* ERROR "must have no type parameters" */ P any]()
+		n()
+	} = t
 }
 
 type S struct{}
@@ -15,5 +20,8 @@ type S struct{}
 func (S) m[ /* ERROR "must have no type parameters" */ P any]() {}
 
 func _(s S) {
-	var _ interface{ m[ /* ERROR "must have no type parameters" */ P any](); n() } = s
+	var _ interface {
+		m[ /* ERROR "must have no type parameters" */ P any]()
+		n()
+	} = s
 }

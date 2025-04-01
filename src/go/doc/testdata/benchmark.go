@@ -137,7 +137,9 @@ func (b *B) run() BenchmarkResult {
 // launch launches the benchmark function. It gradually increases the number
 // of benchmark iterations until the benchmark runs for a second in order
 // to get a reasonable measurement. It prints timing information in this form
-//		testing.BenchmarkHello	100000		19 ns/op
+//
+//	testing.BenchmarkHello	100000		19 ns/op
+//
 // launch is run by the fun function as a separate goroutine.
 func (b *B) launch() {
 	// Run the benchmark for a single iteration in case it's expensive.

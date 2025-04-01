@@ -6,7 +6,6 @@ package strconv_test
 
 import (
 	"math"
-	. "strconv"
 	"testing"
 )
 

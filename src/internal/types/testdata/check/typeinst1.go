@@ -5,6 +5,7 @@
 package p
 
 type List[E any] []E
+
 var _ List[List[List[int]]]
 var _ List[List[List[int]]] = []List[List[int]]{}
 
@@ -35,17 +36,17 @@ func _() {
 	x1.f1.f2 = x2
 }
 
-func f[P any] (x P) List[P] {
+func f[P any](x P) List[P] {
 	return List[P]{x}
 }
 
 var (
-	_ []int = f(0)
-	_ []float32 = f[float32](10)
+	_ []int            = f(0)
+	_ []float32        = f[float32](10)
 	_ List[complex128] = f(1i)
-	_ []List[int] = f(List[int]{})
-        _ List[List[int]] = []List[int]{}
-        _ = []List[int]{}
+	_ []List[int]      = f(List[int]{})
+	_ List[List[int]]  = []List[int]{}
+	_                  = []List[int]{}
 )
 
 // Parameterized types with methods
@@ -71,12 +72,12 @@ type Iterator[K any] struct {
 	r Receiver[Pair[K]]
 }
 
-func Values [T any] (r Receiver[T]) T {
-        return r.values
+func Values[T any](r Receiver[T]) T {
+	return r.values
 }
 
 func (it Iterator[K]) Next() K {
-        return Values[Pair[K]](it.r).key
+	return Values[Pair[K]](it.r).key
 }
 
 // A more complex test case testing type bounds (extracted from linalg.go2 and reduced to essence)
@@ -89,9 +90,9 @@ func AbsDifference[T NumericAbs[T]](x T) { panic(0) }
 
 // For now, a lone type parameter is not permitted as RHS in a type declaration (issue #45639).
 // type OrderedAbs[T any] T
-// 
+//
 // func (a OrderedAbs[T]) Abs() OrderedAbs[T]
-// 
+//
 // func OrderedAbsDifference[T any](x T) {
 // 	AbsDifference(OrderedAbs[T](x))
 // }
@@ -102,16 +103,16 @@ func g[P interface{ m() P }](x P) { panic(0) }
 
 // For now, a lone type parameter is not permitted as RHS in a type declaration (issue #45639).
 // type T4[P any] P
-// 
+//
 // func (_ T4[P]) m() T4[P]
-// 
+//
 // func _[Q any](x Q) {
 // 	g(T4[Q](x))
 // }
 
 // Another test case that caused  problems in the past
 
-type T5[_ interface { a() }, _ interface{}] struct{}
+type T5[_ interface{ a() }, _ interface{}] struct{}
 
 type A[P any] struct{ x P }
 
@@ -129,6 +130,7 @@ var _ T5[A[int], int]
 // The following code tests this mechanism.
 
 type R1[A any] struct{}
+
 func (_ R1[A]) vm()
 func (_ *R1[A]) pm()
 
@@ -140,6 +142,7 @@ func _[T any](r R1[T], p *R1[T]) {
 }
 
 type R2[A, B any] struct{}
+
 func (_ R2[A, B]) vm()
 func (_ *R2[A, B]) pm()
 
@@ -163,13 +166,13 @@ type _ interface {
 
 // Type sets may contain each type at most once.
 type _ interface {
-	~int|~ /* ERROR "overlapping terms ~int" */ int
-	~int|int /* ERROR "overlapping terms int" */
-	int|int /* ERROR "overlapping terms int" */
+	~int | ~ /* ERROR "overlapping terms ~int" */ int
+	~int | int /* ERROR "overlapping terms int" */
+	int | int  /* ERROR "overlapping terms int" */
 }
 
 type _ interface {
-	~struct{f int} | ~struct{g int} | ~ /* ERROR "overlapping terms" */ struct{f int}
+	~struct{ f int } | ~struct{ g int } | ~ /* ERROR "overlapping terms" */ struct{ f int }
 }
 
 // Interface term lists can contain any type, incl. *Named types.
@@ -177,12 +180,14 @@ type _ interface {
 // term list when determining if an operation is permitted.
 
 type MyInt int
-func add1[T interface{MyInt}](x T) T {
+
+func add1[T interface{ MyInt }](x T) T {
 	return x + 1
 }
 
 type MyString string
-func double[T interface{MyInt|MyString}](x T) T {
+
+func double[T interface{ MyInt | MyString }](x T) T {
 	return x + x
 }
 
@@ -207,10 +212,11 @@ type I0 interface {
 }
 
 func f0[T I0]() {}
+
 var _ = f0[int]
 var _ = f0[bool]
 var _ = f0[string]
-var _ = f0[float64 /* ERROR "does not satisfy I0" */ ]
+var _ = f0[float64 /* ERROR "does not satisfy I0" */]
 
 type I01 interface {
 	E0
@@ -218,10 +224,11 @@ type I01 interface {
 }
 
 func f01[T I01]() {}
+
 var _ = f01[int]
-var _ = f01[bool /* ERROR "does not satisfy I0" */ ]
+var _ = f01[bool /* ERROR "does not satisfy I0" */]
 var _ = f01[string]
-var _ = f01[float64 /* ERROR "does not satisfy I0" */ ]
+var _ = f01[float64 /* ERROR "does not satisfy I0" */]
 
 type I012 interface {
 	E0
@@ -230,10 +237,11 @@ type I012 interface {
 }
 
 func f012[T I012]() {}
-var _ = f012[int /* ERRORx `cannot satisfy I012.*empty type set` */ ]
-var _ = f012[bool /* ERRORx `cannot satisfy I012.*empty type set` */ ]
-var _ = f012[string /* ERRORx `cannot satisfy I012.*empty type set` */ ]
-var _ = f012[float64 /* ERRORx `cannot satisfy I012.*empty type set` */ ]
+
+var _ = f012[int /* ERRORx `cannot satisfy I012.*empty type set` */]
+var _ = f012[bool /* ERRORx `cannot satisfy I012.*empty type set` */]
+var _ = f012[string /* ERRORx `cannot satisfy I012.*empty type set` */]
+var _ = f012[float64 /* ERRORx `cannot satisfy I012.*empty type set` */]
 
 type I12 interface {
 	E1
@@ -241,9 +249,10 @@ type I12 interface {
 }
 
 func f12[T I12]() {}
-var _ = f12[int /* ERROR "does not satisfy I12" */ ]
-var _ = f12[bool /* ERROR "does not satisfy I12" */ ]
-var _ = f12[string /* ERROR "does not satisfy I12" */ ]
+
+var _ = f12[int /* ERROR "does not satisfy I12" */]
+var _ = f12[bool /* ERROR "does not satisfy I12" */]
+var _ = f12[string /* ERROR "does not satisfy I12" */]
 var _ = f12[float64]
 
 type I0_ interface {
@@ -252,10 +261,11 @@ type I0_ interface {
 }
 
 func f0_[T I0_]() {}
+
 var _ = f0_[int]
-var _ = f0_[bool /* ERROR "does not satisfy I0_" */ ]
-var _ = f0_[string /* ERROR "does not satisfy I0_" */ ]
-var _ = f0_[float64 /* ERROR "does not satisfy I0_" */ ]
+var _ = f0_[bool /* ERROR "does not satisfy I0_" */]
+var _ = f0_[string /* ERROR "does not satisfy I0_" */]
+var _ = f0_[float64 /* ERROR "does not satisfy I0_" */]
 
 // Using a function instance as a type is an error.
 var _ f0 // ERROR "not a type"
@@ -264,17 +274,17 @@ var _ f0 /* ERROR "not a type" */ [int]
 // Empty type sets can only be satisfied by empty type sets.
 type none interface {
 	// force an empty type set
-        int
-        string
+	int
+	string
 }
 
 func ff[T none]() {}
-func gg[T any]() {}
+func gg[T any]()  {}
 func hh[T ~int]() {}
 
 func _[T none]() {
-	_ = ff[int /* ERROR "cannot satisfy none (empty type set)" */ ]
-	_ = ff[T]  // pathological but ok because T's type set is empty, too
+	_ = ff[int /* ERROR "cannot satisfy none (empty type set)" */]
+	_ = ff[T] // pathological but ok because T's type set is empty, too
 	_ = gg[int]
 	_ = gg[T]
 	_ = hh[int]

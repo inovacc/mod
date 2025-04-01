@@ -10,7 +10,7 @@ import "io"
 var _ io.Writer = W{} // no error expected here because W has invalid embedded field
 
 type W struct {
-	*bufio /* ERROR "undefined: bufio" */ .Writer
+	*bufio. /* ERROR "undefined: bufio" */ Writer
 }
 
 // test using an invalid type

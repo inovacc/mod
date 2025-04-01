@@ -4,7 +4,7 @@
 
 package p
 
-type Optional[T any] struct {}
+type Optional[T any] struct{}
 
 func (_ Optional[T]) Val() (T, bool)
 

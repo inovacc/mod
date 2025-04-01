@@ -1156,7 +1156,7 @@ func init() {
 		//
 		// output[i] = input.
 		{name: "PSHUFBbroadcast", argLength: 1, reg: fp11, resultInArg0: true, asm: "PSHUFB"}, // PSHUFB with mask zero, (GOAMD64=v1)
-		{name: "VPBROADCASTB", argLength: 1, reg: gpfp, asm: "VPBROADCASTB"}, // Broadcast input byte from gp (GOAMD64=v3)
+		{name: "VPBROADCASTB", argLength: 1, reg: gpfp, asm: "VPBROADCASTB"},                  // Broadcast input byte from gp (GOAMD64=v3)
 
 		// Byte negate/zero/preserve (GOAMD64=v2).
 		//

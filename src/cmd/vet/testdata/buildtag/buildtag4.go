@@ -5,7 +5,6 @@
 // This file contains tests for the buildtag checker.
 
 //go:build !(bad || worse)
-// +build !bad
-// +build !worse
+// +build !bad,!worse
 
 package testdata

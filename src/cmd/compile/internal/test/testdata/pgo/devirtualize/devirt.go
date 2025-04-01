@@ -18,8 +18,6 @@ package devirt
 // to ensure the escaping doesn't break lookup.
 import (
 	"fmt"
-
-	"example.com/pgo/devirtualize/mult.pkg"
 )
 
 var sink int

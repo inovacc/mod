@@ -5,8 +5,8 @@
 // WARNING: Please avoid updating this file. If this file needs to be updated,
 // then a new inline_hot.pprof file should be generated:
 //
-//  $ cd $GOROOT/src/cmd/compile/internal/test/testdata/pgo/inline/
-//  $ go test -bench=. -cpuprofile ./inline_hot.pprof
+//	$ cd $GOROOT/src/cmd/compile/internal/test/testdata/pgo/inline/
+//	$ go test -bench=. -cpuprofile ./inline_hot.pprof
 package main
 
 import "testing"
