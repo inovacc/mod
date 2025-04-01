@@ -19,6 +19,5 @@ func _[P any]() {
 }
 
 // TODO(gri) This is a follow-on error due to T[int] being invalid.
-//
-//	We should try to avoid it.
-const _ = unsafe. /* ERROR "not constant" */ Sizeof(T[int]{})
+//           We should try to avoid it.
+const _ = unsafe /* ERROR "not constant" */ .Sizeof(T[int]{})

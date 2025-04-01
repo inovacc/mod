@@ -19,7 +19,7 @@ var _ List[byte] = []byte{}
 // A generic binary tree might be declared as follows.
 type Tree[E any] struct {
 	left, right *Tree[E]
-	payload     E
+	payload E
 }
 
 // A simple instantiation of Tree:
@@ -65,7 +65,7 @@ func _() {
 type T1a struct {
 	f A1
 }
-type A1 = struct{ g int }
+type A1 = struct { g int }
 
 type T2a struct {
 	f struct {
@@ -106,21 +106,20 @@ var _ = T /* ERROR "cannot use generic type T" */ (0)
 
 // In type context, generic (parameterized) types cannot be parenthesized before
 // being instantiated. See also NOTES entry from 12/4/2019.
-var _ (T /* ERROR "cannot use generic type T" */)[ /* ERRORx `unexpected \[|expected ';'` */ int]
+var _ (T /* ERROR "cannot use generic type T" */ )[ /* ERRORx `unexpected \[|expected ';'` */ int]
 
 // All types may be parameterized, including interfaces.
-type I1[T any] interface {
+type I1[T any] interface{
 	m1(T)
 }
 
 // There is no such thing as a variadic generic type.
-type _
-[T ... /* ERROR "invalid use of '...'" */ any] struct{}
+type _[T ... /* ERROR "invalid use of '...'" */ any] struct{}
 
 // Generic interfaces may be embedded as one would expect.
 type I2 interface {
-	I1(int)    // method!
-	I1[string] // embedded I1
+	I1(int)     // method!
+	I1[string]  // embedded I1
 }
 
 func _() {
@@ -152,7 +151,7 @@ type _ struct {
 	*( /* ERROR "cannot parenthesize" */ int32)
 	List[int]
 
-	int8   /* ERROR "int8 redeclared" */
+	int8 /* ERROR "int8 redeclared" */
 	*int16 /* ERROR "int16 redeclared" */
 	List /* ERROR "List redeclared" */ [int]
 }
@@ -219,12 +218,12 @@ type B0 any
 type B1[_ any] any
 type B2[_, _ any] any
 
-func _[T1 B0]()                                                                  {}
-func _[T1 B1[T1]]()                                                              {}
+func _[T1 B0]() {}
+func _[T1 B1[T1]]() {}
 func _[T1 B2 /* ERRORx `cannot use generic type .* without instantiation` */ ]() {}
 
-func _[T1, T2 B0]()                                                                  {}
-func _[T1 B1[T1], T2 B1[T2]]()                                                       {}
+func _[T1, T2 B0]() {}
+func _[T1 B1[T1], T2 B1[T2]]() {}
 func _[T1, T2 B2 /* ERRORx `cannot use generic type .* without instantiation` */ ]() {}
 
 func _[T1 B0, T2 B1[T2]]() {} // here B1 applies to T2
@@ -249,14 +248,12 @@ type I interface {
 }
 
 var (
-	_ interface /* ERROR "contains type constraints" */ {
-		~int
-	}
+	_ interface /* ERROR "contains type constraints" */ {~int}
 	_ I /* ERROR "contains type constraints" */
 )
 
-func _(I /* ERROR "contains type constraints" */)
-func _(x, y, z I /* ERROR "contains type constraints" */)
+func _(I /* ERROR "contains type constraints" */ )
+func _(x, y, z I /* ERROR "contains type constraints" */ )
 func _() I /* ERROR "contains type constraints" */
 
 func _() {
@@ -268,13 +265,13 @@ type C interface {
 }
 
 var _ comparable /* ERROR "comparable" */
-var _ C          /* ERROR "comparable" */
+var _ C /* ERROR "comparable" */
 
-func _(_ comparable /* ERROR "comparable" */, _ C /* ERROR "comparable" */)
+func _(_ comparable /* ERROR "comparable" */ , _ C /* ERROR "comparable" */ )
 
 func _() {
 	var _ comparable /* ERROR "comparable" */
-	var _ C          /* ERROR "comparable" */
+	var _ C /* ERROR "comparable" */
 }
 
 // Type parameters are never const types, i.e., it's
@@ -282,7 +279,7 @@ func _() {
 // (If a type set contains just a single const type, we could
 // allow it, but such type sets don't make much sense in the
 // first place.)
-func _[T interface{ ~int | ~float64 }]() {
+func _[T interface{~int|~float64}]() {
 	// not valid
 	const _ = T /* ERROR "not constant" */ (0)
 	const _ T /* ERROR "invalid constant type T" */ = 1
@@ -301,7 +298,7 @@ func _[P interface{ ~[]int }]() P {
 	return P{1, 2, 3}
 }
 
-func _[P interface{ ~[]E }, E interface{ map[string]P }]() P {
+func _[P interface{ ~[]E }, E interface{ map[string]P } ]() P {
 	x := P{}
 	return P{{}}
 	return P{E{}}

@@ -4,11 +4,11 @@
 
 package p
 
-func _() (int, UndefinedType /* ERROR "undefined: UndefinedType" */, string) {
+func _() (int, UndefinedType /* ERROR "undefined: UndefinedType" */ , string)  {
 	return 0 // ERROR "not enough return values\n\thave (number)\n\twant (int, unknown type, string)"
 }
 
-func _() (int, UndefinedType /* ERROR "undefined: UndefinedType" */) {
+func _() (int, UndefinedType /* ERROR "undefined: UndefinedType" */ ) {
 	return 0, 1, 2 // ERROR "too many return values\n\thave (number, number, number)\n\twant (int, unknown type)"
 }
 

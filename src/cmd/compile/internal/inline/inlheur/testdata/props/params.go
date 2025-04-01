@@ -12,9 +12,7 @@ import "os"
 
 // params.go T_feeds_if_simple 20 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -28,10 +26,8 @@ func T_feeds_if_simple(x int) {
 
 // params.go T_feeds_if_nested 35 0 1
 // ParamFlags
-//
-//	0 ParamMayFeedIfOrSwitch
-//	1 ParamFeedsIfOrSwitch
-//
+//   0 ParamMayFeedIfOrSwitch
+//   1 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[64,32],"ResultFlags":null}
 // <endcallsites>
@@ -47,9 +43,7 @@ func T_feeds_if_nested(x, y int) {
 
 // params.go T_feeds_if_pointer 51 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -63,10 +57,8 @@ func T_feeds_if_pointer(xp *int) {
 
 // params.go T.T_feeds_if_simple_method 66 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//	1 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
+//   1 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32,32],"ResultFlags":null}
 // <endcallsites>
@@ -83,12 +75,10 @@ func (r T) T_feeds_if_simple_method(x int) {
 
 // params.go T_feeds_if_blanks 86 0 1
 // ParamFlags
-//
-//	0 ParamNoInfo
-//	1 ParamFeedsIfOrSwitch
-//	2 ParamNoInfo
-//	3 ParamNoInfo
-//
+//   0 ParamNoInfo
+//   1 ParamFeedsIfOrSwitch
+//   2 ParamNoInfo
+//   3 ParamNoInfo
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[0,32,0,0],"ResultFlags":null}
 // <endcallsites>
@@ -103,9 +93,7 @@ func T_feeds_if_blanks(_ string, x int, _ bool, _ bool) {
 
 // params.go T_feeds_if_with_copy 101 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -135,9 +123,7 @@ func T_feeds_if_with_copy_expr(x int) {
 
 // params.go T_feeds_switch 131 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -201,10 +187,8 @@ func T_feeds_if_redefined2(x int) {
 
 // params.go T_feeds_multi_if 196 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//	1 ParamNoInfo
-//
+//   0 ParamFeedsIfOrSwitch
+//   1 ParamNoInfo
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32,0],"ResultFlags":null}
 // <endcallsites>
@@ -259,9 +243,7 @@ func T_feeds_if_redefined_indirectwrite_copy(x int) {
 
 // params.go T_feeds_if_expr1 251 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -323,9 +305,7 @@ func T_feeds_if_maybe_divide_by_zero(x int) {
 
 // params.go T_feeds_indcall 313 0 1
 // ParamFlags
-//
-//	0 ParamMayFeedIndirectCall
-//
+//   0 ParamMayFeedIndirectCall
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[16],"ResultFlags":null}
 // <endcallsites>
@@ -338,9 +318,7 @@ func T_feeds_indcall(x func()) {
 
 // params.go T_feeds_indcall_and_if 326 0 1
 // ParamFlags
-//
-//	0 ParamMayFeedIndirectCall|ParamFeedsIfOrSwitch
-//
+//   0 ParamMayFeedIndirectCall|ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[48],"ResultFlags":null}
 // <endcallsites>
@@ -353,9 +331,7 @@ func T_feeds_indcall_and_if(x func()) {
 
 // params.go T_feeds_indcall_with_copy 339 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIndirectCall
-//
+//   0 ParamFeedsIndirectCall
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[8],"ResultFlags":null}
 // <endcallsites>
@@ -370,9 +346,7 @@ func T_feeds_indcall_with_copy(x func()) {
 
 // params.go T_feeds_interface_method_call 354 0 1
 // ParamFlags
-//
-//	0 ParamFeedsInterfaceMethodCall
-//
+//   0 ParamFeedsInterfaceMethodCall
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[2],"ResultFlags":null}
 // <endcallsites>

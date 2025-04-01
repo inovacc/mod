@@ -10,12 +10,12 @@ import "time"
 import "unsafe"
 
 // T1 declared before its methods.
-type T1 struct {
+type T1 struct{
 	f int
 }
 
-func (T1) m()                                                         {}
-func (T1) m /* ERROR "already declared" */ ()                         {}
+func (T1) m() {}
+func (T1) m /* ERROR "already declared" */ () {}
 func (x *T1) f /* ERROR "field and method with the same name f" */ () {}
 
 // Conflict between embedded field and method name,
@@ -47,24 +47,24 @@ type T2 struct {
 }
 
 // Methods declared without a declared type.
-func (undefined /* ERROR "undefined" */) m()    {}
+func (undefined /* ERROR "undefined" */) m() {}
 func (x *undefined /* ERROR "undefined" */) m() {}
 
-func (pi /* ERROR "not a type" */) m1()    {}
-func (x pi /* ERROR "not a type" */) m2()  {}
-func (x *pi /* ERROR "not a type" */) m3() {}
+func (pi /* ERROR "not a type" */) m1() {}
+func (x pi /* ERROR "not a type" */) m2() {}
+func (x *pi /* ERROR "not a type" */ ) m3() {}
 
 // Blank types.
-type _ struct{ m int }
-type _ struct{ m int }
+type _ struct { m int }
+type _ struct { m int }
 
 func (_ /* ERROR "cannot use _" */) m() {}
-func m(_ /* ERROR "cannot use _" */)    {}
+func m(_ /* ERROR "cannot use _" */) {}
 
 // Methods with receiver base type declared in another file.
-func (T3) m1()                                   {}
-func (*T3) m2()                                  {}
-func (x T3) m3()                                 {}
+func (T3) m1() {}
+func (*T3) m2() {}
+func (x T3) m3() {}
 func (x *T3) f /* ERROR "field and method" */ () {}
 
 // Methods of non-struct type.
@@ -77,40 +77,35 @@ type T5 interface {
 	m() int
 }
 
-func (T5 /* ERROR "invalid receiver" */) m1() {}
-func (T5 /* ERROR "invalid receiver" */) m2() {}
+func (T5 /* ERROR "invalid receiver" */ ) m1() {}
+func (T5 /* ERROR "invalid receiver" */ ) m2() {}
 
 // Methods associated with a named pointer type.
 type ptr *int
-
-func (ptr /* ERROR "invalid receiver" */) _()  {}
-func (*ptr /* ERROR "invalid receiver" */) _() {}
+func (ptr /* ERROR "invalid receiver" */ ) _() {}
+func (*ptr /* ERROR "invalid receiver" */ ) _() {}
 
 // Methods with zero or multiple receivers.
-func ( /* ERROR "method has no receiver" */ ) _()                 {}
-func (T3, * /* ERROR "method has multiple receivers" */ T3) _()   {}
-func (T3, T3, T3 /* ERROR "method has multiple receivers" */) _() {}
-func (a, b /* ERROR "method has multiple receivers" */ T3) _()    {}
+func ( /* ERROR "method has no receiver" */ ) _() {}
+func (T3, * /* ERROR "method has multiple receivers" */ T3) _() {}
+func (T3, T3, T3 /* ERROR "method has multiple receivers" */ ) _() {}
+func (a, b /* ERROR "method has multiple receivers" */ T3) _() {}
 func (a, b, c /* ERROR "method has multiple receivers" */ T3) _() {}
 
 // Methods associated with non-local or unnamed types.
-func (int /* ERROR "cannot define new methods on non-local type int" */) m()               {}
-func ([] /* ERROR "invalid receiver" */ int) m()                                           {}
-func (time. /* ERROR "cannot define new methods on non-local type time.Time" */ Time) m()  {}
-func (*time. /* ERROR "cannot define new methods on non-local type time.Time" */ Time) m() {}
-func (x any /* ERROR "invalid receiver" */) m()                                            {}
+func (int /* ERROR "cannot define new methods on non-local type int" */ ) m() {}
+func ([ /* ERROR "invalid receiver" */ ]int) m() {}
+func (time /* ERROR "cannot define new methods on non-local type time.Time" */ .Time) m() {}
+func (*time /* ERROR "cannot define new methods on non-local type time.Time" */ .Time) m() {}
+func (x any /* ERROR "invalid receiver" */ ) m() {}
 
 // Unsafe.Pointer is treated like a pointer when used as receiver type.
 type UP unsafe.Pointer
-
-func (UP /* ERROR "invalid" */) m1()  {}
-func (*UP /* ERROR "invalid" */) m2() {}
+func (UP /* ERROR "invalid" */ ) m1() {}
+func (*UP /* ERROR "invalid" */ ) m2() {}
 
 // Double declarations across package files
 const c_double = 0
-
 type t_double int
-
 var v_double int
-
 func f_double() {}

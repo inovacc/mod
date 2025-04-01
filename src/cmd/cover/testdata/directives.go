@@ -12,32 +12,29 @@ package main
 
 //go:c1
 
-// doc
-//
 //go:c2
+//doc
 func c() {
 }
 
 //go:d1
 
-// doc
-//
+//doc
 //go:d2
 type d int
 
 //go:e1
 
-// doc
-//
+//doc
 //go:e2
 type (
 	e int
 	f int
 )
 
-// go:_empty1
-// doc
-// go:_empty2
+//go:_empty1
+//doc
+//go:_empty2
 type ()
 
 //go:f

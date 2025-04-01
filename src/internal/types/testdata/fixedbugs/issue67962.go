@@ -19,7 +19,7 @@ func _() {
 		}
 	}
 
-	switch t := x. /* ERROR "not an interface" */ (type) {
+	switch t := x /* ERROR "not an interface" */ .(type) {
 	case int, string:
 		_ = t
 	}

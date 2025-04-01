@@ -13,6 +13,8 @@ package devirt
 
 import (
 	"testing"
+
+	"example.com/pgo/devirtualize/mult.pkg"
 )
 
 func BenchmarkDevirtIface(b *testing.B) {

@@ -9,10 +9,8 @@
 package p
 
 const _ /* ERROR unexpected := */ := 0
-
 type _ /* ERROR unexpected := */ := int
 var _ /* ERROR unexpected := */ := 0
 
 const _ int /* ERROR unexpected := */ := 0
-
 var _ int /* ERROR unexpected := */ := 0

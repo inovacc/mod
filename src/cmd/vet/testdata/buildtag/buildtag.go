@@ -6,12 +6,13 @@
 
 // ERRORNEXT "possible malformed [+]build comment"
 // +builder
-//go:build !ignore && toolate
-// +build !ignore,toolate
+// +build !ignore
 
 package testdata
 
 // ERRORNEXT "misplaced \+build comment"
+// +build toolate
+
 var _ = 3
 
 var _ = `

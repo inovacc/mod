@@ -156,8 +156,8 @@ func _[T ~func(func(int) bool)](x T) {
 
 // go.dev/issue/65236
 
-func seq0(func() bool)         {}
-func seq1(func(int) bool)      {}
+func seq0(func() bool) {}
+func seq1(func(int) bool) {}
 func seq2(func(int, int) bool) {}
 
 func _() {

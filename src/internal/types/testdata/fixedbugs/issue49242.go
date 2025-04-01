@@ -13,11 +13,11 @@ func _[P int]() int {
 }
 
 func _[P int](x int) P {
-	return x // ERRORx `cannot use x .* as P value in return statement`
+        return x // ERRORx `cannot use x .* as P value in return statement`
 }
 
 func _[P, Q any](x P) Q {
-	return x // ERRORx `cannot use x .* as Q value in return statement`
+        return x // ERRORx `cannot use x .* as Q value in return statement`
 }
 
 // test case from issue

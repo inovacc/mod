@@ -23,7 +23,7 @@ func g() {
 }
 
 func f() {
-	m := make(map[string] /* ERROR unexpected \) */)
+	m := make(map[string] /* ERROR unexpected \) */ )
 	for {
 		x := 1
 		print(x)

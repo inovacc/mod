@@ -28,5 +28,5 @@ type _ interface {
 
 type _ interface {
 	io.Reader
-	io. /* ERROR "duplicate method Read" */ Reader
+	io /* ERROR "duplicate method Read" */ .Reader
 }

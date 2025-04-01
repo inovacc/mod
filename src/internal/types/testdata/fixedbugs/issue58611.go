@@ -22,6 +22,6 @@ func (s *Set[string]) String() string {
 	for k := range *s {
 		keys = append(keys, k)
 	}
-	sort.Strings(keys /* ERRORx "cannot use keys.*with string declared at.*|type parameter" */)
-	return strings. /* ERROR "cannot use strings.Join" */ Join(keys /* ERRORx "cannot use keys.*with string declared at.*|type parameter" */, ",")
+	sort.Strings(keys /* ERRORx "cannot use keys.*with string declared at.*|type parameter" */ )
+	return strings /* ERROR "cannot use strings.Join" */ .Join(keys /* ERRORx "cannot use keys.*with string declared at.*|type parameter" */ , ",")
 }

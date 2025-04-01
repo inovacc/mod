@@ -5,6 +5,7 @@
 package runtime_test
 
 import (
+	. "runtime"
 	"strconv"
 	"sync"
 	"testing"

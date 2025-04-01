@@ -10,7 +10,7 @@ package p
 // reverses that slice in place.
 func Reverse[T any](list []T) {
 	i := 0
-	j := len(list) - 1
+	j := len(list)-1
 	for i < j {
 		list[i], list[j] = list[j], list[i]
 		i++
@@ -22,12 +22,12 @@ func _() {
 	// Reverse can be called with an explicit type argument.
 	Reverse[int](nil)
 	Reverse[string]([]string{"foo", "bar"})
-	Reverse[struct{ x, y int }]([]struct{ x, y int }{{1, 2}, {2, 3}, {3, 4}})
+	Reverse[struct{x, y int}]([]struct{x, y int}{{1, 2}, {2, 3}, {3, 4}})
 
 	// Since the type parameter is used for an incoming argument,
 	// it can be inferred from the provided argument's type.
 	Reverse([]string{"foo", "bar"})
-	Reverse([]struct{ x, y int }{{1, 2}, {2, 3}, {3, 4}})
+	Reverse([]struct{x, y int}{{1, 2}, {2, 3}, {3, 4}})
 
 	// But the incoming argument must have a type, even if it's a
 	// default type. An untyped nil won't work.
@@ -118,29 +118,29 @@ func max[T interface{ ~int }](x ...T) T {
 // Thus even if a type can be inferred successfully, the function
 // call may not be valid.
 
-func fboth[T any](chan T)   {}
+func fboth[T any](chan T) {}
 func frecv[T any](<-chan T) {}
 func fsend[T any](chan<- T) {}
 
 func _() {
 	var both chan int
 	var recv <-chan int
-	var send chan<- int
+	var send chan<-int
 
 	fboth(both)
-	fboth(recv /* ERROR "cannot use" */)
-	fboth(send /* ERROR "cannot use" */)
+	fboth(recv /* ERROR "cannot use" */ )
+	fboth(send /* ERROR "cannot use" */ )
 
 	frecv(both)
 	frecv(recv)
-	frecv(send /* ERROR "cannot use" */)
+	frecv(send /* ERROR "cannot use" */ )
 
 	fsend(both)
 	fsend(recv /* ERROR "cannot use" */)
 	fsend(send)
 }
 
-func ffboth[T any](func(chan T))   {}
+func ffboth[T any](func(chan T)) {}
 func ffrecv[T any](func(<-chan T)) {}
 func ffsend[T any](func(chan<- T)) {}
 
@@ -150,15 +150,15 @@ func _() {
 	var send func(chan<- int)
 
 	ffboth(both)
-	ffboth(recv /* ERROR "does not match" */)
-	ffboth(send /* ERROR "does not match" */)
+	ffboth(recv /* ERROR "does not match" */ )
+	ffboth(send /* ERROR "does not match" */ )
 
-	ffrecv(both /* ERROR "does not match" */)
+	ffrecv(both /* ERROR "does not match" */ )
 	ffrecv(recv)
-	ffrecv(send /* ERROR "does not match" */)
+	ffrecv(send /* ERROR "does not match" */ )
 
-	ffsend(both /* ERROR "does not match" */)
-	ffsend(recv /* ERROR "does not match" */)
+	ffsend(both /* ERROR "does not match" */ )
+	ffsend(recv /* ERROR "does not match" */ )
 	ffsend(send)
 }
 
@@ -169,8 +169,8 @@ func _() {
 // assignment is permitted, parameter passing is permitted as well,
 // so type inference should be able to handle these cases well.
 
-func g1[T any]([]T)      {}
-func g2[T any]([]T, T)   {}
+func g1[T any]([]T) {}
+func g2[T any]([]T, T) {}
 func g3[T any](*T, ...T) {}
 
 func _() {
@@ -185,12 +185,12 @@ func _() {
 	g3(& /* ERROR "cannot use &s1 (value of type *string) as *myString value in argument to g3" */ s1, "1", myString("2"), "3")
 	_ = s1
 
-	type myStruct struct{ x int }
+	type myStruct struct{x int}
 	var s2 myStruct
-	g3(nil, struct{ x int }{}, myStruct{})
-	g3(&s2, struct{ x int }{}, myStruct{})
-	g3(nil, myStruct{}, struct{ x int }{})
-	g3(&s2, myStruct{}, struct{ x int }{})
+	g3(nil, struct{x int}{}, myStruct{})
+	g3(&s2, struct{x int}{}, myStruct{})
+	g3(nil, myStruct{}, struct{x int}{})
+	g3(&s2, myStruct{}, struct{x int}{})
 }
 
 // Here's a realistic example.

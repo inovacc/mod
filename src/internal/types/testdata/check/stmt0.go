@@ -15,8 +15,8 @@ func assignments0() (int, int) {
 	f3 := func() (int, int, int) { return 1, 2, 3 }
 
 	a, b, c = 1, 2, 3
-	a, b, c = 1 /* ERROR "assignment mismatch: 3 variables but 2 values" */, 2
-	a, b, c = 1 /* ERROR "assignment mismatch: 3 variables but 4 values" */, 2, 3, 4
+	a, b, c = 1 /* ERROR "assignment mismatch: 3 variables but 2 values" */ , 2
+	a, b, c = 1 /* ERROR "assignment mismatch: 3 variables but 4 values" */ , 2, 3, 4
 	_, _, _ = a, b, c
 
 	a = f0 /* ERROR "used as value" */ ()
@@ -29,7 +29,7 @@ func assignments0() (int, int) {
 
 	a, b, c = <- /* ERROR "assignment mismatch: 3 variables but 1 value" */ ch
 
-	return   /* ERROR "not enough return values\n\thave ()\n\twant (int, int)" */
+	return /* ERROR "not enough return values\n\thave ()\n\twant (int, int)" */
 	return 1 /* ERROR "not enough return values\n\thave (number)\n\twant (int, int)" */
 	return 1, 2
 	return 1, 2, 3 /* ERROR "too many return values\n\thave (number, number, number)\n\twant (int, int)" */
@@ -43,39 +43,39 @@ func assignments1() {
 	c = s /* ERRORx `cannot use .* in assignment` */
 	s = b /* ERRORx `cannot use .* in assignment` */
 
-	v0, v1, v2 := 1 /* ERROR "assignment mismatch" */, 2, 3, 4
+	v0, v1, v2 := 1 /* ERROR "assignment mismatch" */ , 2, 3, 4
 	_, _, _ = v0, v1, v2
 
 	b = true
 
 	i += 1
-	i /* ERROR "mismatched types int and untyped string" */ += "foo"
+	i /* ERROR "mismatched types int and untyped string" */+= "foo"
 
 	f -= 1
 	f /= 0
-	f = float32(0) / 0 /* ERROR "division by zero" */
-	f /* ERROR "mismatched types float64 and untyped string" */ -= "foo"
+	f = float32(0)/0 /* ERROR "division by zero" */
+	f /* ERROR "mismatched types float64 and untyped string" */-= "foo"
 
 	c *= 1
 	c /= 0
 
 	s += "bar"
-	s /* ERROR "mismatched types string and untyped int" */ += 1
+	s /* ERROR "mismatched types string and untyped int" */+= 1
 
 	var u64 uint64
-	u64 += 1 << u64
+	u64 += 1<<u64
 
 	undefined /* ERROR "undefined" */ = 991
 
 	// test cases for issue 5800
 	var (
-		_ int            = nil /* ERROR "cannot use nil as int value in variable declaration" */
-		_ [10]int        = nil /* ERROR "cannot use nil as [10]int value in variable declaration" */
-		_ []byte         = nil
-		_ struct{}       = nil /* ERROR "cannot use nil as struct{} value in variable declaration" */
-		_ func()         = nil
+		_ int = nil /* ERROR "cannot use nil as int value in variable declaration" */
+		_ [10]int = nil /* ERROR "cannot use nil as [10]int value in variable declaration" */
+		_ []byte = nil
+		_ struct{} = nil /* ERROR "cannot use nil as struct{} value in variable declaration" */
+		_ func() = nil
 		_ map[int]string = nil
-		_ chan int       = nil
+		_ chan int = nil
 	)
 
 	// test cases for issue 5500
@@ -84,13 +84,13 @@ func assignments1() {
 		return m /* ERROR "not enough return values" */ [0]
 	}
 
-	g := func(int, bool) {}
+	g := func(int, bool){}
 	var m map[int]int
 	g(m[0]) /* ERROR "not enough arguments" */
 
 	// assignments to _
 	_ = nil /* ERROR "use of untyped nil" */
-	_ = 1 << /* ERROR "constant shift overflow" */ 1000
+	_ = 1  << /* ERROR "constant shift overflow" */ 1000
 	(_) = 0
 }
 
@@ -108,7 +108,7 @@ func assignments2() {
 	s, b = m["foo"]
 	_, d = m["bar"]
 	m["foo"] = nil
-	m["foo"] = nil /* ERROR "assignment mismatch: 1 variable but 2 values" */, false
+	m["foo"] = nil /* ERROR "assignment mismatch: 1 variable but 2 values" */ , false
 	_ = append(m["foo"])
 	_ = append(m["foo"], true)
 
@@ -116,19 +116,19 @@ func assignments2() {
 	_, b = <-c
 	_, d = <-c
 	<- /* ERROR "cannot assign" */ c = 0
-	<-c = 0 /* ERROR "assignment mismatch: 1 variable but 2 values" */, false
+	<-c = 0 /* ERROR "assignment mismatch: 1 variable but 2 values" */ , false
 
 	var x interface{}
 	_, b = x.(int)
 	x /* ERROR "cannot assign" */ .(int) = 0
-	x.(int) = 0 /* ERROR "assignment mismatch: 1 variable but 2 values" */, false
+	x.(int) = 0 /* ERROR "assignment mismatch: 1 variable but 2 values" */ , false
 
 	assignments2 /* ERROR "used as value" */ () = nil
 	int /* ERROR "not an expression" */ = 0
 }
 
 func issue6487() {
-	type S struct{ x int }
+	type S struct{x int}
 	_ = &S /* ERROR "cannot take address" */ {}.x
 	_ = &( /* ERROR "cannot take address" */ S{}.x)
 	_ = (&S{}).x
@@ -155,8 +155,8 @@ func issue6766a() {
 func shortVarDecls1() {
 	const c = 0
 	type d int
-	a, b, c /* ERROR "cannot assign" */, d /* ERROR "cannot assign" */ := 1, "zwei", 3.0, 4
-	var _ int = a    // a is of type int
+	a, b, c /* ERROR "cannot assign" */ , d /* ERROR "cannot assign" */  := 1, "zwei", 3.0, 4
+	var _ int = a // a is of type int
 	var _ string = b // b is of type string
 }
 
@@ -190,7 +190,7 @@ func selects() {
 	select {}
 	var (
 		ch chan int
-		sc chan<- bool
+		sc chan <- bool
 	)
 	select {
 	case <-ch:
@@ -229,7 +229,7 @@ func selects() {
 }
 
 func gos() {
-	go 1 /* ERROR "must be function call" */
+	go 1; /* ERROR "must be function call" */
 	go int /* ERROR "go requires function call, not conversion" */ (0)
 	go ( /* ERROR "expression in go must not be parenthesized" */ gos())
 	go gos()
@@ -239,7 +239,7 @@ func gos() {
 }
 
 func defers() {
-	defer 1 /* ERROR "must be function call" */
+	defer 1; /* ERROR "must be function call" */
 	defer int /* ERROR "defer requires function call, not conversion" */ (0)
 	defer ( /* ERROR "expression in defer must not be parenthesized" */ defers())
 	defer defers()
@@ -382,15 +382,15 @@ func returns0() {
 
 func returns1(x float64) (int, *float64) {
 	return 0, &x
-	return                                                       /* ERROR "not enough return values" */
+	return /* ERROR "not enough return values" */
 	return "foo" /* ERRORx `cannot .* in return statement` */, x /* ERRORx `cannot use .* in return statement` */
-	return 0, &x, 1                                              /* ERROR "too many return values" */
+	return 0, &x, 1 /* ERROR "too many return values" */
 }
 
 func returns2() (a, b int) {
 	return
 	return 1, "foo" /* ERRORx `cannot use .* in return statement` */
-	return 1, 2, 3  /* ERROR "too many return values" */
+	return 1, 2, 3 /* ERROR "too many return values" */
 	{
 		type a int
 		return 1, 2
@@ -418,15 +418,15 @@ func switches0() {
 	}
 
 	switch {
-	case 1 /* ERROR "cannot convert" */ :
+	case 1  /* ERROR "cannot convert" */ :
 	}
 
 	true := "false"
 	_ = true
 	// A tagless switch is equivalent to the bool
-	// constant true, not the identifier 'true'.
+        // constant true, not the identifier 'true'.
 	switch {
-	case "false" /* ERROR "cannot convert" */ :
+	case "false" /* ERROR "cannot convert" */:
 	}
 
 	switch int32(x) {
@@ -456,8 +456,8 @@ func switches0() {
 	var y32 float32
 	switch y32 {
 	case 1.1:
-	case 11 / 10: // integer division!
-	case 11. /* ERROR "duplicate case" */ / 10:
+	case 11/10: // integer division!
+	case 11. /* ERROR "duplicate case" */ /10:
 	case 2, 3.0, 4.1:
 	case 5.2, 1.10 /* ERROR "duplicate case" */ :
 	}
@@ -465,8 +465,8 @@ func switches0() {
 	var y64 float64
 	switch y64 {
 	case 1.1:
-	case 11 / 10: // integer division!
-	case 11. /* ERROR "duplicate case" */ / 10:
+	case 11/10: // integer division!
+	case 11. /* ERROR "duplicate case" */ /10:
 	case 2, 3.0, 4.1:
 	case 5.2, 1.10 /* ERROR "duplicate case" */ :
 	}
@@ -500,8 +500,8 @@ func switches0() {
 	case "hello":
 	case S("hello"):
 	case S /* ERROR "duplicate case" */ ("hello"):
-	case 1 == 1, B(false):
-	case false, B(2 == 2):
+	case 1==1, B(false):
+	case false, B(2==2):
 	}
 
 	// switch on array
@@ -533,10 +533,10 @@ func switches1() {
 	case 1:
 		fallthrough
 	case 2:
-		fallthrough // trailing empty statements are ok
+		fallthrough; ; ; // trailing empty statements are ok
 	case 3:
 	default:
-		fallthrough
+		fallthrough; ;
 	case 4:
 		fallthrough /* ERROR "cannot fallthrough final case in switch" */
 	}
@@ -544,7 +544,7 @@ func switches1() {
 	var y interface{}
 	switch y.(type) {
 	case int:
-		fallthrough /* ERROR "cannot fallthrough in type switch" */
+		fallthrough /* ERROR "cannot fallthrough in type switch" */ ; ; ;
 	default:
 	}
 
@@ -558,37 +558,29 @@ func switches1() {
 	switch x {
 	case 0:
 		goto L1
-	L1:
-		fallthrough
+		L1: fallthrough; ;
 	case 1:
 		goto L2
 		goto L3
 		goto L4
-	L2:
-	L3:
-	L4:
-		fallthrough
+		L2: L3: L4: fallthrough
 	default:
 	}
 
 	switch x {
 	case 0:
 		goto L5
-	L5:
-		fallthrough
+		L5: fallthrough
 	default:
 		goto L6
 		goto L7
 		goto L8
-	L6:
-	L7:
-	L8:
-		fallthrough /* ERROR "cannot fallthrough final case in switch" */
+		L6: L7: L8: fallthrough /* ERROR "cannot fallthrough final case in switch" */
 	}
 
 	switch x {
 	case 0:
-		fallthrough
+		fallthrough; ;
 	case 1:
 		{
 			fallthrough /* ERROR "fallthrough statement out of place" */
@@ -597,8 +589,7 @@ func switches1() {
 		fallthrough
 	case 3:
 		fallthrough /* ERROR "fallthrough statement out of place" */
-		{ /* empty block is not an empty statement */
-		}
+		{ /* empty block is not an empty statement */ }; ;
 	default:
 		fallthrough /* ERROR "cannot fallthrough final case in switch" */
 	}
@@ -618,7 +609,7 @@ func switches2() {
 	}
 
 	// untyped constants are converted to default types
-	switch 1<<63 - 1 {
+	switch 1<<63-1 {
 	}
 	switch 1 /* ERRORx `cannot use .* as int value.*\(overflows\)` */ << 63 {
 	}
@@ -682,27 +673,23 @@ type T struct{}
 type T1 struct{}
 type T2 struct{}
 
-func (T) m()     {}
+func (T) m() {}
 func (T2) m(int) {}
 
 func typeswitches() {
 	var i int
 	var x interface{}
 
-	switch x.(type) {
-	}
-	switch x /* ERROR "outside type switch" */ .(type) {
-	}
+	switch x.(type) {}
+	switch (x /* ERROR "outside type switch" */ .(type)) {}
 
 	switch x.(type) {
 	default:
 	default /* ERROR "multiple defaults" */ :
 	}
 
-	switch x /* ERROR "declared and not used" */ := x.(type) {
-	}
-	switch _ /* ERROR "no new variable on left side of :=" */ := x.(type) {
-	}
+	switch x /* ERROR "declared and not used" */ := x.(type) {}
+	switch _ /* ERROR "no new variable on left side of :=" */ := x.(type) {}
 
 	switch x := x.(type) {
 	case int:
@@ -710,8 +697,7 @@ func typeswitches() {
 		_ = y
 	}
 
-	switch x /* ERROR "x declared and not used" */ := i /* ERROR "not an interface" */ .(type) {
-	}
+	switch x /* ERROR "x declared and not used" */ := i /* ERROR "not an interface" */ .(type) {}
 
 	switch t := x.(type) {
 	case nil:
@@ -736,6 +722,7 @@ func typeswitches() {
 	case I2 /* STRICT "wrong type for method m" */ : // only an error in strict mode (issue 8561)
 	}
 
+
 	{
 		x := 1
 		v := 2
@@ -743,7 +730,7 @@ func typeswitches() {
 		case int:
 			println(x)
 			println(x / 0 /* ERROR "invalid operation: division by zero" */)
-		case 1 /* ERROR "1 is not a type" */ :
+		case 1 /* ERROR "1 is not a type" */:
 		}
 	}
 }
@@ -774,15 +761,15 @@ func typeswitch1() {
 }
 
 // Test correct typeswitch against interface types.
-type A interface{ a() }
-type B interface{ b() }
-type C interface{ a(int) }
+type A interface { a() }
+type B interface { b() }
+type C interface { a(int) }
 
 func typeswitch2() {
 	switch A(nil).(type) {
 	case A:
 	case B:
-	case C /* STRICT "cannot have dynamic type" */ : // only an error in strict mode (issue 8561)
+	case C /* STRICT "cannot have dynamic type" */: // only an error in strict mode (issue 8561)
 	}
 }
 
@@ -796,7 +783,7 @@ func typeswitch3(x interface{}) {
 	switch x.(type) {
 	case nil:
 	case int:
-	case nil /* ERROR "duplicate case" */, nil /* ERROR "duplicate case" */ :
+	case nil /* ERROR "duplicate case" */ , nil /* ERROR "duplicate case" */ :
 	}
 
 	type F func(int)
@@ -809,40 +796,32 @@ func typeswitch3(x interface{}) {
 }
 
 func fors1() {
-	for {
-	}
+	for {}
 	var i string
 	_ = i
-	for i := 0; i < 10; i++ {
-	}
-	for i := 0; i < 10; j /* ERROR "cannot declare" */ := 0 {
-	}
+	for i := 0; i < 10; i++ {}
+	for i := 0; i < 10; j /* ERROR "cannot declare" */ := 0 {}
 }
 
 func rangeloops1() {
 	var (
-		a  [10]float32
-		b  []string
-		p  *[10]complex128
+		a [10]float32
+		b []string
+		p *[10]complex128
 		pp **[10]complex128
-		s  string
-		m  map[int]bool
-		c  chan int
+		s string
+		m map[int]bool
+		c chan int
 		sc chan<- int
 		rc <-chan int
 		xs struct{}
 	)
 
-	for range xs /* ERROR "cannot range over" */ {
-	}
-	for _ = range xs /* ERROR "cannot range over" */ {
-	}
-	for i := range xs /* ERROR "cannot range over" */ {
-		_ = i
-	}
+	for range xs /* ERROR "cannot range over" */ {}
+	for _ = range xs /* ERROR "cannot range over" */ {}
+	for i := range xs /* ERROR "cannot range over" */ { _ = i }
 
-	for range a {
-	}
+	for range a {}
 	for i := range a {
 		var ii int
 		ii = i
@@ -858,12 +837,10 @@ func rangeloops1() {
 	}
 	var ii int
 	var xx float32
-	for ii, xx = range a {
-	}
+	for ii, xx = range a {}
 	_, _ = ii, xx
 
-	for range b {
-	}
+	for range b {}
 	for i := range b {
 		var ii int
 		ii = i
@@ -878,8 +855,7 @@ func rangeloops1() {
 		_ = xx
 	}
 
-	for range s {
-	}
+	for range s {}
 	for i := range s {
 		var ii int
 		ii = i
@@ -894,21 +870,17 @@ func rangeloops1() {
 		_ = xx
 	}
 
-	for range p {
-	}
+	for range p {}
 	for _, x := range p {
 		var xx complex128
 		xx = x
 		_ = xx
 	}
 
-	for range pp /* ERROR "cannot range over" */ {
-	}
-	for _, x := range pp /* ERROR "cannot range over" */ {
-	}
+	for range pp /* ERROR "cannot range over" */ {}
+	for _, x := range pp /* ERROR "cannot range over" */ {}
 
-	for range m {
-	}
+	for range m {}
 	for k := range m {
 		var kk int32
 		kk = k /* ERRORx `cannot use .* in assignment` */
@@ -918,33 +890,24 @@ func rangeloops1() {
 		var kk int
 		kk = k
 		_ = kk
-		if v {
-		}
+		if v {}
 	}
 
-	for range c {
-	}
-	for _, _ /* ERROR "only one iteration variable" */ = range c {
-	}
+	for range c {}
+	for _, _ /* ERROR "only one iteration variable" */ = range c {}
 	for e := range c {
 		var ee int
 		ee = e
 		_ = ee
 	}
-	for _ = range sc /* ERROR "cannot range over" */ {
-	}
-	for _ = range rc {
-	}
+	for _ = range sc /* ERROR "cannot range over" */ {}
+	for _ = range rc {}
 
 	// constant strings
 	const cs = "foo"
-	for range cs {
-	}
-	for range "" {
-	}
-	for i, x := range cs {
-		_, _ = i, x
-	}
+	for range cs {}
+	for range "" {}
+	for i, x := range cs { _, _ = i, x }
 	for i, x := range "" {
 		var ii int
 		ii = i
@@ -962,37 +925,25 @@ func rangeloops2() {
 	var a [10]int
 	var i I
 	_ = i
-	for i /* ERRORx `cannot use .* in assignment` */ = range a {
-	}
-	for i /* ERRORx `cannot use .* in assignment` */ = range &a {
-	}
-	for i /* ERRORx `cannot use .* in assignment` */ = range a[:] {
-	}
+	for i /* ERRORx `cannot use .* in assignment` */ = range a {}
+	for i /* ERRORx `cannot use .* in assignment` */ = range &a {}
+	for i /* ERRORx `cannot use .* in assignment` */ = range a[:] {}
 
 	var s string
 	var r R
 	_ = r
-	for i /* ERRORx `cannot use .* in assignment` */ = range s {
-	}
-	for i /* ERRORx `cannot use .* in assignment` */ = range "foo" {
-	}
-	for _, r /* ERRORx `cannot use .* in assignment` */ = range s {
-	}
-	for _, r /* ERRORx `cannot use .* in assignment` */ = range "foo" {
-	}
+	for i /* ERRORx `cannot use .* in assignment` */ = range s {}
+	for i /* ERRORx `cannot use .* in assignment` */ = range "foo" {}
+	for _, r /* ERRORx `cannot use .* in assignment` */ = range s {}
+	for _, r /* ERRORx `cannot use .* in assignment` */ = range "foo" {}
 }
 
 func issue6766b() {
-	for _ := /* ERROR "no new variables" */ range "" {
-	}
-	for a, a /* ERROR "redeclared" */ := range "" {
-		_ = a
-	}
+	for _ := /* ERROR "no new variables" */ range "" {}
+	for a, a /* ERROR "redeclared" */ := range "" { _ = a }
 	var a int
 	_ = a
-	for a, a /* ERROR "redeclared" */ := range []int{1, 2, 3} {
-		_ = a
-	}
+	for a, a /* ERROR "redeclared" */ := range []int{1, 2, 3} { _ = a }
 }
 
 // Test that despite errors in the range clause,
@@ -1013,21 +964,21 @@ func issue10148() {
 func labels0() {
 	goto L0
 	goto L1
-L0:
-L1:
-L1 /* ERROR "already declared" */ :
+	L0:
+	L1:
+	L1 /* ERROR "already declared" */ :
 	if true {
 		goto L2
-	L2:
-	L0 /* ERROR "already declared" */ :
+		L2:
+		L0 /* ERROR "already declared" */ :
 	}
 	_ = func() {
 		goto L0
 		goto L1
 		goto L2
-	L0:
-	L1:
-	L2:
+		L0:
+		L1:
+		L2:
 	}
 }
 
@@ -1037,7 +988,7 @@ func expression_statements(ch chan int) {
 	println()
 
 	0 /* ERROR "not used" */
-	1 /* ERROR "not used" */ + 2
+	1 /* ERROR "not used" */ +2
 	cap /* ERROR "not used" */ (ch)
 	println /* ERROR "must be called" */
 }

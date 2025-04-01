@@ -5,7 +5,6 @@ as needed.
 Read this file first before starting to make changes in the code.
 
 #
-
 ### Overall organization
 
 There are two almost identical typecheckers:
@@ -44,8 +43,8 @@ source transformations).
 In the following, examples and commands are based on types2 but usually apply
 directly to go/types.
 
-#
 
+#
 ### Tests
 
 There is a comprehensive suite of tests in the form of annotated source files.
@@ -67,8 +66,8 @@ reported error.
 For each issue #NNNN that is fixed in the typecheckers, a test
 should be added as src/internal/types/testdata/fixedbugs/issueNNNN.go.
 
-#
 
+#
 ### Debugging
 
 The pre-existing template ./testdata/manual.go is convenient for debugging
@@ -81,8 +80,8 @@ Useful debugging flags (together with `go test -run Manual`):
 - -v    (produce a typechecking trace)
 - -verify       (verify `ERROR` comments in manual.go)
 
-#
 
+#
 ### Frequently used types and variables
 
 #### Checker
@@ -91,6 +90,7 @@ File: check.go
 
 A `Checker` maintains all typechecking state relevant for typechecking a package.
 Typically the receiver type for typechecker methods.
+
 
 #### operand
 
@@ -101,6 +101,7 @@ The `operandMode` describes the kind of expression (constant, variable, etc.).
 Operands are the primary result of typechecking an expression.
 If typechecking of an expression fails, the resulting operand has mode `invalid`.
 
+
 #### Typ
 
 File: universe.go
@@ -108,8 +109,8 @@ File: universe.go
 The `Typ` array provides access to all predeclared basic types.
 `Typ[Invalid]` is used to denote an invalid type.
 
-#
 
+#
 ### Internal coding conventions
 
 #### Predicates
@@ -123,19 +124,17 @@ Predicates are typically named in form `isX`, such as `isInteger`.
 Typically, there is a Checker method for typechecking a particular expression.
 For instance, there is a method `Checker.unary` that typechecks unary expressions.
 The basic form of such a function f is as follows:
-
 ```
 func (check *Checker) f(x *operand, e syntax.Expr, /* addition arguments, if any */)
 ```
-
 The result of typechecking expression `e` is returned via the operand `x`
 (which sometimes also serves as incoming argument).
 If an error occurred the function f will report the error and try to continue
 as best as it can, but it may return an invalid operand (`x.mode == invalid`).
 Callers may need to explicitly check for invalid operands.
 
-#
 
+#
 ### TODO
 
 Add more relevant content.

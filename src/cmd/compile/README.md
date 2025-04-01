@@ -189,6 +189,7 @@ more sensitive to export data overheads. For this reason, it uses
 at all. This demands random access to the export data files of all
 dependencies, so is not suitable for distributed build systems.)
 
+
 ### 8. Tips
 
 #### Getting Started
@@ -242,8 +243,7 @@ dependencies, so is not suitable for distributed build systems.)
   $ go test cmd/internal/testdir -run='Test/escape.*.go'   # test specific files in 'test' dir
   ```
   For details, see the [testdir README](https://github.com/golang/go/tree/master/test#readme).
-  The `errorCheck` method
-  in [testdir_test.go](https://github.com/golang/go/blob/master/src/cmd/internal/testdir/testdir_test.go)
+  The `errorCheck` method in [testdir_test.go](https://github.com/golang/go/blob/master/src/cmd/internal/testdir/testdir_test.go)
   is helpful for a description of the `ERROR` comments used in many of those tests.
 
   In addition, the `go/types` package from the standard library and `cmd/compile/internal/types2`
@@ -330,7 +330,7 @@ dependencies, so is not suitable for distributed build systems.)
   benchmark results, including by manipulating CPU frequency scaling settings on Linux.
 
 * [view-annotated-file](https://github.com/loov/view-annotated-file) (from the community)
-  overlays inlining, bounds check, and escape info back onto the source code.
+   overlays inlining, bounds check, and escape info back onto the source code.
 
 * [godbolt.org](https://go.godbolt.org) is widely used to examine
   and share assembly output from many compilers, including the Go compiler. It can also

@@ -6,6 +6,7 @@ package sync_test
 
 import (
 	"runtime"
+	. "sync"
 	"testing"
 )
 

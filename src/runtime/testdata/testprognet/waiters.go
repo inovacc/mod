@@ -6,10 +6,10 @@ package main
 
 import (
 	"fmt"
-	"internal/runtime/atomic"
 	"io"
 	"log"
 	"net"
+	"internal/runtime/atomic"
 	"sync"
 	"time"
 	_ "unsafe" // for go:linkname

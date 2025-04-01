@@ -70,7 +70,7 @@ type ComplexAbs[T Complex] T
 func (a ComplexAbs[T]) Abs() ComplexAbs[T] {
 	r := float64(real(a))
 	i := float64(imag(a))
-	d := math.Sqrt(r*r + i*i)
+	d := math.Sqrt(r * r + i * i)
 	return ComplexAbs[T](complex(d, 0))
 }
 

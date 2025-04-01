@@ -403,16 +403,16 @@ without corrupting arguments or results.
 
 Special-purpose registers are as follows:
 
-| Register | Call meaning                       | Return meaning | Body meaning |
-|----------|------------------------------------|----------------|--------------|
-| RSP      | Stack pointer                      | Same           | Same         |
-| RBP      | Frame pointer                      | Same           | Same         |
-| RDX      | Closure context pointer            | Scratch        | Scratch      |
-| R12      | Scratch                            | Scratch        | Scratch      |
-| R13      | Scratch                            | Scratch        | Scratch      |
-| R14      | Current goroutine                  | Same           | Same         |
-| R15      | GOT reference temporary if dynlink | Same           | Same         |
-| X15      | Zero value (*)                     | Same           | Scratch      |
+| Register | Call meaning | Return meaning | Body meaning |
+| --- | --- | --- | --- |
+| RSP | Stack pointer | Same | Same |
+| RBP | Frame pointer | Same | Same |
+| RDX | Closure context pointer | Scratch | Scratch |
+| R12 | Scratch | Scratch | Scratch |
+| R13 | Scratch | Scratch | Scratch |
+| R14 | Current goroutine | Same | Same |
+| R15 | GOT reference temporary if dynlink | Same | Same |
+| X15 | Zero value (*) | Same | Scratch |
 
 (*) Except on Plan 9, where X15 is a scratch register because SSE
 registers cannot be used in note handlers (so the compiler avoids
@@ -488,17 +488,17 @@ simplify transitions to and from the C ABI.
 
 At calls, the MXCSR control bits are always set as follows:
 
-| Flag | Bit   | Value  | Meaning                    |
-|------|-------|--------|----------------------------|
-| FZ   | 15    | 0      | Do not flush to zero       |
-| RC   | 14/13 | 0 (RN) | Round to nearest           |
-| PM   | 12    | 1      | Precision masked           |
-| UM   | 11    | 1      | Underflow masked           |
-| OM   | 10    | 1      | Overflow masked            |
-| ZM   | 9     | 1      | Divide-by-zero masked      |
-| DM   | 8     | 1      | Denormal operations masked |
-| IM   | 7     | 1      | Invalid operations masked  |
-| DAZ  | 6     | 0      | Do not zero de-normals     |
+| Flag | Bit | Value | Meaning |
+| --- | --- | --- | --- |
+| FZ | 15 | 0 | Do not flush to zero |
+| RC | 14/13 | 0 (RN) | Round to nearest |
+| PM | 12 | 1 | Precision masked |
+| UM | 11 | 1 | Underflow masked |
+| OM | 10 | 1 | Overflow masked |
+| ZM | 9 | 1 | Divide-by-zero masked |
+| DM | 8 | 1 | Denormal operations masked |
+| IM | 7 | 1 | Invalid operations masked |
+| DAZ | 6 | 0 | Do not zero de-normals |
 
 The MXCSR status bits are callee-save.
 
@@ -541,16 +541,16 @@ registers.
 
 Special-purpose registers are as follows:
 
-| Register | Call meaning            | Return meaning | Body meaning                 |
-|----------|-------------------------|----------------|------------------------------|
-| RSP      | Stack pointer           | Same           | Same                         |
-| R30      | Link register           | Same           | Scratch (non-leaf functions) |
-| R29      | Frame pointer           | Same           | Same                         |
-| R28      | Current goroutine       | Same           | Same                         |
-| R27      | Scratch                 | Scratch        | Scratch                      |
-| R26      | Closure context pointer | Scratch        | Scratch                      |
-| R18      | Reserved (not used)     | Same           | Same                         |
-| ZR       | Zero value              | Same           | Same                         |
+| Register | Call meaning | Return meaning | Body meaning |
+| --- | --- | --- | --- |
+| RSP | Stack pointer | Same | Same |
+| R30 | Link register | Same | Scratch (non-leaf functions) |
+| R29 | Frame pointer | Same | Same |
+| R28 | Current goroutine | Same | Same |
+| R27 | Scratch | Scratch | Scratch |
+| R26 | Closure context pointer | Scratch | Scratch |
+| R18 | Reserved (not used) | Same | Same |
+| ZR  | Zero value | Same | Same |
 
 *Rationale*: These register meanings are compatible with Go’s
 stack-based calling convention.
@@ -612,20 +612,20 @@ registers and not preserved across calls.
 At calls, the floating-point control register (FPCR) bits are always
 set as follows:
 
-| Flag | Bit   | Value  | Meaning                                                             |
-|------|-------|--------|---------------------------------------------------------------------|
-| DN   | 25    | 0      | Propagate NaN operands                                              |
-| FZ   | 24    | 0      | Do not flush to zero                                                |
-| RC   | 23/22 | 0 (RN) | Round to nearest, choose even if tied                               |
-| IDE  | 15    | 0      | Denormal operations trap disabled                                   |
-| IXE  | 12    | 0      | Inexact trap disabled                                               |
-| UFE  | 11    | 0      | Underflow trap disabled                                             |
-| OFE  | 10    | 0      | Overflow trap disabled                                              |
-| DZE  | 9     | 0      | Divide-by-zero trap disabled                                        |
-| IOE  | 8     | 0      | Invalid operations trap disabled                                    |
-| NEP  | 2     | 0      | Scalar operations do not affect higher elements in vector registers |
-| AH   | 1     | 0      | No alternate handling of de-normal inputs                           |
-| FIZ  | 0     | 0      | Do not zero de-normals                                              |
+| Flag | Bit | Value | Meaning |
+| --- | --- | --- | --- |
+| DN  | 25 | 0 | Propagate NaN operands |
+| FZ  | 24 | 0 | Do not flush to zero |
+| RC  | 23/22 | 0 (RN) | Round to nearest, choose even if tied |
+| IDE | 15 | 0 | Denormal operations trap disabled |
+| IXE | 12 | 0 | Inexact trap disabled |
+| UFE | 11 | 0 | Underflow trap disabled |
+| OFE | 10 | 0 | Overflow trap disabled |
+| DZE | 9 | 0 | Divide-by-zero trap disabled |
+| IOE | 8 | 0 | Invalid operations trap disabled |
+| NEP | 2 | 0 | Scalar operations do not affect higher elements in vector registers |
+| AH  | 1 | 0 | No alternate handling of de-normal inputs |
+| FIZ | 0 | 0 | Do not zero de-normals |
 
 *Rationale*: Having a fixed FPCR control configuration allows Go
 functions to use floating-point and vector (SIMD) operations without
@@ -648,15 +648,15 @@ Register R20, R21 is Used by runtime.duffcopy, runtime.duffzero.
 Special-purpose registers used within Go generated code and Go assembly code
 are as follows:
 
-| Register | Call meaning            | Return meaning | Body meaning               |
-|----------|-------------------------|----------------|----------------------------|
-| R0       | Zero value              | Same           | Same                       |
-| R1       | Link register           | Link register  | Scratch                    |
-| R3       | Stack pointer           | Same           | Same                       |
-| R20,R21  | Scratch                 | Scratch        | Used by duffcopy, duffzero |
-| R22      | Current goroutine       | Same           | Same                       |
-| R29      | Closure context pointer | Same           | Same                       |
-| R30, R31 | used by the assembler   | Same           | Same                       |
+| Register | Call meaning | Return meaning | Body meaning |
+| --- | --- | --- | --- |
+| R0 | Zero value | Same | Same |
+| R1 | Link register | Link register | Scratch |
+| R3 | Stack pointer | Same | Same |
+| R20,R21 | Scratch | Scratch | Used by duffcopy, duffzero |
+| R22 | Current goroutine | Same | Same |
+| R29 | Closure context pointer | Same | Same |
+| R30, R31 | used by the assembler | Same | Same |
 
 *Rationale*: These register meanings are compatible with Go’s stack-based
 calling convention.
@@ -681,7 +681,6 @@ The "return PC" is loaded to the link register, R1, as part of the
 loong64 `JAL` operation.
 
 #### Flags
-
 All bits in CSR are system flags and are not modified by Go.
 
 ### ppc64 architecture
@@ -696,19 +695,18 @@ Register R31 is a permanent scratch register in Go.
 Special-purpose registers used within Go generated code and Go
 assembly code are as follows:
 
-| Register | Call meaning                       | Return meaning | Body meaning               |
-|----------|------------------------------------|----------------|----------------------------|
-| R0       | Zero value                         | Same           | Same                       |
-| R1       | Stack pointer                      | Same           | Same                       |
-| R2       | TOC register                       | Same           | Same                       |
-| R11      | Closure context pointer            | Scratch        | Scratch                    |
-| R12      | Function address on indirect calls | Scratch        | Scratch                    |
-| R13      | TLS pointer                        | Same           | Same                       |
-| R20,R21  | Scratch                            | Scratch        | Used by duffcopy, duffzero |
-| R30      | Current goroutine                  | Same           | Same                       |
-| R31      | Scratch                            | Scratch        | Scratch                    |
-| LR       | Link register                      | Link register  | Scratch                    |
-
+| Register | Call meaning | Return meaning | Body meaning |
+| --- | --- | --- | --- |
+| R0  | Zero value | Same | Same |
+| R1  | Stack pointer | Same | Same |
+| R2  | TOC register | Same | Same |
+| R11 | Closure context pointer | Scratch | Scratch |
+| R12 | Function address on indirect calls | Scratch | Scratch |
+| R13 | TLS pointer | Same | Same |
+| R20,R21 | Scratch | Scratch | Used by duffcopy, duffzero |
+| R30 | Current goroutine | Same | Same |
+| R31 | Scratch | Scratch | Scratch |
+| LR  | Link register | Link register | Scratch |
 *Rationale*: These register meanings are compatible with Go’s
 stack-based calling convention.
 
@@ -794,17 +792,17 @@ It uses F10 – F17, F8, F9, F18 – F23 for floating-point arguments and result
 Special-purpose registers used within Go generated code and Go
 assembly code are as follows:
 
-| Register | Call meaning            | Return meaning | Body meaning               |
-|----------|-------------------------|----------------|----------------------------|
-| X0       | Zero value              | Same           | Same                       |
-| X1       | Link register           | Link register  | Scratch                    |
-| X2       | Stack pointer           | Same           | Same                       |
-| X3       | Global pointer          | Same           | Used by dynamic linker     |
-| X4       | TLS (thread pointer)    | TLS            | Scratch                    |
-| X24,X25  | Scratch                 | Scratch        | Used by duffcopy, duffzero |
-| X26      | Closure context pointer | Scratch        | Scratch                    |
-| X27      | Current goroutine       | Same           | Same                       |
-| X31      | Scratch                 | Scratch        | Scratch                    |
+| Register | Call meaning | Return meaning | Body meaning |
+| --- | --- | --- | --- |
+| X0  | Zero value | Same | Same |
+| X1  | Link register | Link register | Scratch |
+| X2  | Stack pointer | Same | Same |
+| X3  | Global pointer | Same | Used by dynamic linker |
+| X4  | TLS (thread pointer) | TLS | Scratch |
+| X24,X25 | Scratch | Scratch | Used by duffcopy, duffzero |
+| X26 | Closure context pointer | Scratch | Scratch |
+| X27 | Current goroutine | Same | Same |
+| X31 | Scratch | Scratch | Scratch |
 
 *Rationale*: These register meanings are compatible with Go’s
 stack-based calling convention. Context register X20 will change to X26,

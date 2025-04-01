@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	. "runtime"
 	"testing"
 	"time"
 )

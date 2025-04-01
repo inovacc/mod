@@ -15,7 +15,7 @@ func main() {
 }
 
 type Map[K comparable, V any] interface {
-	map[K]V
+	map[K] V
 }
 
 func copyMap[M Map[K, V], K comparable, V any](m M) M {

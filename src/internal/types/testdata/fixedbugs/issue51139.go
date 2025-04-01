@@ -19,8 +19,8 @@ func _() {
 func Append[S ~[]T, T any](s S, x ...T) S { /* implementation of append */ return s }
 
 func _() {
-	type MyPtr *int
-	var x []MyPtr
-	_ = append(x, new(int))
-	_ = Append(x, new(int))
+        type MyPtr *int
+        var x []MyPtr
+        _ = append(x, new(int))
+        _ = Append(x, new(int))
 }

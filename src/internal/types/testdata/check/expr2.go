@@ -15,7 +15,7 @@ func _bool() {
 	var x, y float32
 	b = x < y
 	_ = b
-	_ = struct{ b bool }{x < y}
+	_ = struct{b bool}{x < y}
 }
 
 // corner cases
@@ -111,8 +111,8 @@ func pointers() {
 	var (
 		ps1 *S1
 		ps2 *S2
-		p1  P1
-		p2  P2
+		p1 P1
+		p2 P2
 	)
 	_ = ps1 == ps1
 	_ = ps1 == ps2 /* ERROR "mismatched types" */
@@ -134,34 +134,34 @@ func channels() {
 
 	// various element types (named types)
 	type (
-		C1  chan int
+		C1 chan int
 		C1r <-chan int
 		C1s chan<- int
-		C2  chan float32
+		C2 chan float32
 	)
 	var (
-		c1  C1
+		c1 C1
 		c1r C1r
 		c1s C1s
 		c1a chan int
-		c2  C2
+		c2 C2
 	)
 	_ = c1 == c1
-	_ = c1 == c1r  /* ERROR "mismatched types" */
-	_ = c1 == c1s  /* ERROR "mismatched types" */
+	_ = c1 == c1r /* ERROR "mismatched types" */
+	_ = c1 == c1s /* ERROR "mismatched types" */
 	_ = c1r == c1s /* ERROR "mismatched types" */
 	_ = c1 == c1a
 	_ = c1a == c1
-	_ = c1 == c2  /* ERROR "mismatched types" */
+	_ = c1 == c2 /* ERROR "mismatched types" */
 	_ = c1a == c2 /* ERROR "mismatched types" */
 
 	// various element types (unnamed types)
 	var (
-		d1  chan int
+		d1 chan int
 		d1r <-chan int
 		d1s chan<- int
 		d1a chan<- int
-		d2  chan float32
+		d2 chan float32
 	)
 	_ = d1 == d1
 	_ = d1 == d1r
@@ -169,7 +169,7 @@ func channels() {
 	_ = d1r == d1s /* ERROR "mismatched types" */
 	_ = d1 == d1a
 	_ = d1a == d1
-	_ = d1 == d2  /* ERROR "mismatched types" */
+	_ = d1 == d2 /* ERROR "mismatched types" */
 	_ = d1a == d2 /* ERROR "mismatched types" */
 }
 
@@ -177,7 +177,6 @@ func channels() {
 type S1 struct{}
 type S11 struct{}
 type S2 struct{}
-
 func (*S1) m() int
 func (*S11) m() int
 func (*S11) n()
@@ -192,11 +191,8 @@ func interfaces() {
 	_ = i /* ERROR "< not defined" */ < j
 
 	// various interfaces
-	var ii interface {
-		m() int
-		n()
-	}
-	var k interface{ m() float32 }
+	var ii interface { m() int; n() }
+	var k interface { m() float32 }
 	_ = i == ii
 	_ = i == k /* ERROR "mismatched types" */
 
@@ -205,7 +201,7 @@ func interfaces() {
 	var s11 S11
 	var s2 S2
 
-	_ = i == 0  /* ERROR "cannot convert" */
+	_ = i == 0 /* ERROR "cannot convert" */
 	_ = i == s1 /* ERROR "mismatched types" */
 	_ = i == &s1
 	_ = i == &s11
@@ -215,7 +211,7 @@ func interfaces() {
 
 	// issue #28164
 	// testcase from issue
-	_ = interface{}(nil) == [] /* ERROR "slice can only be compared to nil" */ int(nil)
+	_ = interface{}(nil) == [ /* ERROR "slice can only be compared to nil" */ ]int(nil)
 
 	// related cases
 	var e interface{}

@@ -250,5 +250,5 @@ type TildeConstraint interface {
 }
 
 type StructConstraint interface {
-	struct{ F int }
+	struct { F int }
 }

@@ -24,7 +24,7 @@ func _[T C1](ch T) {
 }
 
 func _[T C2](ch T) {
-	ch <- /* ERROR "cannot send to receive-only channel" */ 0
+	ch  <-/* ERROR "cannot send to receive-only channel" */ 0
 }
 
 func _[T C3](ch T) {

@@ -6,7 +6,7 @@ package p
 
 // test case from issue
 
-type _ interface {
+type _ interface{
 	m /* ERROR unexpected name int in interface type; possibly missing semicolon or newline or } */ int
 }
 
@@ -16,10 +16,10 @@ const (
 	x int = 10 /* ERROR unexpected literal "foo" in grouped declaration; possibly missing semicolon or newline or \) */ "foo"
 )
 
-var _ = []int{1, 2, 3 /* ERROR unexpected name int in composite literal; possibly missing comma or } */ int}
+var _ = []int{1, 2, 3 /* ERROR unexpected name int in composite literal; possibly missing comma or } */ int }
 
 type _ struct {
-	x y /* ERROR syntax error: unexpected comma in struct type; possibly missing semicolon or newline or } */,
+	x y /* ERROR syntax error: unexpected comma in struct type; possibly missing semicolon or newline or } */ ,
 }
 
 func f(a, b c /* ERROR unexpected name d in parameter list; possibly missing comma or \) */ d) {

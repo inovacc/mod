@@ -7,9 +7,9 @@ package p
 import "io"
 
 type A interface {
-	io.Reader
+        io.Reader
 }
 
 func f(a A) {
-	a.Read(nil)
+        a.Read(nil)
 }

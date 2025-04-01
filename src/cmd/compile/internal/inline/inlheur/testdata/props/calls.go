@@ -80,10 +80,8 @@ func T_calls_on_panic_paths(x int, q []string) {
 
 // calls.go T_calls_not_on_panic_paths 93 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch|ParamMayFeedIfOrSwitch
-//	1 ParamNoInfo
-//
+//   0 ParamFeedsIfOrSwitch|ParamMayFeedIfOrSwitch
+//   1 ParamNoInfo
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[96,0],"ResultFlags":null}
 // callsite: calls.go:103:9|0 flagstr "" flagval 0 score 2 mask 0 maskstr ""
@@ -157,9 +155,7 @@ func T_pass_noninlinable_func_to_param_feeding_indirect_call(x int) int {
 
 // calls.go T_pass_inlinable_func_to_param_feeding_nested_indirect_call 165 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":[0]}
 // callsite: calls.go:166:25|0 flagstr "" flagval 0 score -13 mask 1024 maskstr "passInlinableFuncToNestedIndCallAdj"
@@ -172,9 +168,7 @@ func T_pass_inlinable_func_to_param_feeding_nested_indirect_call(x int) int {
 
 // calls.go T_pass_noninlinable_func_to_param_feeding_nested_indirect_call 177 0 1
 // ParamFlags
-//
-//	0 ParamFeedsIfOrSwitch
-//
+//   0 ParamFeedsIfOrSwitch
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":[0]}
 // callsite: calls.go:178:25|0 flagstr "" flagval 0 score 7 mask 256 maskstr "passFuncToNestedIndCallAdj"

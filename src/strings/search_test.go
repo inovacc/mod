@@ -6,6 +6,7 @@ package strings_test
 
 import (
 	"slices"
+	. "strings"
 	"testing"
 )
 

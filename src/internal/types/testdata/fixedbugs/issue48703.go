@@ -15,10 +15,10 @@ func (_ List[P]) m() (_ List[List[P]]) { return }
 type R[P any] int
 
 func (*R[R /* ERROR "must be an identifier" */ [int]]) m0() {}
-func (R[P]) m1(R[R[P]])                                     {}
-func (R[P]) m2(R[*P])                                       {}
-func (R[P]) m3([unsafe.Sizeof(new(R[P]))]int)               {}
-func (R[P]) m4([unsafe.Sizeof(new(R[R[P]]))]int)            {}
+func (R[P]) m1(R[R[P]])                                   {}
+func (R[P]) m2(R[*P])                                     {}
+func (R[P]) m3([unsafe.Sizeof(new(R[P]))]int)             {}
+func (R[P]) m4([unsafe.Sizeof(new(R[R[P]]))]int)          {}
 
 // Mutual recursion
 type M[P any] int

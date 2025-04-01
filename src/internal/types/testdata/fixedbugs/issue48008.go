@@ -14,28 +14,24 @@ func _(x interface{}) {
 	case T[int]:
 	case []T[int]:
 	case [10]T[int]:
-	case struct{ T[int] }:
+	case struct{T[int]}:
 	case *T[int]:
 	case func(T[int]):
-	case interface{ m(T[int]) }:
-	case map[T[int]]string:
+	case interface{m(T[int])}:
+	case map[T[int]] string:
 	case chan T[int]:
 
 	case T /* ERROR "cannot use generic type T[P any] without instantiation" */ :
 	case []T /* ERROR "cannot use generic type" */ :
 	case [10]T /* ERROR "cannot use generic type" */ :
-	case struct {
-		T /* ERROR "cannot use generic type" */
-	}:
+	case struct{T /* ERROR "cannot use generic type" */ }:
 	case *T /* ERROR "cannot use generic type" */ :
-	case func(T /* ERROR "cannot use generic type" */):
-	case interface {
-		m(T /* ERROR "cannot use generic type" */)
-	}:
-	case map[T] /* ERROR "cannot use generic type" */ string:
+	case func(T /* ERROR "cannot use generic type" */ ):
+	case interface{m(T /* ERROR "cannot use generic type" */ )}:
+	case map[T /* ERROR "cannot use generic type" */ ] string:
 	case chan T /* ERROR "cannot use generic type" */ :
 
-	case T /* ERROR "cannot use generic type" */, *T /* ERROR "cannot use generic type" */ :
+	case T /* ERROR "cannot use generic type" */ , *T /* ERROR "cannot use generic type" */ :
 	}
 }
 
@@ -43,7 +39,7 @@ func _(x interface{}) {
 
 func _(x interface{}) {
 	switch x.(type) {
-	case (nil), int:
+	case ((nil)), int:
 	}
 }
 

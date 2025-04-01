@@ -4,14 +4,14 @@
 
 package p
 
-type T0 interface {
+type T0 interface{
 }
 
-type T1 interface {
+type T1 interface{
 	~int
 }
 
-type T2 interface {
+type T2 interface{
 	comparable
 }
 

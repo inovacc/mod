@@ -33,17 +33,15 @@ func absDifference[T numericAbs[T /* ERROR "T does not satisfy Numeric" */]](a, 
 // The second example from the issue.
 type T[P int] struct{ f P }
 
-func _[P T[P /* ERROR "P does not satisfy int" */]]() {}
+func _[P T[P /* ERROR "P does not satisfy int" */ ]]() {}
 
 // Additional tests
-func _[P T[T /* ERROR "T[P] does not satisfy int" */ [P /* ERROR "P does not satisfy int" */]]]()  {}
-func _[P T[Q /* ERROR "Q does not satisfy int" */], Q T[P /* ERROR "P does not satisfy int" */]]() {}
-func _[P T[Q], Q int]()                                                                            {}
+func _[P T[T /* ERROR "T[P] does not satisfy int" */ [P /* ERROR "P does not satisfy int" */ ]]]() {}
+func _[P T[Q /* ERROR "Q does not satisfy int" */ ], Q T[P /* ERROR "P does not satisfy int" */ ]]() {}
+func _[P T[Q], Q int]() {}
 
 type C[P comparable] struct{ f P }
-
 func _[P C[C[P]]]() {}
-func _[P C[C /* ERROR "C[Q] does not satisfy comparable" */ [Q /* ERROR "Q does not satisfy comparable" */]], Q func()]() {
-}
-func _[P [10]C[P]]()            {}
-func _[P struct{ f C[C[P]] }]() {}
+func _[P C[C /* ERROR "C[Q] does not satisfy comparable" */ [Q /* ERROR "Q does not satisfy comparable" */]], Q func()]() {}
+func _[P [10]C[P]]() {}
+func _[P struct{ f C[C[P]]}]() {}

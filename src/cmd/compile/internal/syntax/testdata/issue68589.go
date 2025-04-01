@@ -4,6 +4,4 @@
 
 package p
 
-var _ ( /* ERROR unexpected keyword type */
-type T
-)
+var _ (/* ERROR unexpected keyword type */ type T)

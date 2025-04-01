@@ -15,11 +15,12 @@ func _[P1 comparable, P2 S2]() {
 	_ = f[S2]
 	_ = f[S3]
 
-	type L1 struct{ x P1 }
-	type L2 struct{ x P2 }
+	type L1 struct { x P1 }
+	type L2 struct { x P2 }
 	_ = f[L1]
-	_ = f[L2 /* ERROR "L2 does not satisfy comparable" */]
+	_ = f[L2 /* ERROR "L2 does not satisfy comparable" */ ]
 }
+
 
 // example from issue
 

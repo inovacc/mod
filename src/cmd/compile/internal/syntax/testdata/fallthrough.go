@@ -27,6 +27,8 @@ func _() {
 
 	case 4:
 		fallthrough // trailing empty statements are ok
+		;
+		;
 
 	case 5:
 		fallthrough

@@ -8,8 +8,8 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"strconv"
 	"strings"
+	"strconv"
 )
 
 // IsSerialized returns true if r is a serialized Profile.

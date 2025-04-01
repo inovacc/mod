@@ -10,7 +10,8 @@ import "C"
 
 func main() {
 	C.f(&C.S{
-		a: 1 +
+		a: 1+
+
 			(3 + ""), // ERROR HERE
 
 		ptr: nil,

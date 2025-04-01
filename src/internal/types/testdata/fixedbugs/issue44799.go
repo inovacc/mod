@@ -6,10 +6,7 @@ package main
 
 func Map[F, T any](s []F, f func(F) T) []T { return nil }
 
-func Reduce[Elem1, Elem2 any](s []Elem1, initializer Elem2, f func(Elem2, Elem1) Elem2) Elem2 {
-	var x Elem2
-	return x
-}
+func Reduce[Elem1, Elem2 any](s []Elem1, initializer Elem2, f func(Elem2, Elem1) Elem2) Elem2 { var x Elem2; return x }
 
 func main() {
 	var s []int
