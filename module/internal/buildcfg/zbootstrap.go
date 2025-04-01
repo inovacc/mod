@@ -14,7 +14,6 @@ var DefaultGOMIPS = `hardfloat`
 var DefaultGOMIPS64 = `hardfloat`
 var DefaultGOPPC64 = `power8`
 var DefaultGORISCV64 = `rva20u64`
-var defaultGOEXPERIMENT = ``
 var defaultGO_EXTLINK_ENABLED = ``
 var defaultGO_LDSO = ``
 var version = `go1.24.1`

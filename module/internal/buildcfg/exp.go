@@ -28,7 +28,7 @@ type ExperimentFlags struct {
 // default in the current toolchain. This is, in effect, the "control"
 // configuration and any variation from this is an experiment.
 var Experiment ExperimentFlags = func() ExperimentFlags {
-	flags, err := ParseGOEXPERIMENT(GOOS, GOARCH, envOr("GOEXPERIMENT", defaultGOEXPERIMENT))
+	flags, err := ParseGOEXPERIMENT(GOOS, GOARCH, envOr("GOEXPERIMENT", DefaultGOEXPERIMENT))
 	if err != nil {
 		Error = err
 		return ExperimentFlags{}
@@ -91,48 +91,48 @@ func ParseGOEXPERIMENT(goos, goarch, goexp string) (*ExperimentFlags, error) {
 	// Pick up any changes to the baseline configuration from the
 	// GOEXPERIMENT environment. This can be set at make.bash time
 	// and overridden at build time.
-	if goexp != "" {
-		// Create a map of known experiment names.
-		names := make(map[string]func(bool))
-		rv := reflect.ValueOf(&flags.Flags).Elem()
-		rt := rv.Type()
-		for i := 0; i < rt.NumField(); i++ {
-			field := rv.Field(i)
-			names[strings.ToLower(rt.Field(i).Name)] = field.SetBool
-		}
-
-		// "regabi" is an alias for all working regabi
-		// subexperiments, and not an experiment itself. Doing
-		// this as an alias make both "regabi" and "noregabi"
-		// do the right thing.
-		names["regabi"] = func(v bool) {
-			flags.RegabiWrappers = v
-			flags.RegabiArgs = v
-		}
-
-		// Parse names.
-		for _, f := range strings.Split(goexp, ",") {
-			if f == "" {
-				continue
-			}
-			if f == "none" {
-				// GOEXPERIMENT=none disables all experiment flags.
-				// This is used by cmd/dist, which doesn't know how
-				// to build with any experiment flags.
-				flags.Flags = goexperiment.Flags{}
-				continue
-			}
-			val := true
-			if strings.HasPrefix(f, "no") {
-				f, val = f[2:], false
-			}
-			set, ok := names[f]
-			if !ok {
-				return nil, fmt.Errorf("unknown GOEXPERIMENT %s", f)
-			}
-			set(val)
-		}
-	}
+	//if goexp != "" {
+	//	// Create a map of known experiment names.
+	//	names := make(map[string]func(bool))
+	//	rv := reflect.ValueOf(&flags.Flags).Elem()
+	//	rt := rv.Type()
+	//	for i := 0; i < rt.NumField(); i++ {
+	//		field := rv.Field(i)
+	//		names[strings.ToLower(rt.Field(i).Name)] = field.SetBool
+	//	}
+	//
+	//	// "regabi" is an alias for all working regabi
+	//	// subexperiments, and not an experiment itself. Doing
+	//	// this as an alias make both "regabi" and "noregabi"
+	//	// do the right thing.
+	//	names["regabi"] = func(v bool) {
+	//		flags.RegabiWrappers = v
+	//		flags.RegabiArgs = v
+	//	}
+	//
+	//	// Parse names.
+	//	for _, f := range strings.Split(goexp, ",") {
+	//		if f == "" {
+	//			continue
+	//		}
+	//		if f == "none" {
+	//			// GOEXPERIMENT=none disables all experiment flags.
+	//			// This is used by cmd/dist, which doesn't know how
+	//			// to build with any experiment flags.
+	//			flags.Flags = goexperiment.Flags{}
+	//			continue
+	//		}
+	//		val := true
+	//		if strings.HasPrefix(f, "no") {
+	//			f, val = f[2:], false
+	//		}
+	//		set, ok := names[f]
+	//		if !ok {
+	//			return nil, fmt.Errorf("unknown GOEXPERIMENT %s", f)
+	//		}
+	//		set(val)
+	//	}
+	//}
 
 	if regabiAlwaysOn {
 		flags.RegabiWrappers = true

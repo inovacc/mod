@@ -13,7 +13,6 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/module/internal/base"
 	"github.com/inovacc/mod/module/internal/cfg"
-	"github.com/inovacc/mod/module/internal/godebug"
 	"github.com/inovacc/mod/module/internal/gover"
 	"github.com/inovacc/mod/module/internal/modfetch"
 	"github.com/inovacc/mod/module/internal/modload"

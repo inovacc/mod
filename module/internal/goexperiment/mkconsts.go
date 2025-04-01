@@ -10,7 +10,7 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/inovacc/mod/module/internal/goexperiment"
+	"internal/goexperiment"
 	"log"
 	"os"
 	"reflect"

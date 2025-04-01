@@ -101,7 +101,6 @@ import (
 	"github.com/inovacc/mod/module/internal/base"
 	"github.com/inovacc/mod/module/internal/cfg"
 	"github.com/inovacc/mod/module/internal/diff"
-	"github.com/inovacc/mod/module/internal/fips140"
 	"github.com/inovacc/mod/module/internal/fsys"
 	"github.com/inovacc/mod/module/internal/gover"
 	"github.com/inovacc/mod/module/internal/imports"
@@ -1960,9 +1959,9 @@ func (ld *loader) pkgTest(ctx context.Context, pkg *loadPkg, testFlags loadPkgFl
 // stdVendor returns the canonical import path for the package with the given
 // path when imported from the standard-library package at parentPath.
 func (ld *loader) stdVendor(parentPath, path string) string {
-	if p, _, ok := fips140.ResolveImport(path); ok {
-		return p
-	}
+	//if p, _, ok := fips140.ResolveImport(path); ok {
+	//	return p
+	//}
 	if search.IsStandardImportPath(path) {
 		return path
 	}

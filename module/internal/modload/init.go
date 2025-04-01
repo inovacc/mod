@@ -12,7 +12,6 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/module/internal/base"
 	"github.com/inovacc/mod/module/internal/cfg"
-	"github.com/inovacc/mod/module/internal/fips140"
 	"github.com/inovacc/mod/module/internal/fsys"
 	"github.com/inovacc/mod/module/internal/godebugs"
 	"github.com/inovacc/mod/module/internal/gover"
@@ -355,7 +354,6 @@ func BinDir() string {
 // for example 'go mod tidy', that don't operate in workspace mode.
 func InitWorkfile() {
 	// Initialize fsys early because we need overlay to read go.work file.
-	fips140.Init()
 	if err := fsys.Init(); err != nil {
 		base.Fatal(err)
 	}
@@ -414,8 +412,6 @@ func Init() {
 		return
 	}
 	initialized = true
-
-	fips140.Init()
 
 	// Keep in sync with WillBeEnabled. We perform extra validation here, and
 	// there are lots of diagnostics and side effects, so we can't use

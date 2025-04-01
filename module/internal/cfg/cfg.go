@@ -10,10 +10,10 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/inovacc/mod/module/internal/build"
 	"github.com/inovacc/mod/module/internal/buildcfg"
 	"github.com/inovacc/mod/module/internal/fsys"
 	"github.com/inovacc/mod/module/internal/pathcache"
+	"go/build"
 	"io"
 	"io/fs"
 	"os"
@@ -412,7 +412,7 @@ func CanGetenv(key string) bool {
 		// Assume anything in the user file or go.env file is valid.
 		return true
 	}
-	return strings.Contains(cfg.KnownEnv, "\t"+key+"\n")
+	return strings.Contains(KnownEnv, "\t"+key+"\n")
 }
 
 var (

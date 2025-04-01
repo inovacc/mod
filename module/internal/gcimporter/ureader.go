@@ -5,7 +5,6 @@
 package gcimporter
 
 import (
-	"github.com/inovacc/mod/module/internal/godebug"
 	"github.com/inovacc/mod/module/internal/pkgbits"
 	"go/token"
 	"go/types"
