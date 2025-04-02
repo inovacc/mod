@@ -32,12 +32,12 @@
 package obj
 
 import (
-	"cmd/internal/goobj"
-	"cmd/internal/hash"
-	"cmd/internal/objabi"
 	"encoding/base64"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"internal/buildcfg"
 	"log"
 	"math"

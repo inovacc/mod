@@ -6,7 +6,7 @@ package errorstest
 
 import (
 	"bytes"
-	"cmd/internal/quoted"
+	"github.com/inovacc/mod/cmd/internal/quoted"
 	"internal/testenv"
 	"os"
 	"os/exec"

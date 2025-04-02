@@ -6,7 +6,7 @@ package life_test
 
 import (
 	"bytes"
-	"cmd/cgo/internal/cgotest"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"internal/testenv"
 	"log"
 	"os"

@@ -17,8 +17,8 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/asm/internal/lex"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // An end-to-end test for the assembler: Do we print what we parse?

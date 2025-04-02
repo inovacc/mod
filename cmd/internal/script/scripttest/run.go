@@ -7,9 +7,9 @@ package scripttest
 
 import (
 	"bytes"
-	"cmd/internal/script"
 	"context"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/script"
 	"internal/testenv"
 	"internal/txtar"
 	"os"

@@ -11,11 +11,11 @@ import (
 	"regexp"
 	"sort"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/rangefunc"
-	"cmd/compile/internal/syntax"
-	"cmd/compile/internal/types2"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/rangefunc"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 var versionErrorRx = regexp.MustCompile(`requires go[0-9]+\.[0-9]+ or later`)

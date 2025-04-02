@@ -5,10 +5,10 @@
 package main
 
 import (
-	"cmd/compile/internal/loopvar/testdata/inlines/a"
-	"cmd/compile/internal/loopvar/testdata/inlines/b"
-	"cmd/compile/internal/loopvar/testdata/inlines/c"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/loopvar/testdata/inlines/a"
+	"github.com/inovacc/mod/cmd/compile/internal/loopvar/testdata/inlines/b"
+	"github.com/inovacc/mod/cmd/compile/internal/loopvar/testdata/inlines/c"
 	"os"
 )
 

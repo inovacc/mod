@@ -3,7 +3,7 @@
 package ssa
 
 import "internal/buildcfg"
-import "cmd/compile/internal/types"
+import "github.com/inovacc/mod/cmd/compile/internal/types"
 
 func rewriteValueARM(v *Value) bool {
 	switch v.Op {

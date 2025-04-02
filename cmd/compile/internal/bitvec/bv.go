@@ -7,8 +7,8 @@ package bitvec
 import (
 	"math/bits"
 
-	"cmd/compile/internal/base"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 const (

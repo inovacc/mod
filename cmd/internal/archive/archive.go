@@ -9,10 +9,10 @@ package archive
 import (
 	"bufio"
 	"bytes"
-	"cmd/internal/bio"
-	"cmd/internal/goobj"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/goobj"
 	"io"
 	"log"
 	"os"

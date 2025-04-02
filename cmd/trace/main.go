@@ -5,11 +5,11 @@
 package main
 
 import (
-	"cmd/internal/browser"
-	"cmd/internal/telemetry/counter"
 	"cmp"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/browser"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 	"internal/trace"
 	"internal/trace/event"
 	"internal/trace/raw"

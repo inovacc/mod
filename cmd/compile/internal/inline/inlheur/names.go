@@ -5,7 +5,7 @@
 package inlheur
 
 import (
-	"cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
 	"go/constant"
 )
 

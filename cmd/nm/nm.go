@@ -12,8 +12,8 @@ import (
 	"os"
 	"sort"
 
-	"cmd/internal/objfile"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/objfile"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 const helpText = `usage: go tool nm [options] file...

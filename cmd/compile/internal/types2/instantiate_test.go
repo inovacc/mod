@@ -4,7 +4,7 @@
 package types2_test
 
 import (
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 	"strings"
 	"testing"
 )

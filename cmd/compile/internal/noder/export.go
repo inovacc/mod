@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"io"
 
-	"cmd/compile/internal/base"
-	"cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/bio"
 )
 
 func WriteExports(out *bio.Writer) {

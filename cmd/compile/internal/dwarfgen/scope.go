@@ -7,11 +7,11 @@ package dwarfgen
 import (
 	"sort"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/internal/dwarf"
-	"cmd/internal/obj"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/internal/dwarf"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // See golang.org/issue/20390.

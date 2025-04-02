@@ -5,10 +5,10 @@
 package inlheur
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/pgoir"
-	"cmd/compile/internal/typecheck"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/pgoir"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
 	"os"
 	"strings"
 )

@@ -357,7 +357,7 @@ func testCoverHTML(t *testing.T, toolexecArg string) {
 
 	// go test -coverprofile testdata/html/html.cov cmd/cover/testdata/html
 	htmlProfile := filepath.Join(dir, "html.cov")
-	cmd := testenv.Command(t, testenv.GoToolPath(t), "test", toolexecArg, "-coverprofile", htmlProfile, "cmd/cover/testdata/html")
+	cmd := testenv.Command(t, testenv.GoToolPath(t), "test", toolexecArg, "-coverprofile", htmlProfile, "github.com/inovacc/mod/cmd/cover/testdata/html")
 	cmd.Env = append(cmd.Environ(), "CMDCOVER_TOOLEXEC=true")
 	run(cmd, t)
 	// testcover -html testdata/html/html.cov -o testdata/html/html.html

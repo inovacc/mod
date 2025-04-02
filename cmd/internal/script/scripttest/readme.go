@@ -6,7 +6,7 @@ package scripttest
 
 import (
 	"bytes"
-	"cmd/internal/script"
+	"github.com/inovacc/mod/cmd/internal/script"
 	"internal/diff"
 	"internal/testenv"
 	"os"
@@ -36,7 +36,7 @@ func checkScriptReadme(t *testing.T, engine *script.Engine, env []string, script
 	args.Conditions = conds.String()
 
 	doc := new(strings.Builder)
-	cmd := testenv.Command(t, gotool, "doc", "cmd/internal/script")
+	cmd := testenv.Command(t, gotool, "doc", "github.com/inovacc/mod/cmd/internal/script")
 	cmd.Env = env
 	cmd.Stdout = doc
 	if err := cmd.Run(); err != nil {

@@ -12,12 +12,12 @@ import (
 	"internal/buildcfg"
 	"strings"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/escape"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/reflectdata"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/escape"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/reflectdata"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 )
 
 // Rewrite append(src, x, y, z) so that any side effects in

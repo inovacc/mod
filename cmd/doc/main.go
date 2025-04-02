@@ -55,7 +55,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 var (

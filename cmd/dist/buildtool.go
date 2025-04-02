@@ -33,31 +33,31 @@ import (
 // These will be imported during bootstrap as bootstrap/name, like bootstrap/math/big.
 var bootstrapDirs = []string{
 	"cmp",
-	"cmd/asm",
-	"cmd/asm/internal/...",
-	"cmd/cgo",
-	"cmd/compile",
-	"cmd/compile/internal/...",
-	"cmd/internal/archive",
-	"cmd/internal/bio",
-	"cmd/internal/codesign",
-	"cmd/internal/dwarf",
-	"cmd/internal/edit",
-	"cmd/internal/gcprog",
-	"cmd/internal/goobj",
-	"cmd/internal/hash",
-	"cmd/internal/macho",
-	"cmd/internal/obj/...",
-	"cmd/internal/objabi",
-	"cmd/internal/pgo",
-	"cmd/internal/pkgpath",
-	"cmd/internal/quoted",
-	"cmd/internal/src",
-	"cmd/internal/sys",
-	"cmd/internal/telemetry",
-	"cmd/internal/telemetry/counter",
-	"cmd/link",
-	"cmd/link/internal/...",
+	"github.com/inovacc/mod/cmd/asm",
+	"github.com/inovacc/mod/cmd/asm/internal/...",
+	"github.com/inovacc/mod/cmd/cgo",
+	"github.com/inovacc/mod/cmd/compile",
+	"github.com/inovacc/mod/cmd/compile/internal/...",
+	"github.com/inovacc/mod/cmd/internal/archive",
+	"github.com/inovacc/mod/cmd/internal/bio",
+	"github.com/inovacc/mod/cmd/internal/codesign",
+	"github.com/inovacc/mod/cmd/internal/dwarf",
+	"github.com/inovacc/mod/cmd/internal/edit",
+	"github.com/inovacc/mod/cmd/internal/gcprog",
+	"github.com/inovacc/mod/cmd/internal/goobj",
+	"github.com/inovacc/mod/cmd/internal/hash",
+	"github.com/inovacc/mod/cmd/internal/macho",
+	"github.com/inovacc/mod/cmd/internal/obj/...",
+	"github.com/inovacc/mod/cmd/internal/objabi",
+	"github.com/inovacc/mod/cmd/internal/pgo",
+	"github.com/inovacc/mod/cmd/internal/pkgpath",
+	"github.com/inovacc/mod/cmd/internal/quoted",
+	"github.com/inovacc/mod/cmd/internal/src",
+	"github.com/inovacc/mod/cmd/internal/sys",
+	"github.com/inovacc/mod/cmd/internal/telemetry",
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter",
+	"github.com/inovacc/mod/cmd/link",
+	"github.com/inovacc/mod/cmd/link/internal/...",
 	"compress/flate",
 	"compress/zlib",
 	"container/heap",
@@ -70,7 +70,7 @@ var bootstrapDirs = []string{
 	"go/version",
 	"internal/abi",
 	"internal/coverage",
-	"cmd/internal/cov/covcmd",
+	"github.com/inovacc/mod/cmd/internal/cov/covcmd",
 	"internal/bisect",
 	"internal/buildcfg",
 	"internal/exportdata",
@@ -185,7 +185,7 @@ func bootstrapBuildTools() {
 				}
 
 				xmkdirall(dst)
-				if path == "cmd/cgo" {
+				if path == "github.com/inovacc/mod/cmd/cgo" {
 					// Write to src because we need the file both for bootstrap
 					// and for later in the main build.
 					mkzdefaultcc("", pathf("%s/zdefaultcc.go", src))
@@ -255,10 +255,10 @@ func bootstrapBuildTools() {
 
 	// Copy binaries into tool binary directory.
 	for _, name := range bootstrapDirs {
-		if !strings.HasPrefix(name, "cmd/") {
+		if !strings.HasPrefix(name, "github.com/inovacc/mod/cmd/") {
 			continue
 		}
-		name = name[len("cmd/"):]
+		name = name[len("github.com/inovacc/mod/cmd/"):]
 		if !strings.Contains(name, "/") {
 			copyfile(pathf("%s/%s%s", tooldir, name, exe), pathf("%s/bin/%s%s", workspace, name, exe), writeExec)
 		}
@@ -367,7 +367,7 @@ func bootstrapFixImports(srcFile string) string {
 		}
 
 		path := m[2]
-		if strings.HasPrefix(path, "cmd/") {
+		if strings.HasPrefix(path, "github.com/inovacc/mod/cmd/") {
 			path = "bootstrap/" + path
 		} else {
 			for _, dir := range bootstrapDirs {

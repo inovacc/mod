@@ -14,16 +14,16 @@ import (
 	"sort"
 	"strings"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/objw"
-	"cmd/compile/internal/reflectdata"
-	"cmd/compile/internal/rttype"
-	"cmd/compile/internal/ssagen"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/objw"
+	"github.com/inovacc/mod/cmd/compile/internal/reflectdata"
+	"github.com/inovacc/mod/cmd/compile/internal/rttype"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // walkSwitch walks a switch statement.

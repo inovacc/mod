@@ -7,10 +7,10 @@
 package ssa
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/types"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 type stackAllocState struct {

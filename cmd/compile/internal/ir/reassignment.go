@@ -5,7 +5,7 @@
 package ir
 
 import (
-	"cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
 )
 
 // A ReassignOracle efficiently answers queries about whether local

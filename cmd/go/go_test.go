@@ -31,18 +31,18 @@ import (
 	"testing"
 	"time"
 
-	"cmd/go/internal/base"
-	"cmd/go/internal/cache"
-	"cmd/go/internal/cfg"
-	"cmd/go/internal/gover"
-	"cmd/go/internal/search"
-	"cmd/go/internal/toolchain"
-	"cmd/go/internal/vcs"
-	"cmd/go/internal/vcweb/vcstest"
-	"cmd/go/internal/web/intercept"
-	"cmd/go/internal/work"
-	"cmd/internal/robustio"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/go/internal/base"
+	"github.com/inovacc/mod/cmd/go/internal/cache"
+	"github.com/inovacc/mod/cmd/go/internal/cfg"
+	"github.com/inovacc/mod/cmd/go/internal/gover"
+	"github.com/inovacc/mod/cmd/go/internal/search"
+	"github.com/inovacc/mod/cmd/go/internal/toolchain"
+	"github.com/inovacc/mod/cmd/go/internal/vcs"
+	"github.com/inovacc/mod/cmd/go/internal/vcweb/vcstest"
+	"github.com/inovacc/mod/cmd/go/internal/web/intercept"
+	"github.com/inovacc/mod/cmd/go/internal/work"
+	"github.com/inovacc/mod/cmd/internal/robustio"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 func init() {
@@ -161,7 +161,7 @@ func TestMain(m *testing.M) {
 	// It is not a standard go command flag; use os.Getenv, not cfg.Getenv.
 	if os.Getenv("GO_GCFLAGS") != "" {
 		fmt.Fprintf(os.Stderr, "testing: warning: no tests to run\n") // magic string for cmd/go
-		fmt.Printf("cmd/go test is not compatible with $GO_GCFLAGS being set\n")
+		fmt.Printf("github.com/inovacc/mod/cmd/go test is not compatible with $GO_GCFLAGS being set\n")
 		fmt.Printf("SKIP\n")
 		return
 	}
@@ -1018,7 +1018,7 @@ func TestGoListStdDoesNotIncludeCommands(t *testing.T) {
 	defer tg.cleanup()
 	tg.parallel()
 	tg.run("list", "std")
-	tg.grepStdoutNot("cmd/", "go list std shows commands")
+	tg.grepStdoutNot("github.com/inovacc/mod/cmd/", "go list std shows commands")
 }
 
 func TestGoListCmdOnlyShowsCommands(t *testing.T) {
@@ -1031,7 +1031,7 @@ func TestGoListCmdOnlyShowsCommands(t *testing.T) {
 	tg.run("list", "cmd")
 	out := strings.TrimSpace(tg.getStdout())
 	for _, line := range strings.Split(out, "\n") {
-		if !strings.Contains(line, "cmd/") {
+		if !strings.Contains(line, "github.com/inovacc/mod/cmd/") {
 			t.Error("go list cmd shows non-commands")
 			break
 		}
@@ -1091,7 +1091,7 @@ func TestGoListTest(t *testing.T) {
 	tg.grepStdoutNot(`^testing \[bytes.test\]$`, "unexpected test copy of testing")
 	tg.grepStdoutNot(`^testing$`, "unexpected real copy of testing")
 
-	tg.run("list", "-test", "cmd/buildid", "cmd/doc")
+	tg.run("list", "-test", "github.com/inovacc/mod/cmd/buildid", "github.com/inovacc/mod/cmd/doc")
 	tg.grepStdout(`^cmd/buildid$`, "missing cmd/buildid")
 	tg.grepStdout(`^cmd/doc$`, "missing cmd/doc")
 	tg.grepStdout(`^cmd/doc\.test$`, "missing cmd/doc test")

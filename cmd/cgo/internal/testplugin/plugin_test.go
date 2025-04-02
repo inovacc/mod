@@ -6,10 +6,10 @@ package plugin_test
 
 import (
 	"bytes"
-	"cmd/cgo/internal/cgotest"
 	"context"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"internal/platform"
 	"internal/testenv"
 	"log"

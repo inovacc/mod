@@ -9,8 +9,8 @@
 package arch
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/obj/riscv"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/riscv"
 )
 
 // IsRISCV64AMO reports whether the op (as defined by a riscv.A*

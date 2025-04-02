@@ -30,10 +30,10 @@
 package mips
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
 	"log"
 	"slices"
 )

@@ -1,6 +1,6 @@
 package main
 
-import "cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/p"
+import "github.com/inovacc/mod/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/p"
 
 func pstring(s *string) {
 	println(*s)

@@ -5,8 +5,8 @@
 package ssa
 
 import (
-	"cmd/compile/internal/types"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"testing"
 )
 

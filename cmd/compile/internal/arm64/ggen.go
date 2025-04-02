@@ -5,11 +5,11 @@
 package arm64
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/objw"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/obj/arm64"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/objw"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/arm64"
 )
 
 func padframe(frame int64) int64 {

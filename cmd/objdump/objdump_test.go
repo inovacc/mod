@@ -5,9 +5,9 @@
 package main
 
 import (
-	"cmd/internal/hash"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/hash"
 	"internal/platform"
 	"internal/testenv"
 	"os"

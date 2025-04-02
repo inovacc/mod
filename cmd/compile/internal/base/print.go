@@ -13,8 +13,8 @@ import (
 	"sort"
 	"strings"
 
-	"cmd/internal/src"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 // An errorMsg is a queued error message, waiting to be printed.

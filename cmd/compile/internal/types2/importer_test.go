@@ -7,8 +7,8 @@
 package types2_test
 
 import (
-	gcimporter "cmd/compile/internal/importer"
-	"cmd/compile/internal/types2"
+	gcimporter "github.com/inovacc/mod/cmd/compile/internal/importer"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 	"io"
 )
 

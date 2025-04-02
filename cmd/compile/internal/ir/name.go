@@ -5,12 +5,12 @@
 package ir
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 
 	"go/constant"
 )

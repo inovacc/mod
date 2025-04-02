@@ -11,7 +11,7 @@ import (
 	"log"
 	"strconv"
 
-	"cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
 )
 
 // A lang is a language version broken into major and minor numbers.

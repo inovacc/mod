@@ -5,8 +5,8 @@
 package main
 
 import (
-	"cmd/internal/script/scripttest"
 	"flag"
+	"github.com/inovacc/mod/cmd/internal/script/scripttest"
 	"internal/testenv"
 	"runtime"
 	"testing"

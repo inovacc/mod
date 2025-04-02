@@ -11,14 +11,14 @@ import (
 	"strings"
 	"text/scanner"
 
-	"cmd/asm/internal/arch"
-	"cmd/asm/internal/flags"
-	"cmd/asm/internal/lex"
-	"cmd/internal/obj"
-	"cmd/internal/obj/ppc64"
-	"cmd/internal/obj/riscv"
-	"cmd/internal/obj/x86"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/asm/internal/arch"
+	"github.com/inovacc/mod/cmd/asm/internal/flags"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/ppc64"
+	"github.com/inovacc/mod/cmd/internal/obj/riscv"
+	"github.com/inovacc/mod/cmd/internal/obj/x86"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 // TODO: configure the architecture

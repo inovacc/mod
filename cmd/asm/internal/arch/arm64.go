@@ -9,9 +9,9 @@
 package arch
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/obj/arm64"
 	"errors"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/arm64"
 )
 
 var arm64LS = map[string]uint8{

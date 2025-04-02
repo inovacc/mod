@@ -5,14 +5,14 @@
 package ssa_test
 
 import (
-	cmddwarf "cmd/internal/dwarf"
-	"cmd/internal/quoted"
 	"cmp"
 	"debug/dwarf"
 	"debug/elf"
 	"debug/macho"
 	"debug/pe"
 	"fmt"
+	cmddwarf "github.com/inovacc/mod/cmd/internal/dwarf"
+	"github.com/inovacc/mod/cmd/internal/quoted"
 	"internal/platform"
 	"internal/testenv"
 	"internal/xcoff"
@@ -80,7 +80,7 @@ func TestStmtLines(t *testing.T) {
 
 	// Build cmd/go forcing DWARF enabled, as a large test case.
 	dir := t.TempDir()
-	out, err := testenv.Command(t, testenv.GoToolPath(t), "build", "-ldflags=-w=0", "-o", dir+"/test.exe", "cmd/go").CombinedOutput()
+	out, err := testenv.Command(t, testenv.GoToolPath(t), "build", "-ldflags=-w=0", "-o", dir+"/test.exe", "github.com/inovacc/mod/cmd/go").CombinedOutput()
 	if err != nil {
 		t.Fatalf("go build: %v\n%s", err, out)
 	}

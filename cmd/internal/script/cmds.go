@@ -5,10 +5,10 @@
 package script
 
 import (
-	"cmd/internal/pathcache"
-	"cmd/internal/robustio"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/pathcache"
+	"github.com/inovacc/mod/cmd/internal/robustio"
 	"internal/diff"
 	"io/fs"
 	"os"

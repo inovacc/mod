@@ -19,8 +19,8 @@ import (
 	"strings"
 	"testing"
 
-	imacho "cmd/internal/macho"
-	"cmd/internal/sys"
+	imacho "github.com/inovacc/mod/cmd/internal/macho"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 var AuthorPaidByTheColumnInch struct {

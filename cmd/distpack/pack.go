@@ -45,7 +45,7 @@ import (
 	"strings"
 	"time"
 
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 func usage() {

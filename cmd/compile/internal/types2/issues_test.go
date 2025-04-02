@@ -7,15 +7,15 @@
 package types2_test
 
 import (
-	"cmd/compile/internal/syntax"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"internal/testenv"
 	"regexp"
 	"slices"
 	"strings"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 func TestIssue5770(t *testing.T) {

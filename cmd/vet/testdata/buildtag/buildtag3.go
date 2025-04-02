@@ -5,9 +5,9 @@
 // This file contains tests for the buildtag checker.
 
 //go:build good
-// ERRORNEXT "[+]build lines do not match //go:build condition"
-// +build bad
+// +build good
 
+// ERRORNEXT "[+]build lines do not match //go:build condition"
 package testdata
 
 var _ = `

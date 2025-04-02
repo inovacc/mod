@@ -7,8 +7,8 @@ package ir
 import (
 	"go/constant"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 )
 
 func ConstType(n Node) constant.Kind {

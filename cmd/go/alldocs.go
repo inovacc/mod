@@ -3090,7 +3090,7 @@
 // match the import path "net/http" from the standard library. Instead, the
 // complete import path "net/http" must be used.
 //
-// Import paths beginning with "cmd/" only match source code in
+// Import paths beginning with "github.com/inovacc/mod/cmd/" only match source code in
 // the Go repository.
 //
 // An import path is a pattern if it includes one or more "..." wildcards,

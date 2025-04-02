@@ -5,9 +5,9 @@
 package riscv64
 
 import (
-	"cmd/compile/internal/objw"
-	"cmd/internal/obj"
-	"cmd/internal/obj/riscv"
+	"github.com/inovacc/mod/cmd/compile/internal/objw"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/riscv"
 )
 
 func ginsnop(pp *objw.Progs) *obj.Prog {

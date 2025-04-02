@@ -24,8 +24,8 @@ import (
 	"sync"
 	"testing"
 
-	"cmd/go/internal/modfetch/codehost"
-	"cmd/internal/par"
+	"github.com/inovacc/mod/cmd/go/internal/modfetch/codehost"
+	"github.com/inovacc/mod/cmd/internal/par"
 
 	"golang.org/x/mod/module"
 	"golang.org/x/mod/semver"

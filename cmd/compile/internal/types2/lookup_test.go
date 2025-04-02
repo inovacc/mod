@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 // BenchmarkLookupFieldOrMethod measures types.LookupFieldOrMethod performance.

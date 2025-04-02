@@ -9,10 +9,10 @@ package dwarf
 
 import (
 	"bytes"
-	"cmd/internal/src"
 	"cmp"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/buildcfg"
 	"os/exec"
 	"slices"

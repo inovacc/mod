@@ -5,9 +5,9 @@
 package types2_test
 
 import (
-	"cmd/compile/internal/syntax"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"internal/goversion"
 	"internal/testenv"
 	"slices"
@@ -15,7 +15,7 @@ import (
 	"sync"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 // nopos indicates an unknown position

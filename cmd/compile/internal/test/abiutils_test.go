@@ -6,15 +6,15 @@ package test
 
 import (
 	"bufio"
-	"cmd/compile/internal/abi"
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ssagen"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/obj/x86"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/abi"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/x86"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"os"
 	"testing"
 )

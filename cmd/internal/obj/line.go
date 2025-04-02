@@ -5,8 +5,8 @@
 package obj
 
 import (
-	"cmd/internal/goobj"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // AddImport adds a package to the list of imported packages.

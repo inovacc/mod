@@ -5,10 +5,10 @@
 package x86
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ssagen"
-	"cmd/internal/obj/x86"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/internal/obj/x86"
 	"internal/buildcfg"
 	"os"
 )

@@ -6,9 +6,9 @@ package ssa
 
 import (
 	"bytes"
-	"cmd/internal/src"
 	"cmp"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"html"
 	"io"
 	"os"

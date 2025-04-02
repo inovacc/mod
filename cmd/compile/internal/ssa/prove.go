@@ -5,8 +5,8 @@
 package ssa
 
 import (
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"math"
 	"math/bits"
 )

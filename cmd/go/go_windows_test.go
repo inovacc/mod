@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/internal/robustio"
+	"github.com/inovacc/mod/cmd/internal/robustio"
 )
 
 func TestAbsolutePath(t *testing.T) {

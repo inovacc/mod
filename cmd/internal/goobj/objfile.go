@@ -19,10 +19,10 @@
 package goobj
 
 import (
-	"cmd/internal/bio"
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
 	"unsafe"
 )
 

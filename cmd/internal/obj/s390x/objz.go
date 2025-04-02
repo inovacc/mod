@@ -30,9 +30,9 @@
 package s390x
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
 	"internal/abi"
 	"log"
 	"math"

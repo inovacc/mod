@@ -6,11 +6,11 @@ package main
 
 import (
 	"bytes"
-	"cmd/internal/pkgpath"
 	"debug/elf"
 	"debug/macho"
 	"debug/pe"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/pkgpath"
 	"go/ast"
 	"go/printer"
 	"go/token"

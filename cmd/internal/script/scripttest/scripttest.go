@@ -7,9 +7,9 @@ package scripttest
 
 import (
 	"bufio"
-	"cmd/internal/pathcache"
-	"cmd/internal/script"
 	"errors"
+	"github.com/inovacc/mod/cmd/internal/pathcache"
+	"github.com/inovacc/mod/cmd/internal/script"
 	"io"
 	"strings"
 	"testing"

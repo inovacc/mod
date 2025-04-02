@@ -12,15 +12,15 @@ import (
 	"log"
 	"os"
 
-	"cmd/asm/internal/arch"
-	"cmd/asm/internal/asm"
-	"cmd/asm/internal/flags"
-	"cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/asm/internal/arch"
+	"github.com/inovacc/mod/cmd/asm/internal/asm"
+	"github.com/inovacc/mod/cmd/asm/internal/flags"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
 
-	"cmd/internal/bio"
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 func main() {

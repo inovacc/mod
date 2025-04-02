@@ -8,7 +8,7 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 )
 
 func CmpPos(p, q syntax.Pos) int { return cmpPos(p, q) }

@@ -6,8 +6,8 @@ package main
 
 import (
 	"bufio"
-	"cmd/internal/browser"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/browser"
 	"html/template"
 	"io"
 	"math"

@@ -7,14 +7,14 @@ package s390x
 import (
 	"math"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/logopt"
-	"cmd/compile/internal/ssa"
-	"cmd/compile/internal/ssagen"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/obj/s390x"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/logopt"
+	"github.com/inovacc/mod/cmd/compile/internal/ssa"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/s390x"
 )
 
 // ssaMarkMoves marks any MOVXconst ops that need to avoid clobbering flags.

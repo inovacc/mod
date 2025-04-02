@@ -6,11 +6,11 @@
 package objfile
 
 import (
-	"cmd/internal/archive"
 	"cmp"
 	"debug/dwarf"
 	"debug/gosym"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/archive"
 	"io"
 	"os"
 	"slices"

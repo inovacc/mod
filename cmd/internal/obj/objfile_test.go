@@ -12,8 +12,8 @@ import (
 	"testing"
 	"unsafe"
 
-	"cmd/internal/goobj"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 var dummyArch = LinkArch{Arch: sys.ArchAMD64}

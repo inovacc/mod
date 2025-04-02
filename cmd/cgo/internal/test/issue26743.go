@@ -9,4 +9,4 @@
 
 package cgotest
 
-import _ "cmd/cgo/internal/test/issue26743"
+import _ "github.com/inovacc/mod/cmd/cgo/internal/test/issue26743"

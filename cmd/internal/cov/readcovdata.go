@@ -5,8 +5,8 @@
 package cov
 
 import (
-	"cmd/internal/bio"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
 	"internal/coverage"
 	"internal/coverage/decodecounter"
 	"internal/coverage/decodemeta"

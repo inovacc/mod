@@ -7,16 +7,16 @@ package ssa
 import (
 	"testing"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/obj/arm64"
-	"cmd/internal/obj/s390x"
-	"cmd/internal/obj/x86"
-	"cmd/internal/src"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/arm64"
+	"github.com/inovacc/mod/cmd/internal/obj/s390x"
+	"github.com/inovacc/mod/cmd/internal/obj/x86"
+	"github.com/inovacc/mod/cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 var CheckFunc = checkFunc

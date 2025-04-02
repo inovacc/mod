@@ -37,10 +37,10 @@ package ssa
 // the parser can be used instead of Fun.
 
 import (
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"reflect"
 	"testing"
 )

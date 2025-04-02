@@ -7,11 +7,11 @@ package shared_test
 import (
 	"bufio"
 	"bytes"
-	"cmd/cgo/internal/cgotest"
 	"debug/elf"
 	"encoding/binary"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"go/build"
 	"internal/platform"
 	"internal/testenv"

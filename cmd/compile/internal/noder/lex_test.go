@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	"cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 )
 
 func eq(a, b []string) bool {

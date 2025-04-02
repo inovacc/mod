@@ -7,12 +7,12 @@ package noder
 import (
 	"go/constant"
 
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/syntax"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/compile/internal/types2"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // Helpers for constructing typed IR nodes.

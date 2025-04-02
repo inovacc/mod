@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 var updateIntrinsics = flag.Bool("update", false, "Print an updated intrinsics table")

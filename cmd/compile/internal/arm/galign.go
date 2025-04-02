@@ -5,9 +5,9 @@
 package arm
 
 import (
-	"cmd/compile/internal/ssa"
-	"cmd/compile/internal/ssagen"
-	"cmd/internal/obj/arm"
+	"github.com/inovacc/mod/cmd/compile/internal/ssa"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/internal/obj/arm"
 	"internal/buildcfg"
 )
 

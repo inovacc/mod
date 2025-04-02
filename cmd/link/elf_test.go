@@ -7,11 +7,11 @@
 package main
 
 import (
-	"cmd/internal/buildid"
-	"cmd/internal/hash"
-	"cmd/link/internal/ld"
 	"debug/elf"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/buildid"
+	"github.com/inovacc/mod/cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/link/internal/ld"
 	"internal/platform"
 	"internal/testenv"
 	"os"

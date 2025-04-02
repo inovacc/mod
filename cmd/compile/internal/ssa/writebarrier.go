@@ -5,12 +5,12 @@
 package ssa
 
 import (
-	"cmd/compile/internal/reflectdata"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/reflectdata"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/buildcfg"
 )
 

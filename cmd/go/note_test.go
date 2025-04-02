@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	"cmd/internal/buildid"
+	"github.com/inovacc/mod/cmd/internal/buildid"
 )
 
 func TestNoteReading(t *testing.T) {

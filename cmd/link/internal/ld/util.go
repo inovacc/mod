@@ -5,9 +5,9 @@
 package ld
 
 import (
-	"cmd/link/internal/loader"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
 	"os"
 )
 

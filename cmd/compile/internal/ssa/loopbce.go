@@ -5,9 +5,9 @@
 package ssa
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 )
 
 type indVarFlags uint8

@@ -8,9 +8,9 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"internal/buildcfg"
 	. "internal/types/errors"
 )

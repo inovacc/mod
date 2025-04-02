@@ -102,8 +102,8 @@ import (
 	"os/exec"
 	"os/signal"
 
-	"cmd/internal/telemetry/counter"
-	"cmd/internal/test2json"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/test2json"
 )
 
 var (

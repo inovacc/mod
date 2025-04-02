@@ -7,7 +7,7 @@ package covcmd
 import (
 	"crypto/sha256"
 	"fmt"
-	"internal/coverage"
+	"github.com/inovacc/mod/internal/coverage"
 )
 
 // CoverPkgConfig is a bundle of information passed from the Go

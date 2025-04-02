@@ -5,7 +5,7 @@
 package ssa
 
 import (
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj"
 	"sort"
 )
 

@@ -5,8 +5,8 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 )
 
 // This file should not be copied to go/types.  See go.dev/issue/67477

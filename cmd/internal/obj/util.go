@@ -6,8 +6,8 @@ package obj
 
 import (
 	"bytes"
-	"cmd/internal/objabi"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"internal/abi"
 	"internal/buildcfg"
 	"io"

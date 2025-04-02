@@ -6,8 +6,8 @@ package main
 
 import (
 	"bufio"
-	"cmd/internal/archive"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/archive"
 	"internal/testenv"
 	"io"
 	"io/fs"

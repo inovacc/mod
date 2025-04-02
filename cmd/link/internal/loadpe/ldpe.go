@@ -7,15 +7,15 @@ package loadpe
 
 import (
 	"bytes"
-	"cmd/internal/bio"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
 	"debug/pe"
 	"encoding/binary"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 	"io"
 	"strings"
 )

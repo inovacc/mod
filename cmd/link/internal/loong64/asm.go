@@ -5,13 +5,13 @@
 package loong64
 
 import (
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
-	"cmd/link/internal/ld"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
 	"debug/elf"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/link/internal/ld"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 	"log"
 )
 

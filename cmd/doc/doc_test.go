@@ -90,7 +90,7 @@ type test struct {
 	no   []string // Regular expressions that should not match.
 }
 
-const p = "cmd/doc/testdata"
+const p = "github.com/inovacc/mod/cmd/doc/testdata"
 
 var tests = []test{
 	// Sanity check.

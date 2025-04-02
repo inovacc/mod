@@ -2,7 +2,7 @@
 
 package loong64
 
-import "cmd/internal/obj"
+import "github.com/inovacc/mod/cmd/internal/obj"
 
 var Anames = []string{
 	obj.A_ARCHSPECIFIC: "ABSD",

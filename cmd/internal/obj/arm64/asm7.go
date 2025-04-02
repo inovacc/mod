@@ -31,10 +31,10 @@
 package arm64
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"log"
 	"math"
 	"slices"

@@ -7,8 +7,8 @@
 package types2_test
 
 import (
-	"cmd/compile/internal/syntax"
-	"cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 	"internal/testenv"
 	"testing"
 )

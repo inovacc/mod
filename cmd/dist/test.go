@@ -571,7 +571,7 @@ func (t *tester) registerStdTest(pkg string) {
 
 		timeoutSec := 180 * time.Second
 		for _, pkg := range stdMatches {
-			if pkg == "cmd/go" {
+			if pkg == "github.com/inovacc/mod/cmd/go" {
 				timeoutSec *= 3
 				break
 			}
@@ -623,7 +623,7 @@ func (t *tester) registerTests() {
 		// it's a very large test, we register is specially as several shards to
 		// enable better load balancing on sharded builders. Ideally the build
 		// system would know how to shard any large test package.
-		"cmd/internal/testdir": true,
+		"github.com/inovacc/mod/cmd/internal/testdir": true,
 	}
 
 	// Fast path to avoid the ~1 second of `go list std cmd` when
@@ -666,7 +666,7 @@ func (t *tester) registerTests() {
 			if registerStdTestSpecially[pkg] {
 				continue
 			}
-			if t.short && (strings.HasPrefix(pkg, "vendor/") || strings.HasPrefix(pkg, "cmd/vendor/")) {
+			if t.short && (strings.HasPrefix(pkg, "vendor/") || strings.HasPrefix(pkg, "github.com/inovacc/mod/cmd/vendor/")) {
 				// Vendored code has no tests, and we don't care too much about vet errors
 				// since we can't modify the code, so skip the tests in short mode.
 				// We still let the longtest builders vet them.
@@ -936,8 +936,8 @@ func (t *tester) registerTests() {
 	//
 	// The same logic applies to the release notes that correspond to each api/next file.
 	if goos == "darwin" || ((goos == "linux" || goos == "windows") && goarch == "amd64") {
-		t.registerTest("API release note check", &goTest{variant: "check", pkg: "cmd/relnote", testFlags: []string{"-check"}})
-		t.registerTest("API check", &goTest{variant: "check", pkg: "cmd/api", timeout: 5 * time.Minute, testFlags: []string{"-check"}})
+		t.registerTest("API release note check", &goTest{variant: "check", pkg: "github.com/inovacc/mod/cmd/relnote", testFlags: []string{"-check"}})
+		t.registerTest("API check", &goTest{variant: "check", pkg: "github.com/inovacc/mod/cmd/api", timeout: 5 * time.Minute, testFlags: []string{"-check"}})
 	}
 
 	// Runtime CPU tests.
@@ -980,7 +980,7 @@ func (t *tester) registerTests() {
 				&goTest{
 					variant:     id,
 					omitVariant: true, // Shards of the same Go package; tests are guaranteed not to overlap.
-					pkg:         "cmd/internal/testdir",
+					pkg:         "github.com/inovacc/mod/cmd/internal/testdir",
 					testFlags:   []string{fmt.Sprintf("-shard=%d", shard), fmt.Sprintf("-shards=%d", nShards)},
 					runOnHost:   true,
 				},
@@ -1219,7 +1219,7 @@ func (t *tester) registerCgoTests(heading string) {
 	cgoTest := func(variant string, subdir, linkmode, buildmode string, opts ...registerTestOpt) *goTest {
 		gt := &goTest{
 			variant:   variant,
-			pkg:       "cmd/cgo/internal/" + subdir,
+			pkg:       "github.com/inovacc/mod/cmd/cgo/internal/" + subdir,
 			buildmode: buildmode,
 		}
 		var ldflags []string
@@ -1543,13 +1543,13 @@ func (t *tester) registerRaceTests() {
 	// slows down all.bash (by 10 seconds on my laptop).
 	// The race builder should catch any error here, but doesn't.
 	// TODO(iant): Figure out how to catch this.
-	// t.registerTest(hdr, &goTest{variant: "race", race: true, runTests: "TestParallelTest", pkg: "cmd/go"})
+	// t.registerTest(hdr, &goTest{variant: "race", race: true, runTests: "TestParallelTest", pkg: "github.com/inovacc/mod/cmd/go"})
 	if t.cgoEnabled {
 		// Building cmd/cgo/internal/test takes a long time.
 		// There are already cgo-enabled packages being tested with the race detector.
 		// We shouldn't need to redo all of cmd/cgo/internal/test too.
 		// The race builder will take care of this.
-		// t.registerTest(hdr, &goTest{variant: "race", race: true, env: []string{"GOTRACEBACK=2"}, pkg: "cmd/cgo/internal/test"})
+		// t.registerTest(hdr, &goTest{variant: "race", race: true, env: []string{"GOTRACEBACK=2"}, pkg: "github.com/inovacc/mod/cmd/cgo/internal/test"})
 	}
 	if t.extLink() {
 		// Test with external linking; see issue 9133.

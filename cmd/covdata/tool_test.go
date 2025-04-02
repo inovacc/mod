@@ -5,9 +5,9 @@
 package main_test
 
 import (
-	cmdcovdata "cmd/covdata"
 	"flag"
 	"fmt"
+	cmdcovdata "github.com/inovacc/mod/cmd/covdata"
 	"internal/coverage/pods"
 	"internal/goexperiment"
 	"internal/testenv"

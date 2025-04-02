@@ -31,8 +31,8 @@
 package x86
 
 import (
-	"cmd/internal/obj"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 var Register = []string{

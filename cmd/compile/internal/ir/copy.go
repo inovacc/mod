@@ -5,7 +5,7 @@
 package ir
 
 import (
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // Copy returns a shallow copy of n.

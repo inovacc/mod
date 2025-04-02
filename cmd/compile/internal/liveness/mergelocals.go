@@ -5,12 +5,12 @@
 package liveness
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/bitvec"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/ssa"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/bitvec"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/ssa"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"os"
 	"path/filepath"
 	"slices"

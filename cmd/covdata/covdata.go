@@ -5,11 +5,11 @@
 package main
 
 import (
-	"cmd/internal/cov"
-	"cmd/internal/pkgpattern"
-	"cmd/internal/telemetry/counter"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/cov"
+	"github.com/inovacc/mod/cmd/internal/pkgpattern"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 	"os"
 	"runtime"
 	"runtime/pprof"

@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"cmd/cgo/internal/test/issue9400"
+	"github.com/inovacc/mod/cmd/cgo/internal/test/issue9400"
 )
 
 func test9400(t *testing.T) {

@@ -584,10 +584,10 @@ func fprint(w io.Writer, n Node) {
 			"internal/buildcfg",
 			"math",
 			"math/bits",
-			"cmd/internal/obj",
-			"cmd/compile/internal/base",
-			"cmd/compile/internal/types",
-			"cmd/compile/internal/ir",
+			"github.com/inovacc/mod/cmd/internal/obj",
+			"github.com/inovacc/mod/cmd/compile/internal/base",
+			"github.com/inovacc/mod/cmd/compile/internal/types",
+			"github.com/inovacc/mod/cmd/compile/internal/ir",
 		}, n.Arch.imports...) {
 			fmt.Fprintf(w, "import %q\n", path)
 		}

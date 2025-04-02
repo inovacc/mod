@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"testing"
 
-	"cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 )
 
 func TestDedupLibraries(t *testing.T) {

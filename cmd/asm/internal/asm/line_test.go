@@ -5,7 +5,7 @@
 package asm
 
 import (
-	"cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
 	"strings"
 	"testing"
 )

@@ -5,7 +5,7 @@
 package ld
 
 import (
-	imacho "cmd/internal/macho"
+	imacho "github.com/inovacc/mod/cmd/internal/macho"
 
 	"bytes"
 	"compress/zlib"

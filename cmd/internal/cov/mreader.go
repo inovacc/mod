@@ -5,7 +5,7 @@
 package cov
 
 import (
-	"cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/bio"
 	"io"
 	"os"
 )

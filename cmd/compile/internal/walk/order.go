@@ -9,15 +9,15 @@ import (
 	"go/constant"
 	"internal/buildcfg"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/reflectdata"
-	"cmd/compile/internal/ssa"
-	"cmd/compile/internal/staticinit"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/reflectdata"
+	"github.com/inovacc/mod/cmd/compile/internal/ssa"
+	"github.com/inovacc/mod/cmd/compile/internal/staticinit"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // Rewrite tree to use separate statements to enforce

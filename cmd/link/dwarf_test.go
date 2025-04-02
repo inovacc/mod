@@ -6,10 +6,10 @@ package main
 
 import (
 	"bytes"
-	cmddwarf "cmd/internal/dwarf"
-	"cmd/internal/objfile"
-	"cmd/internal/quoted"
 	"debug/dwarf"
+	cmddwarf "github.com/inovacc/mod/cmd/internal/dwarf"
+	"github.com/inovacc/mod/cmd/internal/objfile"
+	"github.com/inovacc/mod/cmd/internal/quoted"
 	"internal/platform"
 	"internal/testenv"
 	"os"

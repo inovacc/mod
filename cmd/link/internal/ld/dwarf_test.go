@@ -20,9 +20,9 @@ import (
 	"strings"
 	"testing"
 
-	intdwarf "cmd/internal/dwarf"
-	objfilepkg "cmd/internal/objfile" // renamed to avoid conflict with objfile function
-	"cmd/link/internal/dwtest"
+	intdwarf "github.com/inovacc/mod/cmd/internal/dwarf"
+	objfilepkg "github.com/inovacc/mod/cmd/internal/objfile" // renamed to avoid conflict with objfile function
+	"github.com/inovacc/mod/cmd/link/internal/dwtest"
 )
 
 func mustHaveDWARF(t testing.TB) {

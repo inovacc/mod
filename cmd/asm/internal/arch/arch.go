@@ -6,17 +6,17 @@
 package arch
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/obj/arm"
-	"cmd/internal/obj/arm64"
-	"cmd/internal/obj/loong64"
-	"cmd/internal/obj/mips"
-	"cmd/internal/obj/ppc64"
-	"cmd/internal/obj/riscv"
-	"cmd/internal/obj/s390x"
-	"cmd/internal/obj/wasm"
-	"cmd/internal/obj/x86"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/arm"
+	"github.com/inovacc/mod/cmd/internal/obj/arm64"
+	"github.com/inovacc/mod/cmd/internal/obj/loong64"
+	"github.com/inovacc/mod/cmd/internal/obj/mips"
+	"github.com/inovacc/mod/cmd/internal/obj/ppc64"
+	"github.com/inovacc/mod/cmd/internal/obj/riscv"
+	"github.com/inovacc/mod/cmd/internal/obj/s390x"
+	"github.com/inovacc/mod/cmd/internal/obj/wasm"
+	"github.com/inovacc/mod/cmd/internal/obj/x86"
 	"strings"
 )
 

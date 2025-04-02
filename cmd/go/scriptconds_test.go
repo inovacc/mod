@@ -5,11 +5,11 @@
 package main_test
 
 import (
-	"cmd/go/internal/cfg"
-	"cmd/internal/script"
-	"cmd/internal/script/scripttest"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/internal/cfg"
+	"github.com/inovacc/mod/cmd/internal/script"
+	"github.com/inovacc/mod/cmd/internal/script/scripttest"
 	"internal/testenv"
 	"os"
 	"os/exec"

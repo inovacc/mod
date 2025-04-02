@@ -4,7 +4,7 @@
 
 package types
 
-import "cmd/compile/internal/base"
+import "github.com/inovacc/mod/cmd/compile/internal/base"
 
 // AlgKind describes the kind of algorithms used for comparing and
 // hashing a Type.

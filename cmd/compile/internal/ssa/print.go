@@ -9,8 +9,8 @@ import (
 	"io"
 	"strings"
 
-	"cmd/internal/hash"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 func printFunc(f *Func) {

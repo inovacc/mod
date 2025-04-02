@@ -6,9 +6,9 @@ package base
 
 import (
 	"bytes"
-	"cmd/internal/obj"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/bisect"
 	"io"
 	"os"

@@ -5,16 +5,16 @@
 package ssa
 
 import (
-	"cmd/compile/internal/abi"
-	"cmd/compile/internal/abt"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/types"
-	"cmd/internal/dwarf"
-	"cmd/internal/obj"
-	"cmd/internal/src"
 	"cmp"
 	"encoding/hex"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/abi"
+	"github.com/inovacc/mod/cmd/compile/internal/abt"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/dwarf"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/buildcfg"
 	"math/bits"
 	"slices"

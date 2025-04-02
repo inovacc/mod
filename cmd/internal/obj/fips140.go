@@ -135,8 +135,8 @@ see ../../link/internal/ld/fips.go for those details.
 package obj
 
 import (
-	"cmd/internal/objabi"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"internal/bisect"
 	"internal/buildcfg"
 	"log"

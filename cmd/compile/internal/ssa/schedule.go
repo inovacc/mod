@@ -5,10 +5,10 @@
 package ssa
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types"
 	"cmp"
 	"container/heap"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"slices"
 	"sort"
 )

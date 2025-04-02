@@ -5,9 +5,9 @@
 package main
 
 import (
-	"cmd/internal/objabi"
-	"cmd/internal/telemetry/counter"
 	"flag"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 
 	"golang.org/x/tools/go/analysis/unitchecker"
 

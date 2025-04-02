@@ -5,8 +5,8 @@
 package escape
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
 )
 
 // addr evaluates an addressable expression n and returns a hole

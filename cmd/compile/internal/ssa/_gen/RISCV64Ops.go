@@ -502,7 +502,7 @@ func init() {
 
 	archs = append(archs, arch{
 		name:            "RISCV64",
-		pkg:             "cmd/internal/obj/riscv",
+		pkg:             "github.com/inovacc/mod/cmd/internal/obj/riscv",
 		genfile:         "../../riscv64/ssa.go",
 		ops:             RISCV64ops,
 		blocks:          RISCV64blocks,

@@ -5,8 +5,8 @@
 package ssa
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/internal/obj/s390x"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/internal/obj/s390x"
 	"math"
 	"math/bits"
 )

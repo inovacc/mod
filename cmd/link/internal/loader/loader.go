@@ -6,14 +6,14 @@ package loader
 
 import (
 	"bytes"
-	"cmd/internal/bio"
-	"cmd/internal/goobj"
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
-	"cmd/link/internal/sym"
 	"debug/elf"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 	"internal/abi"
 	"io"
 	"log"
@@ -702,7 +702,7 @@ func (l *Loader) checkdup(name string, r *oReader, li uint32, dup Sym) {
 		reason = fmt.Sprintf("different sizes: new size %d != old size %d",
 			sz, szdup)
 	}
-	fmt.Fprintf(os.Stderr, "cmd/link: while reading object for '%v': duplicate symbol '%s', previous def at '%v', with mismatched payload: %s\n", r.unit.Lib, name, rdup.unit.Lib, reason)
+	fmt.Fprintf(os.Stderr, "github.com/inovacc/mod/cmd/link: while reading object for '%v': duplicate symbol '%s', previous def at '%v', with mismatched payload: %s\n", r.unit.Lib, name, rdup.unit.Lib, reason)
 
 	// For the moment, allow DWARF subprogram DIEs for
 	// auto-generated wrapper functions. What seems to happen

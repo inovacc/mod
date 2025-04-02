@@ -8,12 +8,12 @@ package test
 // by the ABI tests in "abiutils_test.go".
 
 import (
-	"cmd/compile/internal/abi"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/abi"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"strings"
 	"testing"
 	"text/scanner"

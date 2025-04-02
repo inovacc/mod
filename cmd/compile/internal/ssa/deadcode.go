@@ -5,7 +5,7 @@
 package ssa
 
 import (
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // findlive returns the reachable blocks and live values in f.

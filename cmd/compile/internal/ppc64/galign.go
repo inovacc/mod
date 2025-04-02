@@ -5,8 +5,8 @@
 package ppc64
 
 import (
-	"cmd/compile/internal/ssagen"
-	"cmd/internal/obj/ppc64"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/internal/obj/ppc64"
 	"internal/buildcfg"
 )
 

@@ -5,10 +5,10 @@
 package ld
 
 import (
-	"cmd/internal/sys"
-	"cmd/link/internal/loader"
 	"encoding/binary"
 	"errors"
+	"github.com/inovacc/mod/cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
 	"log"
 	"os"
 )

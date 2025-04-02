@@ -17,15 +17,15 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/importer"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/compile/internal/types2"
-	"cmd/internal/bio"
-	"cmd/internal/goobj"
-	"cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/importer"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 )
 
 type gcimports struct {

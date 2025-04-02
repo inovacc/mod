@@ -15,9 +15,9 @@ import (
 	"reflect"
 	"regexp"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // DumpAny is like FDumpAny but prints to stderr.

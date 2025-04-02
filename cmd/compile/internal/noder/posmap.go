@@ -5,9 +5,9 @@
 package noder
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/syntax"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // A posMap handles mapping from syntax.Pos to src.XPos.

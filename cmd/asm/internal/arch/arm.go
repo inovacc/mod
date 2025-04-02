@@ -11,8 +11,8 @@ package arch
 import (
 	"strings"
 
-	"cmd/internal/obj"
-	"cmd/internal/obj/arm"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/arm"
 )
 
 var armLS = map[string]uint8{

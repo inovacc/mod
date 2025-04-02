@@ -9,8 +9,8 @@ import (
 	"internal/buildcfg"
 	"strings"
 
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 )
 
 func isSpace(c rune) bool {

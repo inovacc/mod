@@ -30,7 +30,7 @@
 
 package sym
 
-import "cmd/internal/objabi"
+import "github.com/inovacc/mod/cmd/internal/objabi"
 
 // A SymKind describes the kind of memory represented by a symbol.
 type SymKind uint8

@@ -5,8 +5,8 @@
 package obj
 
 import (
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"testing"
 )
 

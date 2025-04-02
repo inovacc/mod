@@ -50,17 +50,17 @@ import (
 	"sync"
 	"time"
 
-	"cmd/internal/bio"
-	"cmd/internal/goobj"
-	"cmd/internal/hash"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
-	"cmd/link/internal/loadelf"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/loadmacho"
-	"cmd/link/internal/loadpe"
-	"cmd/link/internal/loadxcoff"
-	"cmd/link/internal/sym"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/link/internal/loadelf"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/loadmacho"
+	"github.com/inovacc/mod/cmd/link/internal/loadpe"
+	"github.com/inovacc/mod/cmd/link/internal/loadxcoff"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 )
 
 // Data layout and relocation.

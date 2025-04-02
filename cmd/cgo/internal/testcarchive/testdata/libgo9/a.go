@@ -30,5 +30,5 @@ func callGoWithVariousStackAndGoFrame(p int32) {
 			runtime.GC()
 		}()
 	}
-	C.callGoWithVariousStack(C.int(p));
+	C.callGoWithVariousStack(C.int(p))
 }

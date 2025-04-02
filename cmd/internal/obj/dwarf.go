@@ -7,10 +7,10 @@
 package obj
 
 import (
-	"cmd/internal/dwarf"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/dwarf"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"slices"
 	"strings"
 	"sync"

@@ -4,8 +4,8 @@ package ssa
 
 import "internal/buildcfg"
 import "math"
-import "cmd/internal/obj"
-import "cmd/compile/internal/types"
+import "github.com/inovacc/mod/cmd/internal/obj"
+import "github.com/inovacc/mod/cmd/compile/internal/types"
 
 func rewriteValueAMD64(v *Value) bool {
 	switch v.Op {

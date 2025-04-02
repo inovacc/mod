@@ -13,9 +13,9 @@ import (
 	"strings"
 	"text/scanner"
 
-	"cmd/asm/internal/flags"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/asm/internal/flags"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // Input is the main input: a stack of readers and some macro definitions.

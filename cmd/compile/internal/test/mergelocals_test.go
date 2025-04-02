@@ -5,11 +5,11 @@
 package test
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/liveness"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/liveness"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/testenv"
 	"path/filepath"
 	"sort"

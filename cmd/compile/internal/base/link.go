@@ -5,7 +5,7 @@
 package base
 
 import (
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // ReservedImports are import paths used internally for generated

@@ -15,9 +15,9 @@
 package main
 
 import (
-	"cmd/go/internal/str"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/internal/str"
 	"internal/txtar"
 	"io/fs"
 	"log"

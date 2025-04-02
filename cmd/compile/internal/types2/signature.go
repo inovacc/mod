@@ -5,8 +5,8 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	. "internal/types/errors"
 	"path/filepath"
 	"strings"

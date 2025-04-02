@@ -31,12 +31,12 @@
 package ld
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
 	"debug/elf"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 	"internal/buildcfg"
 	"path/filepath"
 	"strings"

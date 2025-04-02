@@ -30,10 +30,10 @@
 package mips
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/sys"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/sys"
 	"internal/abi"
 	"log"
 	"math"

@@ -12,7 +12,7 @@ import "C"
 import (
 	"testing"
 
-	"cmd/cgo/internal/test/issue8756"
+	"github.com/inovacc/mod/cmd/cgo/internal/test/issue8756"
 )
 
 func test8756(t *testing.T) {

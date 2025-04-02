@@ -7,14 +7,14 @@
 package objfile
 
 import (
-	"cmd/internal/archive"
-	"cmd/internal/goobj"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
 	"debug/dwarf"
 	"debug/gosym"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/archive"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
 	"io"
 	"os"
 )

@@ -5,9 +5,9 @@
 package main_test
 
 import (
-	"cmd/internal/cov/covcmd"
 	"encoding/json"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/cov/covcmd"
 	"internal/testenv"
 	"os"
 	"path/filepath"

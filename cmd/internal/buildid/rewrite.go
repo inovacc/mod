@@ -6,12 +6,12 @@ package buildid
 
 import (
 	"bytes"
-	"cmd/internal/codesign"
-	imacho "cmd/internal/macho"
 	"crypto/sha256"
 	"debug/elf"
 	"debug/macho"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/codesign"
+	imacho "github.com/inovacc/mod/cmd/internal/macho"
 	"io"
 )
 

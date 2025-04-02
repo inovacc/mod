@@ -5,12 +5,12 @@
 package inlheur
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/types"
 	"cmp"
 	"encoding/json"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"internal/buildcfg"
 	"io"
 	"os"

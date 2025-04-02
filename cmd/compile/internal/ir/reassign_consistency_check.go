@@ -5,9 +5,9 @@
 package ir
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"path/filepath"
 	"strings"
 )

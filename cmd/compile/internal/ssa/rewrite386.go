@@ -3,7 +3,7 @@
 package ssa
 
 import "math"
-import "cmd/compile/internal/types"
+import "github.com/inovacc/mod/cmd/compile/internal/types"
 
 func rewriteValue386(v *Value) bool {
 	switch v.Op {

@@ -5,14 +5,14 @@
 package walk
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/ssa"
-	"cmd/compile/internal/staticdata"
-	"cmd/compile/internal/staticinit"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/ssa"
+	"github.com/inovacc/mod/cmd/compile/internal/staticdata"
+	"github.com/inovacc/mod/cmd/compile/internal/staticinit"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // walkCompLit walks a composite literal node:

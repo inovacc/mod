@@ -9,10 +9,10 @@
 package arch
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/obj/loong64"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/loong64"
 )
 
 func jumpLoong64(word string) bool {

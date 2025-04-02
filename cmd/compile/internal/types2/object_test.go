@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 func TestIsAlias(t *testing.T) {

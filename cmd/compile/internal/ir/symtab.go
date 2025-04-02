@@ -5,8 +5,8 @@
 package ir
 
 import (
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // Syms holds known symbols.

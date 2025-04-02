@@ -15,9 +15,9 @@ import (
 	"strings"
 	"sync"
 
-	"cmd/internal/objabi"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 )
 
 // This file handles all algorithms related to XCOFF files generation.

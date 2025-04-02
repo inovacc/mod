@@ -5,10 +5,10 @@
 package obj
 
 import (
-	"cmd/internal/goobj"
-	"cmd/internal/objabi"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"log"
 )
 

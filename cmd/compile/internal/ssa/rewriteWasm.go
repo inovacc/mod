@@ -4,7 +4,7 @@ package ssa
 
 import "internal/buildcfg"
 import "math"
-import "cmd/compile/internal/types"
+import "github.com/inovacc/mod/cmd/compile/internal/types"
 
 func rewriteValueWasm(v *Value) bool {
 	switch v.Op {

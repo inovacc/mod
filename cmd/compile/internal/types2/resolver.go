@@ -5,9 +5,9 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
 	"cmp"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"go/constant"
 	. "internal/types/errors"
 	"slices"

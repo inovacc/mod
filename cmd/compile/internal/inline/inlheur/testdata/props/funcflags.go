@@ -24,7 +24,9 @@ func T_simple() {
 // funcflags.go T_nested 32 0 1
 // Flags FuncPropNeverReturns
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":1,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -52,7 +54,9 @@ func T_block1(x int) {
 
 // funcflags.go T_block2 60 0 1
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -67,7 +71,9 @@ func T_block2(x int) {
 // funcflags.go T_switches1 75 0 1
 // Flags FuncPropNeverReturns
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":1,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -84,7 +90,9 @@ func T_switches1(x int) {
 
 // funcflags.go T_switches1a 92 0 1
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -98,7 +106,9 @@ func T_switches1a(x int) {
 
 // funcflags.go T_switches2 106 0 1
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>
@@ -237,8 +247,10 @@ func T_hasgotos(x int, y int) {
 
 // funcflags.go T_break_with_label 246 0 1
 // ParamFlags
-//   0 ParamMayFeedIfOrSwitch
-//   1 ParamNoInfo
+//
+//	0 ParamMayFeedIfOrSwitch
+//	1 ParamNoInfo
+//
 // <endpropsdump>
 // {"Flags":0,"ParamFlags":[64,0],"ResultFlags":null}
 // <endcallsites>
@@ -260,7 +272,9 @@ lab1:
 // funcflags.go T_callsexit 268 0 1
 // Flags FuncPropNeverReturns
 // ParamFlags
-//   0 ParamFeedsIfOrSwitch
+//
+//	0 ParamFeedsIfOrSwitch
+//
 // <endpropsdump>
 // {"Flags":1,"ParamFlags":[32],"ResultFlags":null}
 // <endcallsites>

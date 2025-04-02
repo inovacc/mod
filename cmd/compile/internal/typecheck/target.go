@@ -6,7 +6,7 @@
 
 package typecheck
 
-import "cmd/compile/internal/ir"
+import "github.com/inovacc/mod/cmd/compile/internal/ir"
 
 // Target is the package being compiled.
 var Target *ir.Package

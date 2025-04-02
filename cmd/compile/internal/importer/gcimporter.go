@@ -14,7 +14,7 @@ import (
 	"io"
 	"os"
 
-	"cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 // Import imports a gc-generated package given its import path and srcDir, adds

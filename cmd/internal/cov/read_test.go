@@ -5,8 +5,8 @@
 package cov_test
 
 import (
-	"cmd/internal/cov"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/cov"
 	"internal/coverage"
 	"internal/coverage/decodecounter"
 	"internal/coverage/decodemeta"

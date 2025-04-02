@@ -9,7 +9,7 @@
 
 package cgotest
 
-import "cmd/cgo/internal/test/issue30527"
+import "github.com/inovacc/mod/cmd/cgo/internal/test/issue30527"
 
 func issue30527G() {
 	issue30527.G(nil)

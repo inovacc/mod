@@ -7,9 +7,9 @@
 package importer
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/types2"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 	"go/token"
 	"internal/pkgbits"
 	"sync"

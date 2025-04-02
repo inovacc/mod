@@ -9,7 +9,7 @@
 
 package cgotest
 
-import "cmd/cgo/internal/test/issue8828"
+import "github.com/inovacc/mod/cmd/cgo/internal/test/issue8828"
 
 func p() {
 	issue8828.Bar()

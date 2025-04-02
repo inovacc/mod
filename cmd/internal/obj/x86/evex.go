@@ -5,9 +5,9 @@
 package x86
 
 import (
-	"cmd/internal/obj"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
 	"strings"
 )
 

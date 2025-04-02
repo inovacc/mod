@@ -5,11 +5,11 @@
 package escape
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/logopt"
-	"cmd/compile/internal/types"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/logopt"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 )
 
 // Below we implement the methods for walking the AST and recording

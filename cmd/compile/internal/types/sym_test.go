@@ -5,7 +5,7 @@
 package types_test
 
 import (
-	"cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"reflect"
 	"slices"
 	"testing"

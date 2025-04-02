@@ -5,10 +5,10 @@
 package types
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"go/constant"
 	"internal/buildcfg"
 	"internal/types/errors"

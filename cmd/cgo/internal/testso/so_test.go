@@ -5,7 +5,7 @@
 package so_test
 
 import (
-	"cmd/cgo/internal/cgotest"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"internal/testenv"
 	"log"
 	"os"

@@ -15,14 +15,14 @@ import (
 	"slices"
 	"strings"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/inline"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/pgoir"
-	"cmd/compile/internal/typecheck"
-	"cmd/compile/internal/types"
-	"cmd/compile/internal/types2"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/inline"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/pgoir"
+	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // localPkgReader holds the package reader used for reading the local

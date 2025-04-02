@@ -25,11 +25,11 @@ import (
 	"testing"
 	"time"
 
-	"cmd/go/internal/cfg"
-	"cmd/go/internal/gover"
-	"cmd/go/internal/vcweb/vcstest"
-	"cmd/internal/script"
-	"cmd/internal/script/scripttest"
+	"github.com/inovacc/mod/cmd/go/internal/cfg"
+	"github.com/inovacc/mod/cmd/go/internal/gover"
+	"github.com/inovacc/mod/cmd/go/internal/vcweb/vcstest"
+	"github.com/inovacc/mod/cmd/internal/script"
+	"github.com/inovacc/mod/cmd/internal/script/scripttest"
 
 	"golang.org/x/telemetry/counter/countertest"
 )

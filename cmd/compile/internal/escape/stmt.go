@@ -5,9 +5,9 @@
 package escape
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
 )
 
 // stmt evaluates a single Go statement.

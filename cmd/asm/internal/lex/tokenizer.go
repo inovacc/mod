@@ -12,9 +12,9 @@ import (
 	"text/scanner"
 	"unicode"
 
-	"cmd/asm/internal/flags"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/asm/internal/flags"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
 )
 
 // A Tokenizer is a simple wrapping of text/scanner.Scanner, configured

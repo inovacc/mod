@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/asm/internal/arch"
-	"cmd/asm/internal/lex"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/asm/internal/arch"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // A simple in-out test: Do we print what we parse?

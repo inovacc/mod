@@ -5,8 +5,8 @@
 package types
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/obj"
 	"strings"
 	"unicode"
 	"unicode/utf8"

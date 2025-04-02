@@ -5,8 +5,8 @@
 package inlheur
 
 import (
-	"cmd/compile/internal/ir"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
 	"go/constant"
 	"go/token"
 	"os"

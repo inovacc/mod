@@ -5,8 +5,8 @@
 package ssa
 
 import (
-	"cmd/compile/internal/types"
 	"cmp"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"slices"
 )
 

@@ -10,6 +10,6 @@
 package cgotest
 
 import (
-	_ "cmd/cgo/internal/test/issue23555a"
-	_ "cmd/cgo/internal/test/issue23555b"
+	_ "github.com/inovacc/mod/cmd/cgo/internal/test/issue23555a"
+	_ "github.com/inovacc/mod/cmd/cgo/internal/test/issue23555b"
 )

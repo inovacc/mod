@@ -14,8 +14,8 @@
 package main
 
 import (
-	"cmd/internal/osinfo"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/osinfo"
 	"internal/sysinfo"
 	"runtime"
 )

@@ -4,7 +4,7 @@
 
 package types2
 
-import "cmd/compile/internal/syntax"
+import "github.com/inovacc/mod/cmd/compile/internal/syntax"
 
 // validType verifies that the given type does not "expand" indefinitely
 // producing a cycle in the type graph.

@@ -7,12 +7,12 @@ package cshared_test
 import (
 	"bufio"
 	"bytes"
-	"cmd/cgo/internal/cgotest"
 	"debug/elf"
 	"debug/pe"
 	"encoding/binary"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"internal/testenv"
 	"log"
 	"os"

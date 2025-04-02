@@ -12,10 +12,10 @@ package carchive_test
 import (
 	"bufio"
 	"bytes"
-	"cmd/cgo/internal/cgotest"
 	"debug/elf"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
 	"internal/testenv"
 	"io"
 	"log"

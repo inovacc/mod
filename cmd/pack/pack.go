@@ -5,9 +5,9 @@
 package main
 
 import (
-	"cmd/internal/archive"
-	"cmd/internal/telemetry/counter"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/archive"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 	"io"
 	"io/fs"
 	"log"

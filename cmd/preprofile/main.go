@@ -13,11 +13,11 @@ package main
 
 import (
 	"bufio"
-	"cmd/internal/objabi"
-	"cmd/internal/pgo"
-	"cmd/internal/telemetry/counter"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/pgo"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 	"log"
 	"os"
 )

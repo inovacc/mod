@@ -7,7 +7,7 @@
 package main
 
 import (
-	"cmd/link/testdata/linkname/p"
+	"github.com/inovacc/mod/cmd/link/testdata/linkname/p"
 	_ "unsafe"
 )
 

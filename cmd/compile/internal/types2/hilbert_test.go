@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 var (

@@ -5,7 +5,7 @@
 package types2_test
 
 import (
-	"cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"internal/testenv"
 	"path"
 	"path/filepath"
@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 func TestSelf(t *testing.T) {
@@ -25,7 +25,7 @@ func TestSelf(t *testing.T) {
 	}
 
 	conf := Config{Importer: defaultImporter()}
-	_, err = conf.Check("cmd/compile/internal/types2", files, nil)
+	_, err = conf.Check("github.com/inovacc/mod/cmd/compile/internal/types2", files, nil)
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -5,7 +5,7 @@
 package ld
 
 import (
-	"cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
 	"testing"
 )
 

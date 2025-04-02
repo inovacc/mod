@@ -9,9 +9,9 @@ package types2_test
 
 import (
 	"bytes"
-	"cmd/compile/internal/syntax"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"go/build"
 	"internal/testenv"
 	"os"
@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 var stdLibImporter = defaultImporter()
@@ -354,8 +354,8 @@ func TestStdKen(t *testing.T) {
 
 // Package paths of excluded packages.
 var excluded = map[string]bool{
-	"builtin":                       true,
-	"cmd/compile/internal/ssa/_gen": true,
+	"builtin": true,
+	"github.com/inovacc/mod/cmd/compile/internal/ssa/_gen": true,
 }
 
 // printPackageMu synchronizes the printing of type-checked package files in

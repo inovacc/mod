@@ -7,7 +7,7 @@
 package types2
 
 import (
-	"cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 )
 
 type substMap map[*TypeParam]Type

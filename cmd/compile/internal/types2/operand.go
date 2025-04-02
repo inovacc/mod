@@ -8,8 +8,8 @@ package types2
 
 import (
 	"bytes"
-	"cmd/compile/internal/syntax"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"go/constant"
 	. "internal/types/errors"
 )

@@ -7,7 +7,7 @@ package riscv
 import (
 	"fmt"
 
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 func init() {

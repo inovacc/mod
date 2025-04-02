@@ -11,8 +11,8 @@ import (
 	"os"
 	"strings"
 
-	"cmd/internal/buildid"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/buildid"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 func usage() {

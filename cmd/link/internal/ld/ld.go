@@ -39,9 +39,9 @@ import (
 	"strconv"
 	"strings"
 
-	"cmd/internal/goobj"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
+	"github.com/inovacc/mod/cmd/internal/goobj"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 )
 
 func (ctxt *Link) readImportCfg(file string) {

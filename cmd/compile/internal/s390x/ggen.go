@@ -5,10 +5,10 @@
 package s390x
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/objw"
-	"cmd/internal/obj"
-	"cmd/internal/obj/s390x"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/objw"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj/s390x"
 )
 
 // clearLoopCutOff is the (somewhat arbitrary) value above which it is better

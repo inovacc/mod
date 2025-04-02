@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"sync"
 
-	"cmd/compile/internal/base"
-	"cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/internal/hash"
 )
 
 // BuiltinPkg is a fake package that declares the universe block.

@@ -4,7 +4,7 @@
 package ppc64
 
 import (
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 const (

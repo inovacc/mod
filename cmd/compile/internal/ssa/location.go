@@ -5,9 +5,9 @@
 package ssa
 
 import (
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/types"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
 )
 
 // A place that an ssa variable can reside.

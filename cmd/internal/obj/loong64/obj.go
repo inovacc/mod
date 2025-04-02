@@ -5,10 +5,10 @@
 package loong64
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/src"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/sys"
 	"internal/abi"
 	"log"
 	"math"

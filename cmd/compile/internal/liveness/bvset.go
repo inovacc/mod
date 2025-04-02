@@ -4,7 +4,7 @@
 
 package liveness
 
-import "cmd/compile/internal/bitvec"
+import "github.com/inovacc/mod/cmd/compile/internal/bitvec"
 
 // FNV-1 hash function constants.
 const (

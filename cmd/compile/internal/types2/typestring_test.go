@@ -8,7 +8,7 @@ import (
 	"internal/testenv"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 const filename = "<src>"

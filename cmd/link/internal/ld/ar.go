@@ -31,11 +31,11 @@
 package ld
 
 import (
-	"cmd/internal/bio"
-	"cmd/link/internal/loader"
-	"cmd/link/internal/sym"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/link/internal/loader"
+	"github.com/inovacc/mod/cmd/link/internal/sym"
 	"internal/buildcfg"
 	"io"
 	"os"

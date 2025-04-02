@@ -16,7 +16,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/internal/hash"
 )
 
 // Code signature layout.

@@ -31,8 +31,8 @@
 package arm
 
 import (
-	"cmd/internal/obj"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 func init() {

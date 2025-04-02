@@ -31,9 +31,9 @@ package types2_test
 
 import (
 	"bytes"
-	"cmd/compile/internal/syntax"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
 	"internal/buildcfg"
 	"internal/testenv"
 	"os"
@@ -45,7 +45,7 @@ import (
 	"strings"
 	"testing"
 
-	. "cmd/compile/internal/types2"
+	. "github.com/inovacc/mod/cmd/compile/internal/types2"
 )
 
 var (

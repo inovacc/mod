@@ -5,11 +5,11 @@
 package objw
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/bitvec"
-	"cmd/compile/internal/types"
-	"cmd/internal/obj"
 	"encoding/binary"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/bitvec"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // Uint8 writes an unsigned byte v into s at offset off,

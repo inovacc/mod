@@ -13,7 +13,7 @@ import (
 	tracepkg "runtime/trace"
 	"strings"
 
-	"cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
 )
 
 func profileName(fn, suffix string) string {

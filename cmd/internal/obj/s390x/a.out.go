@@ -29,7 +29,7 @@
 
 package s390x
 
-import "cmd/internal/obj"
+import "github.com/inovacc/mod/cmd/internal/obj"
 
 //go:generate go run ../stringer.go -i $GOFILE -o anames.go -p s390x
 

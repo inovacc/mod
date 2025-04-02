@@ -5,9 +5,9 @@
 package types2_test
 
 import (
-	"cmd/compile/internal/types2"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 	"strings"
 	"testing"
 )

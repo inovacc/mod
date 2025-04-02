@@ -2,7 +2,7 @@
 
 package s390x
 
-import "cmd/internal/obj"
+import "github.com/inovacc/mod/cmd/internal/obj"
 
 var Anames = []string{
 	obj.A_ARCHSPECIFIC: "ADD",

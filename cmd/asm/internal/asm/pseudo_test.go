@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/asm/internal/lex"
+	"github.com/inovacc/mod/cmd/asm/internal/lex"
 )
 
 func tokenize(s string) [][]lex.Token {

@@ -18,7 +18,7 @@ import (
 	"strings"
 	"testing"
 
-	"cmd/internal/objfile"
+	"github.com/inovacc/mod/cmd/internal/objfile"
 )
 
 type testline struct {

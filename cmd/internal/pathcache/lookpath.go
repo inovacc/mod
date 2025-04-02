@@ -5,7 +5,7 @@
 package pathcache
 
 import (
-	"cmd/internal/par"
+	"github.com/inovacc/mod/cmd/internal/par"
 	"os/exec"
 )
 

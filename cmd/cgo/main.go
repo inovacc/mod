@@ -27,10 +27,10 @@ import (
 	"strings"
 	"sync"
 
-	"cmd/internal/edit"
-	"cmd/internal/hash"
-	"cmd/internal/objabi"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/edit"
+	"github.com/inovacc/mod/cmd/internal/hash"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 // A Package collects information about the package we're going to write.

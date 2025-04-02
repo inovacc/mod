@@ -10,7 +10,7 @@ package cgotest
 import "C"
 
 import (
-	"cmd/cgo/internal/test/issue41761a"
+	"github.com/inovacc/mod/cmd/cgo/internal/test/issue41761a"
 	"testing"
 )
 

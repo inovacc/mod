@@ -5,7 +5,7 @@
 package sym
 
 import (
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/obj"
 	"internal/buildcfg"
 )
 

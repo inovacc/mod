@@ -6,10 +6,10 @@
 package importer
 
 import (
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/syntax"
-	"cmd/compile/internal/types2"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
+	"github.com/inovacc/mod/cmd/internal/src"
 	"internal/pkgbits"
 )
 

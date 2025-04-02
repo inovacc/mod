@@ -6,10 +6,10 @@
 package flags
 
 import (
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 	"os"
 	"path/filepath"
 	"strings"

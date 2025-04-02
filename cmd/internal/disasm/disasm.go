@@ -22,8 +22,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"cmd/internal/objfile"
-	"cmd/internal/src"
+	"github.com/inovacc/mod/cmd/internal/objfile"
+	"github.com/inovacc/mod/cmd/internal/src"
 
 	"golang.org/x/arch/arm/armasm"
 	"golang.org/x/arch/arm64/arm64asm"

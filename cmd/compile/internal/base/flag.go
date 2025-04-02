@@ -5,11 +5,11 @@
 package base
 
 import (
-	"cmd/internal/cov/covcmd"
-	"cmd/internal/telemetry/counter"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/cov/covcmd"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 	"internal/buildcfg"
 	"internal/platform"
 	"log"
@@ -18,9 +18,9 @@ import (
 	"runtime"
 	"strings"
 
-	"cmd/internal/obj"
-	"cmd/internal/objabi"
-	"cmd/internal/sys"
+	"github.com/inovacc/mod/cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/sys"
 )
 
 func usage() {

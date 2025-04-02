@@ -6,11 +6,11 @@ package main
 
 import (
 	"bytes"
-	"cmd/internal/cov/covcmd"
 	"cmp"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/internal/cov/covcmd"
 	"go/ast"
 	"go/parser"
 	"go/token"
@@ -25,9 +25,9 @@ import (
 	"strconv"
 	"strings"
 
-	"cmd/internal/edit"
-	"cmd/internal/objabi"
-	"cmd/internal/telemetry/counter"
+	"github.com/inovacc/mod/cmd/internal/edit"
+	"github.com/inovacc/mod/cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/telemetry/counter"
 )
 
 const usageMessage = "" +

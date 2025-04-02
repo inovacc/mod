@@ -11,16 +11,16 @@ import (
 	"slices"
 	"sync"
 
-	"cmd/compile/internal/base"
-	"cmd/compile/internal/ir"
-	"cmd/compile/internal/liveness"
-	"cmd/compile/internal/objw"
-	"cmd/compile/internal/pgoir"
-	"cmd/compile/internal/ssagen"
-	"cmd/compile/internal/staticinit"
-	"cmd/compile/internal/types"
-	"cmd/compile/internal/walk"
-	"cmd/internal/obj"
+	"github.com/inovacc/mod/cmd/compile/internal/base"
+	"github.com/inovacc/mod/cmd/compile/internal/ir"
+	"github.com/inovacc/mod/cmd/compile/internal/liveness"
+	"github.com/inovacc/mod/cmd/compile/internal/objw"
+	"github.com/inovacc/mod/cmd/compile/internal/pgoir"
+	"github.com/inovacc/mod/cmd/compile/internal/ssagen"
+	"github.com/inovacc/mod/cmd/compile/internal/staticinit"
+	"github.com/inovacc/mod/cmd/compile/internal/types"
+	"github.com/inovacc/mod/cmd/compile/internal/walk"
+	"github.com/inovacc/mod/cmd/internal/obj"
 )
 
 // "Portable" code generation.

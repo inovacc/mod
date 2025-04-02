@@ -6,9 +6,9 @@ package importer
 
 import (
 	"bytes"
-	"cmd/compile/internal/syntax"
-	"cmd/compile/internal/types2"
 	"fmt"
+	"github.com/inovacc/mod/cmd/compile/internal/syntax"
+	"github.com/inovacc/mod/cmd/compile/internal/types2"
 	"go/build"
 	"internal/exportdata"
 	"internal/testenv"

@@ -13,8 +13,8 @@ import (
 	"os"
 	"testing"
 
-	"cmd/internal/bio"
-	"cmd/internal/objabi"
+	"github.com/inovacc/mod/cmd/internal/bio"
+	"github.com/inovacc/mod/cmd/internal/objabi"
 )
 
 func dummyWriter(buf *bytes.Buffer) *Writer {
