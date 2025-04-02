@@ -127,7 +127,7 @@ func (s *Setting) register() {
 	if s.info == nil || s.info.Opaque {
 		panic("godebug: unexpected IncNonDefault of " + s.name)
 	}
-	registerMetric("/godebug/non-default-behavior/"+s.Name()+":events", s.nonDefault.Load)
+	//registerMetric("/godebug/non-default-behavior/"+s.Name()+":events", s.nonDefault.Load)
 }
 
 // cache is a cache of all the GODEBUG settings,
@@ -191,33 +191,33 @@ func lookup(name string) *setting {
 // again each time the environment variable changes
 // (due to use of os.Setenv, for example).
 //
-//go:linkname setUpdate
-func setUpdate(update func(string, string))
-
-// registerMetric is provided by package runtime.
-// It forwards registrations to runtime/metrics.
+////go:linkname setUpdate
+//func setUpdate(update func(string, string))
 //
-//go:linkname registerMetric
-func registerMetric(name string, read func() uint64)
-
-// setNewIncNonDefault is provided by package runtime.
-// The runtime can do
+//// registerMetric is provided by package runtime.
+//// It forwards registrations to runtime/metrics.
+////
+////go:linkname registerMetric
+//func registerMetric(name string, read func() uint64)
 //
-//	inc := newNonDefaultInc(name)
+//// setNewIncNonDefault is provided by package runtime.
+//// The runtime can do
+////
+////	inc := newNonDefaultInc(name)
+////
+//// instead of
+////
+////	inc := godebug.New(name).IncNonDefault
+////
+//// since it cannot import godebug.
+////
+////go:linkname setNewIncNonDefault
+//func setNewIncNonDefault(newIncNonDefault func(string) func())
 //
-// instead of
-//
-//	inc := godebug.New(name).IncNonDefault
-//
-// since it cannot import godebug.
-//
-//go:linkname setNewIncNonDefault
-func setNewIncNonDefault(newIncNonDefault func(string) func())
-
-func init() {
-	setUpdate(update)
-	setNewIncNonDefault(newIncNonDefault)
-}
+//func init() {
+//	setUpdate(update)
+//	setNewIncNonDefault(newIncNonDefault)
+//}
 
 func newIncNonDefault(name string) func() {
 	s := New(name)
