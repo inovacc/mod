@@ -5,7 +5,7 @@
 package list
 
 import (
-	"go/build"
+	"github.com/inovacc/mod/go/build"
 )
 
 type Context struct {
