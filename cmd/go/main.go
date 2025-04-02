@@ -36,6 +36,7 @@ import (
 	"github.com/inovacc/mod/cmd/go/vet"
 	"github.com/inovacc/mod/cmd/go/work"
 	"github.com/inovacc/mod/cmd/go/workcmd"
+	"github.com/inovacc/mod/internal/buildcfg"
 
 	"github.com/inovacc/mod/cmd/internal/telemetry"
 	"github.com/inovacc/mod/cmd/internal/telemetry/counter"

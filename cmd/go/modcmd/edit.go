@@ -13,6 +13,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/gover"
 	"github.com/inovacc/mod/cmd/go/lockedfile"
 	"github.com/inovacc/mod/cmd/go/modfetch"
 	"github.com/inovacc/mod/cmd/go/modload"
