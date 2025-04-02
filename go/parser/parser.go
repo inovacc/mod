@@ -17,10 +17,10 @@ package parser
 
 import (
 	"fmt"
-	"go/ast"
-	"go/build/constraint"
-	"go/scanner"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/build/constraint"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
 	"strings"
 )
 

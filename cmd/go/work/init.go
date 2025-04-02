@@ -9,7 +9,12 @@ package work
 import (
 	"bytes"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/fsys"
+	"github.com/inovacc/mod/cmd/go/modload"
 	"github.com/inovacc/mod/cmd/internal/quoted"
+	"github.com/inovacc/mod/internal/platform"
 	"os"
 	"os/exec"
 	"path/filepath"

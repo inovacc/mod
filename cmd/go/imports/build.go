@@ -22,6 +22,9 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/go/build/constraint"
+	"github.com/inovacc/mod/internal/syslist"
 	"strings"
 	"unicode"
 )

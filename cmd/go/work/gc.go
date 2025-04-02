@@ -7,6 +7,7 @@ package work
 import (
 	"bufio"
 	"bytes"
+	"crypto/fips140"
 	"fmt"
 	"github.com/inovacc/mod/cmd/go/base"
 	"github.com/inovacc/mod/cmd/go/cfg"
@@ -14,6 +15,8 @@ import (
 	"github.com/inovacc/mod/cmd/go/gover"
 	"github.com/inovacc/mod/cmd/go/load"
 	"github.com/inovacc/mod/cmd/go/str"
+	"github.com/inovacc/mod/internal/buildcfg"
+	"github.com/inovacc/mod/internal/platform"
 	"io"
 	"log"
 	"os"

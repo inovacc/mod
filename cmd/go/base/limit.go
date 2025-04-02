@@ -6,6 +6,7 @@ package base
 
 import (
 	"fmt"
+	"github.com/inovacc/mod/internal/godebug"
 	"runtime"
 	"strconv"
 	"sync"

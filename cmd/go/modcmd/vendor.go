@@ -9,6 +9,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/base"
 	"go/build"
 	"io"
 	"io/fs"

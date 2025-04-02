@@ -6,8 +6,8 @@ package scanner_test
 
 import (
 	"fmt"
-	"go/scanner"
-	"go/token"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
 )
 
 func ExampleScanner_Scan() {

@@ -7,9 +7,9 @@ package doc
 
 import (
 	"fmt"
-	"go/ast"
-	"go/doc/comment"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/doc/comment"
+	"github.com/inovacc/mod/go/token"
 	"strings"
 )
 

@@ -7,6 +7,11 @@ package work
 import (
 	"bytes"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/cache"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/fsys"
+	"github.com/inovacc/mod/cmd/go/str"
 	"os"
 	"os/exec"
 	"strings"

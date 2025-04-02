@@ -7,7 +7,6 @@ package modload
 import (
 	"bytes"
 	"context"
-	"crypto/fips140"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -18,6 +17,8 @@ import (
 	"github.com/inovacc/mod/cmd/go/lockedfile"
 	"github.com/inovacc/mod/cmd/go/modfetch"
 	"github.com/inovacc/mod/cmd/go/search"
+	"github.com/inovacc/mod/internal/godebugs"
+	"github.com/inovacc/mod/internal/lazyregexp"
 	"io"
 	"os"
 	"path"
@@ -353,7 +354,7 @@ func BinDir() string {
 // for example 'go mod tidy', that don't operate in workspace mode.
 func InitWorkfile() {
 	// Initialize fsys early because we need overlay to read go.work file.
-	fips140.Init()
+	//fips140.Init()
 	if err := fsys.Init(); err != nil {
 		base.Fatal(err)
 	}
@@ -413,7 +414,7 @@ func Init() {
 	}
 	initialized = true
 
-	fips140.Init()
+	//fips140.Init()
 
 	// Keep in sync with WillBeEnabled. We perform extra validation here, and
 	// there are lots of diagnostics and side effects, so we can't use

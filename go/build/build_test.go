@@ -146,8 +146,8 @@ func TestLocalDirectory(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if p.ImportPath != "go/build" {
-		t.Fatalf("ImportPath=%q, want %q", p.ImportPath, "go/build")
+	if p.ImportPath != "github.com/inovacc/mod/go/build" {
+		t.Fatalf("ImportPath=%q, want %q", p.ImportPath, "github.com/inovacc/mod/go/build")
 	}
 }
 
@@ -509,9 +509,9 @@ func TestImportDirNotExist(t *testing.T) {
 		path, srcDir string
 		mode         ImportMode
 	}{
-		{"Import(full, 0)", "go/build/doesnotexist", "", 0},
+		{"Import(full, 0)", "github.com/inovacc/mod/go/build/doesnotexist", "", 0},
 		{"Import(local, 0)", "./doesnotexist", filepath.Join(ctxt.GOROOT, "src/go/build"), 0},
-		{"Import(full, FindOnly)", "go/build/doesnotexist", "", FindOnly},
+		{"Import(full, FindOnly)", "github.com/inovacc/mod/go/build/doesnotexist", "", FindOnly},
 		{"Import(local, FindOnly)", "./doesnotexist", filepath.Join(ctxt.GOROOT, "src/go/build"), FindOnly},
 	}
 
@@ -541,8 +541,8 @@ func TestImportDirNotExist(t *testing.T) {
 					t.Fatalf(`%s got nil p, want non-nil *Package`, test.label)
 				}
 				// Verify partial information in p.
-				if p.ImportPath != "go/build/doesnotexist" {
-					t.Errorf(`%s got p.ImportPath: %q, want "go/build/doesnotexist"`, test.label, p.ImportPath)
+				if p.ImportPath != "github.com/inovacc/mod/go/build/doesnotexist" {
+					t.Errorf(`%s got p.ImportPath: %q, want "github.com/inovacc/mod/go/build/doesnotexist"`, test.label, p.ImportPath)
 				}
 			}
 		})

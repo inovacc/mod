@@ -8,4 +8,5 @@
 package e
 
 func ( [<-chan<-[
-func /* ERROR unexpected name u */ u) { go
+func /* ERROR unexpected name u */ u) {
+	go

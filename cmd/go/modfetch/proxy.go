@@ -11,6 +11,8 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/go/base"
 	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/modfetch/codehost"
+	"github.com/inovacc/mod/cmd/go/web"
 	"io"
 	"io/fs"
 	"net/url"

@@ -9,8 +9,8 @@ package types
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	"strconv"
 	"strings"
 )

@@ -8,8 +8,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"internal/diff"
-	"internal/txtar"
+	"github.com/inovacc/mod/internal/diff"
+	"github.com/inovacc/mod/internal/txtar"
+
 	"path/filepath"
 	"strings"
 	"testing"
@@ -27,7 +28,7 @@ func TestTestdata(t *testing.T) {
 	}
 	p.LookupPackage = func(name string) (importPath string, ok bool) {
 		if name == "comment" {
-			return "go/doc/comment", true
+			return "github.com/inovacc/mod/go/doc/comment", true
 		}
 		return DefaultLookupPackage(name)
 	}

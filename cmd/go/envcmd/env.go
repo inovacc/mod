@@ -17,6 +17,7 @@ import (
 	"github.com/inovacc/mod/cmd/go/load"
 	"github.com/inovacc/mod/cmd/go/modload"
 	"github.com/inovacc/mod/cmd/go/work"
+	"github.com/inovacc/mod/go/build"
 	"github.com/inovacc/mod/internal/buildcfg"
 	"io"
 	"os"

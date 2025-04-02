@@ -8,8 +8,8 @@ package types
 
 import (
 	"fmt"
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	. "internal/types/errors"
 	"runtime"
 	"strings"

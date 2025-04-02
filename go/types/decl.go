@@ -6,9 +6,9 @@ package types
 
 import (
 	"fmt"
-	"go/ast"
-	"go/constant"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
 	"internal/buildcfg"
 	. "internal/types/errors"
 	"slices"

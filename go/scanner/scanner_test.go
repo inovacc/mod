@@ -5,7 +5,7 @@
 package scanner
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -895,10 +895,10 @@ func BenchmarkScanFiles(b *testing.B) {
 	// Scan a few arbitrary large files, and one small one, to provide some
 	// variety in benchmarks.
 	for _, p := range []string{
-		"go/types/expr.go",
-		"go/parser/parser.go",
+		"github.com/inovacc/mod/go/types/expr.go",
+		"github.com/inovacc/mod/go/parser/parser.go",
 		"net/http/server.go",
-		"go/scanner/errors.go",
+		"github.com/inovacc/mod/go/scanner/errors.go",
 	} {
 		b.Run(p, func(b *testing.B) {
 			b.StopTimer()

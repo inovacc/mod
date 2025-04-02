@@ -7,9 +7,9 @@ package printer
 
 import (
 	"fmt"
-	"go/ast"
-	"go/build/constraint"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/build/constraint"
+	"github.com/inovacc/mod/go/token"
 	"io"
 	"os"
 	"strings"

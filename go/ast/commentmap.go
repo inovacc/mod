@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"cmp"
 	"fmt"
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"slices"
 	"strings"
 )

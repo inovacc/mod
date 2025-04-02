@@ -16,6 +16,8 @@ import (
 	"github.com/inovacc/mod/cmd/go/modload"
 	"github.com/inovacc/mod/cmd/go/str"
 	"github.com/inovacc/mod/cmd/go/work"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"io"
 	"log"
 	"os"

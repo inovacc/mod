@@ -11,7 +11,7 @@ package types
 
 import (
 	"fmt"
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"slices"
 	"strings"
 )

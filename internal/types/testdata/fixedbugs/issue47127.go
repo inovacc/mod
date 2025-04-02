@@ -62,7 +62,8 @@ func _[P any]() {
 
 func _[P any, Q interface {
 	*P | []P | chan P | map[string]P
-}]() {}
+}]() {
+}
 func _[P any, Q interface {
 	P /* ERROR "term cannot be a type parameter" */
 }]() {

@@ -11,6 +11,13 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/fsys"
+	"github.com/inovacc/mod/cmd/go/str"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/go/build/constraint"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/syslist"
 
 	"io"
 	"io/fs"

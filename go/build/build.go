@@ -8,9 +8,16 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/build/constraint"
+	"github.com/inovacc/mod/go/doc"
+	"github.com/inovacc/mod/go/token"
 	"github.com/inovacc/mod/internal/buildcfg"
+	"github.com/inovacc/mod/internal/godebug"
+	"github.com/inovacc/mod/internal/goroot"
 	"github.com/inovacc/mod/internal/goversion"
 	"github.com/inovacc/mod/internal/platform"
+	"github.com/inovacc/mod/internal/syslist"
 
 	"io"
 	"io/fs"
@@ -1161,7 +1168,7 @@ func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) 
 		if filepath.IsAbs(srcDir) {
 			absSrcDir = srcDir
 		} else if ctxt.Dir != "" {
-			return fmt.Errorf("go/build: Dir is non-empty, so relative srcDir is not allowed: %v", srcDir)
+			return fmt.Errorf("github.com/inovacc/mod/go/build: Dir is non-empty, so relative srcDir is not allowed: %v", srcDir)
 		} else {
 			// Find the absolute source directory. hasSubdir does not handle
 			// relative paths (and can't because the callbacks don't support this).
@@ -1248,12 +1255,12 @@ func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) 
 	)
 
 	if err := cmd.Run(); err != nil {
-		return fmt.Errorf("go/build: go list %s: %v\n%s\n", path, err, stderr.String())
+		return fmt.Errorf("github.com/inovacc/mod/go/build: go list %s: %v\n%s\n", path, err, stderr.String())
 	}
 
 	f := strings.SplitN(stdout.String(), "\n", 5)
 	if len(f) != 5 {
-		return fmt.Errorf("go/build: importGo %s: unexpected output:\n%s\n", path, stdout.String())
+		return fmt.Errorf("github.com/inovacc/mod/go/build: importGo %s: unexpected output:\n%s\n", path, stdout.String())
 	}
 	dir := f[0]
 	errStr := strings.TrimSpace(f[4])

@@ -5,7 +5,7 @@
 package printer
 
 import (
-	"go/build/constraint"
+	"github.com/inovacc/mod/go/build/constraint"
 	"slices"
 	"text/tabwriter"
 )

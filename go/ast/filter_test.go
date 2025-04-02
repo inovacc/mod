@@ -7,10 +7,6 @@
 package ast_test
 
 import (
-	"go/ast"
-	"go/format"
-	"go/parser"
-	"go/token"
 	"strings"
 	"testing"
 )

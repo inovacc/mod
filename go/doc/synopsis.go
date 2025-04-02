@@ -5,7 +5,7 @@
 package doc
 
 import (
-	"go/doc/comment"
+	"github.com/inovacc/mod/go/doc/comment"
 	"strings"
 	"unicode"
 )

@@ -10,7 +10,7 @@ package build
 import (
 	"bytes"
 	"fmt"
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"internal/dag"
 	"internal/testenv"
 	"io/fs"
@@ -920,11 +920,11 @@ func TestStdlibLowercase(t *testing.T) {
 
 // TestFindImports tests that findImports works.  See #43249.
 func TestFindImports(t *testing.T) {
-	imports, err := findImports("go/build")
+	imports, err := findImports("github.com/inovacc/mod/go/build")
 	if err != nil {
 		t.Fatal(err)
 	}
-	t.Logf("go/build imports %q", imports)
+	t.Logf("github.com/inovacc/mod/go/build imports %q", imports)
 	want := []string{"bytes", "os", "path/filepath", "strings"}
 wantLoop:
 	for _, w := range want {

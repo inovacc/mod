@@ -6,8 +6,8 @@ package doc
 
 import (
 	"bytes"
-	"go/parser"
-	"go/token"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"internal/diff"
 	"testing"
 )

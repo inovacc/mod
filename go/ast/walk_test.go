@@ -5,9 +5,6 @@
 package ast_test
 
 import (
-	"go/ast"
-	"go/parser"
-	"go/token"
 	"testing"
 )
 

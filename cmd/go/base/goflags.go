@@ -7,6 +7,7 @@ package base
 import (
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/cfg"
 	"runtime"
 	"strings"
 

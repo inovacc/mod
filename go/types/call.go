@@ -7,8 +7,8 @@
 package types
 
 import (
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	. "internal/types/errors"
 	"strings"
 )

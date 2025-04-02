@@ -6,7 +6,7 @@ package build
 
 import (
 	"fmt"
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"io"
 	"strings"
 	"testing"

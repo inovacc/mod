@@ -24,8 +24,8 @@ package parser
 
 import (
 	"flag"
-	"go/scanner"
-	"go/token"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
 	"os"
 	"path/filepath"
 	"regexp"

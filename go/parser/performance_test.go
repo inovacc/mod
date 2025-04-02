@@ -5,7 +5,7 @@
 package parser
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"os"
 	"testing"
 )

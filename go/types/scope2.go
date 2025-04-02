@@ -7,7 +7,7 @@
 
 package types
 
-import "go/token"
+import "github.com/inovacc/mod/go/token"
 
 // LookupParent follows the parent chain of scopes starting with s until
 // it finds a scope where Lookup(name) returns a non-nil object, and then

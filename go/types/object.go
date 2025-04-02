@@ -10,8 +10,8 @@ package types
 import (
 	"bytes"
 	"fmt"
-	"go/constant"
-	"go/token"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
 	"strings"
 	"unicode"
 	"unicode/utf8"

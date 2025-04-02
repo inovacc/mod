@@ -10,7 +10,7 @@ package scanner
 import (
 	"bytes"
 	"fmt"
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"path/filepath"
 	"strconv"
 	"unicode"

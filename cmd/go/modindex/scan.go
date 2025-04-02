@@ -11,6 +11,10 @@ import (
 	"github.com/inovacc/mod/cmd/go/base"
 	"github.com/inovacc/mod/cmd/go/fsys"
 	"github.com/inovacc/mod/cmd/go/str"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/go/doc"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
 
 	"io/fs"
 	"path/filepath"

@@ -8,9 +8,9 @@ package doc
 
 import (
 	"cmp"
-	"go/ast"
-	"go/token"
-	"internal/lazyregexp"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/lazyregexp"
 	"path"
 	"slices"
 	"strconv"

@@ -13,12 +13,12 @@ import (
 	"github.com/inovacc/mod/cmd/go/fsys"
 	"github.com/inovacc/mod/cmd/go/str"
 	"github.com/inovacc/mod/cmd/go/trace"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/go/doc"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"github.com/inovacc/mod/internal/lazytemplate"
-	"go/ast"
-	"go/build"
-	"go/doc"
-	"go/parser"
-	"go/token"
 	"maps"
 	"path/filepath"
 	"slices"
@@ -44,7 +44,7 @@ type TestCover struct {
 	Vars  []coverInfo
 }
 
-// TestPackagesFor is like TestPackagesAndErrors but it returns
+// TestPackagesFor is like TestPackagesAndErrors, but it returns
 // the package containing an error if the test packages or
 // their dependencies have errors.
 // Only test packages without errors are returned.

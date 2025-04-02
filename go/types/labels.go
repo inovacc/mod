@@ -5,7 +5,7 @@
 package types
 
 import (
-	"go/ast"
+	"github.com/inovacc/mod/go/ast"
 	"go/token"
 	. "internal/types/errors"
 	"slices"

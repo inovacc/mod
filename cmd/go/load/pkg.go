@@ -12,9 +12,23 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"go/build"
-	"go/scanner"
-	"go/token"
+	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/fsys"
+	"github.com/inovacc/mod/cmd/go/gover"
+	"github.com/inovacc/mod/cmd/go/imports"
+	"github.com/inovacc/mod/cmd/go/modfetch"
+	"github.com/inovacc/mod/cmd/go/modindex"
+	"github.com/inovacc/mod/cmd/go/modinfo"
+	"github.com/inovacc/mod/cmd/go/modload"
+	"github.com/inovacc/mod/cmd/go/search"
+	"github.com/inovacc/mod/cmd/go/str"
+	"github.com/inovacc/mod/cmd/go/trace"
+	"github.com/inovacc/mod/cmd/go/vcs"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/platform"
 	"io/fs"
 	"os"
 	pathpkg "path"
@@ -392,7 +406,7 @@ func (p *Package) copyBuild(opts PackageOpts, pp *build.Package) {
 	p.BinaryOnly = pp.BinaryOnly
 
 	// TODO? Target
-	p.Goroot = pp.Goroot || fips140.Snapshot() && str.HasFilePathPrefix(p.Dir, fips140.Dir())
+	//p.Goroot = pp.Goroot || fips140.Snapshot() && str.HasFilePathPrefix(p.Dir, fips140.Dir())
 	p.Standard = p.Goroot && p.ImportPath != "" && search.IsStandardImportPath(p.ImportPath)
 	p.GoFiles = pp.GoFiles
 	p.CgoFiles = pp.CgoFiles
@@ -870,10 +884,10 @@ func loadPackageData(ctx context.Context, path, parentPath, parentDir, parentRoo
 	}
 	r := resolvedImportCache.Do(importKey, func() resolvedImport {
 		var r resolvedImport
-		if newPath, dir, ok := fips140.ResolveImport(path); ok {
+		/*if newPath, dir, ok := fips140.ResolveImport(path); ok {
 			r.path = newPath
 			r.dir = dir
-		} else if cfg.ModulesEnabled {
+		} else */if cfg.ModulesEnabled {
 			r.dir, r.path, r.err = modload.Lookup(parentPath, parentIsStd, path)
 		} else if build.IsLocalImport(path) {
 			r.dir = filepath.Join(parentDir, path)
@@ -2436,9 +2450,9 @@ func (p *Package) setBuildInfo(ctx context.Context, autoVCS bool) {
 	if cfg.RawGOEXPERIMENT != "" {
 		appendSetting("GOEXPERIMENT", cfg.RawGOEXPERIMENT)
 	}
-	if fips140.Enabled() {
-		appendSetting("GOFIPS140", fips140.Version())
-	}
+	//if fips140.Enabled() {
+	//	appendSetting("GOFIPS140", fips140.Version())
+	//}
 	appendSetting("GOOS", cfg.BuildContext.GOOS)
 	if key, val, _ := cfg.GetArchEnv(); key != "" && val != "" {
 		appendSetting(key, val)

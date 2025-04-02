@@ -9,8 +9,8 @@
 package printer
 
 import (
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	"math"
 	"strconv"
 	"strings"

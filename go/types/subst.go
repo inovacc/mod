@@ -10,7 +10,7 @@
 package types
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 )
 
 type substMap map[*TypeParam]Type

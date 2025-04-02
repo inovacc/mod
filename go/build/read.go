@@ -9,10 +9,11 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"go/ast"
-	"go/parser"
-	"go/scanner"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/scanner"
+	"github.com/inovacc/mod/go/token"
+
 	"io"
 	"strconv"
 	"strings"
@@ -127,7 +128,7 @@ func (r *importReader) readByteNoBuf() byte {
 func (r *importReader) peekByte(skipSpace bool) byte {
 	if r.err != nil {
 		if r.nerr++; r.nerr > 10000 {
-			panic("go/build: import reader looping")
+			panic("github.com/inovacc/mod/go/build: import reader looping")
 		}
 		return 0
 	}

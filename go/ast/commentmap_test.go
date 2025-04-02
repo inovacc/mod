@@ -8,9 +8,8 @@ package ast_test
 
 import (
 	"fmt"
-	. "go/ast"
-	"go/parser"
-	"go/token"
+	. "github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	"sort"
 	"strings"
 	"testing"
@@ -26,8 +25,8 @@ package p /* the name is p */
 import (
 	"bytes"     // bytes
 	"fmt"       // fmt
-	"go/ast"
-	"go/parser"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
 )
 
 // T

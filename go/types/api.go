@@ -32,9 +32,9 @@ package types
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
-	"go/constant"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
 	. "internal/types/errors"
 	_ "unsafe" // for linkname
 )

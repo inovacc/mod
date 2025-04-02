@@ -9,6 +9,12 @@ package modcmd
 import (
 	"context"
 	"fmt"
+	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/gover"
+	"github.com/inovacc/mod/cmd/go/imports"
+	"github.com/inovacc/mod/cmd/go/modload"
+	"github.com/inovacc/mod/cmd/go/toolchain"
 
 	"golang.org/x/mod/modfile"
 )

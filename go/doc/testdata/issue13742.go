@@ -5,8 +5,8 @@
 package b
 
 import (
-	"go/ast"
-	. "go/ast"
+	"github.com/inovacc/mod/go/ast"
+	. "github.com/inovacc/mod/go/ast"
 )
 
 // Both F0 and G0 should appear as functions.

@@ -83,7 +83,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"go/ast"
+	"github.com/inovacc/mod/go/ast"
 	"go/build"
 	"go/importer"
 	"go/parser"

@@ -5,6 +5,7 @@
 package gover
 
 import (
+	"github.com/inovacc/mod/internal/goversion"
 	"runtime"
 	"strconv"
 )

@@ -7,8 +7,8 @@
 package types
 
 import (
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 )
 
 // isTerminating reports if s is a terminating statement.

@@ -8,7 +8,7 @@ import "math"
 import m "math"
 
 import . "testing" // declares T in file scope
-import . "fmt" // declares Println in file scope
+import . "fmt"     // declares Println in file scope
 
 // using "math" in this file doesn't affect its use in other files
 const Pi0 = math.Pi

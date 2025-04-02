@@ -10,9 +10,9 @@ import (
 	"github.com/inovacc/mod/cmd/go/cfg"
 	"github.com/inovacc/mod/cmd/go/fsys"
 	"github.com/inovacc/mod/cmd/go/str"
+	"github.com/inovacc/mod/go/build"
 
 	"github.com/inovacc/mod/cmd/internal/pkgpattern"
-	"go/build"
 	"io/fs"
 	"os"
 	"path"

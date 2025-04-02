@@ -18,9 +18,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"go/doc"
-	"go/parser"
-	"go/token"
+	"github.com/inovacc/mod/go/doc"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"io/fs"
 	"os"
 	"path/filepath"

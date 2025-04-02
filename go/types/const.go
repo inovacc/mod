@@ -10,8 +10,8 @@
 package types
 
 import (
-	"go/constant"
-	"go/token"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
 	. "internal/types/errors"
 	"math"
 )

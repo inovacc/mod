@@ -7,7 +7,7 @@
 package ast
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"strings"
 )
 

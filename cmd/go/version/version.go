@@ -11,6 +11,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/gover"
 	"io/fs"
 	"os"
 	"path/filepath"

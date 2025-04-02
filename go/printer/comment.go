@@ -5,8 +5,8 @@
 package printer
 
 import (
-	"go/ast"
-	"go/doc/comment"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/doc/comment"
 	"strings"
 )
 
