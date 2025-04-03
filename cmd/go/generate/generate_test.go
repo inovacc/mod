@@ -56,12 +56,12 @@ func TestGenerateCommandParse(t *testing.T) {
 	g.setShorthand([]string{"-command", "yacc", "go", "tool", "yacc"})
 	for _, test := range splitTests {
 		// First with newlines.
-		got := g.split("//go:generate " + test.in + "\n")
+		got := g.split("////go:generate " + test.in + "\n")
 		if !reflect.DeepEqual(got, test.out) {
 			t.Errorf("split(%q): got %q expected %q", test.in, got, test.out)
 		}
 		// Then with CRLFs, thank you Windows.
-		got = g.split("//go:generate " + test.in + "\r\n")
+		got = g.split("////go:generate " + test.in + "\r\n")
 		if !reflect.DeepEqual(got, test.out) {
 			t.Errorf("split(%q): got %q expected %q", test.in, got, test.out)
 		}
@@ -111,7 +111,7 @@ func TestGenerateCommandShorthand(t *testing.T) {
 	}
 
 	// simple command from environment variable
-	inLine = "//go:generate -command CMD0 \"ab${_X}cd\""
+	inLine = "////go:generate -command CMD0 \"ab${_X}cd\""
 	expected = []string{"-command", "CMD0", "abYcd"}
 	got = g.split(inLine + "\n")
 
@@ -120,7 +120,7 @@ func TestGenerateCommandShorthand(t *testing.T) {
 	}
 
 	// try again, with an extra level of indirection (should leave variable in command)
-	inLine = "//go:generate -command CMD0 \"ab${DOLLAR}{_X}cd\""
+	inLine = "////go:generate -command CMD0 \"ab${DOLLAR}{_X}cd\""
 	expected = []string{"-command", "CMD0", "ab${_X}cd"}
 	got = g.split(inLine + "\n")
 
@@ -132,7 +132,7 @@ func TestGenerateCommandShorthand(t *testing.T) {
 	g.setShorthand(got)
 
 	// see that the command still substitutes correctly from env. variable
-	inLine = "//go:generate CMD0"
+	inLine = "////go:generate CMD0"
 	expected = []string{"abYcd"}
 	got = g.split(inLine + "\n")
 

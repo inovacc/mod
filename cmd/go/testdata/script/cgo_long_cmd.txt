@@ -43,4 +43,4 @@ func main() {
 -- gen.go --
 package p
 
-//go:generate go run generate.go
+////go:generate go run generate.go

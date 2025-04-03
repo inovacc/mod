@@ -20,7 +20,7 @@ import (
 	"time"
 )
 
-//go:generate go run ./genflags.go
+////go:generate go run ./genflags.go
 
 // The flag handling part of go test is large and distracting.
 // We can't use (*flag.FlagSet).Parse because some of the flags from

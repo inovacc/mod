@@ -46,7 +46,7 @@ and so on. It must be run explicitly.
 Go generate scans the file for directives, which are lines of
 the form,
 
-	//go:generate command argument...
+	////go:generate command argument...
 
 (note: no leading spaces and no space in "//go") where command
 is the generator to be run, corresponding to an executable file
@@ -111,14 +111,14 @@ empty string.
 
 A directive of the form,
 
-	//go:generate -command xxx args...
+	////go:generate -command xxx args...
 
 specifies, for the remainder of this source file only, that the
 string xxx represents the command identified by the arguments. This
 can be used to create aliases or to handle multiword generators.
 For example,
 
-	//go:generate -command foo go tool foo
+	////go:generate -command foo go tool foo
 
 specifies that the command "foo" represents the generator
 "go tool foo".
