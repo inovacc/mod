@@ -8,8 +8,8 @@ package gcimporter
 
 import (
 	"fmt"
+	"github.com/inovacc/mod/internal/pkgbits"
 	"go/token"
-	"internal/pkgbits"
 	"sync"
 )
 

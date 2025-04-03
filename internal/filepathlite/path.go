@@ -10,7 +10,7 @@ package filepathlite
 
 import (
 	"errors"
-	"internal/stringslite"
+	"github.com/inovacc/mod/internal/stringslite"
 	"io/fs"
 	"slices"
 )

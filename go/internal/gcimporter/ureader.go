@@ -5,10 +5,10 @@
 package gcimporter
 
 import (
-	"go/token"
-	"go/types"
-	"internal/godebug"
-	"internal/pkgbits"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/go/types"
+	"github.com/inovacc/mod/internal/godebug"
+	"github.com/inovacc/mod/internal/pkgbits"
 	"slices"
 	"strings"
 )

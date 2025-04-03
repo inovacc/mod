@@ -14,7 +14,7 @@
 package exithook
 
 import (
-	"internal/runtime/atomic"
+	"github.com/inovacc/mod/internal/runtime/atomic"
 	_ "unsafe" // for linkname
 )
 

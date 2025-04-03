@@ -7,7 +7,7 @@ package testtrace
 import (
 	"errors"
 	"fmt"
-	"internal/trace"
+	"github.com/inovacc/mod/internal/trace"
 	"slices"
 	"strings"
 )

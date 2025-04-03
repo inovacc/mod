@@ -17,7 +17,7 @@ import (
 	"github.com/inovacc/mod/cmd/compile/internal/typecheck"
 	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"github.com/inovacc/mod/cmd/internal/objabi"
-	"internal/coverage"
+	"github.com/inovacc/mod/internal/coverage"
 	"strconv"
 	"strings"
 )

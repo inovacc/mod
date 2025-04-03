@@ -6,8 +6,8 @@ package stringtab
 
 import (
 	"fmt"
-	"internal/coverage/slicereader"
-	"internal/coverage/uleb128"
+	"github.com/inovacc/mod/internal/coverage/slicereader"
+	"github.com/inovacc/mod/internal/coverage/uleb128"
 	"io"
 )
 

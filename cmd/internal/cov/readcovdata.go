@@ -7,10 +7,10 @@ package cov
 import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/internal/bio"
-	"internal/coverage"
-	"internal/coverage/decodecounter"
-	"internal/coverage/decodemeta"
-	"internal/coverage/pods"
+	"github.com/inovacc/mod/internal/coverage"
+	"github.com/inovacc/mod/internal/coverage/decodecounter"
+	"github.com/inovacc/mod/internal/coverage/decodemeta"
+	"github.com/inovacc/mod/internal/coverage/pods"
 	"io"
 	"os"
 )

@@ -9,7 +9,7 @@
 package stringslite
 
 import (
-	"internal/bytealg"
+	"github.com/inovacc/mod/internal/bytealg"
 	"unsafe"
 )
 

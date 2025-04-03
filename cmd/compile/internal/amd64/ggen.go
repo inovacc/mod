@@ -10,7 +10,7 @@ import (
 	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"github.com/inovacc/mod/cmd/internal/obj"
 	"github.com/inovacc/mod/cmd/internal/obj/x86"
-	"internal/buildcfg"
+	"github.com/inovacc/mod/internal/buildcfg"
 )
 
 // no floating point in note handlers on Plan 9

@@ -6,6 +6,8 @@ package main_test
 
 import (
 	"errors"
+	"github.com/inovacc/mod/internal/testenv"
+	"github.com/inovacc/mod/internal/testpty"
 	"io"
 	"os"
 	"testing"

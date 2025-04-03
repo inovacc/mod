@@ -190,7 +190,7 @@ func (w *Walker) export(pkg *apiPackage) {
 	if verbose {
 		log.Println(pkg)
 	}
-	pop := w.pushScope("pkg " + pkg.Path())
+	pop := w.pushScope(fmt.Sprintf("pkg %s", pkg.Path()))
 	w.current = pkg
 	w.collectDeprecated()
 	scope := pkg.Scope()

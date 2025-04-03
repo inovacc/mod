@@ -6,7 +6,7 @@ package script
 
 import (
 	"fmt"
-	"internal/syslist"
+	"github.com/inovacc/mod/internal/syslist"
 	"os"
 	"runtime"
 	"sync"

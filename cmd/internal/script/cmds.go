@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/internal/pathcache"
 	"github.com/inovacc/mod/cmd/internal/robustio"
-	"internal/diff"
+	"github.com/inovacc/mod/internal/diff"
 	"io/fs"
 	"os"
 	"os/exec"

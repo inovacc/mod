@@ -8,7 +8,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"internal/buildcfg"
+	"github.com/inovacc/mod/internal/buildcfg"
 	"log"
 	"os"
 

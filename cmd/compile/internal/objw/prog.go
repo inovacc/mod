@@ -35,7 +35,7 @@ import (
 	"github.com/inovacc/mod/cmd/compile/internal/ir"
 	"github.com/inovacc/mod/cmd/internal/obj"
 	"github.com/inovacc/mod/cmd/internal/src"
-	"internal/abi"
+	"github.com/inovacc/mod/internal/abi"
 )
 
 var sharedProgArray = new([10000]obj.Prog) // *T instead of T to work around issue 19839

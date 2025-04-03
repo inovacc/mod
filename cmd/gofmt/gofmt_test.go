@@ -7,7 +7,7 @@ package main
 import (
 	"bytes"
 	"flag"
-	"internal/diff"
+	"github.com/inovacc/mod/internal/diff"
 	"os"
 	"path/filepath"
 	"strings"

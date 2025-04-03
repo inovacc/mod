@@ -5,7 +5,7 @@
 package main
 
 import (
-	"internal/trace"
+	"github.com/inovacc/mod/internal/trace"
 )
 
 var _ generator = &goroutineGenerator{}

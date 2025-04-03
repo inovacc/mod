@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/internal/obj"
 	"github.com/inovacc/mod/cmd/internal/src"
-	"internal/bisect"
+	"github.com/inovacc/mod/internal/bisect"
 	"io"
 	"os"
 	"path/filepath"

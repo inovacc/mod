@@ -4,7 +4,7 @@
 
 package bytealg
 
-import "internal/cpu"
+import "github.com/inovacc/mod/internal/cpu"
 
 const MaxBruteForce = 64
 

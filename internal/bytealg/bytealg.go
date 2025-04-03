@@ -5,7 +5,7 @@
 package bytealg
 
 import (
-	"internal/cpu"
+	"github.com/inovacc/mod/internal/cpu"
 	"unsafe"
 )
 

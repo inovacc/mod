@@ -6,8 +6,8 @@ package test
 
 import (
 	"bufio"
-	"internal/goexperiment"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/goexperiment"
+	"github.com/inovacc/mod/internal/testenv"
 	"io"
 	"math/bits"
 	"regexp"

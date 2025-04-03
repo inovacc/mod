@@ -6,8 +6,8 @@ package main
 
 import (
 	"fmt"
-	"internal/trace"
-	"internal/trace/traceviewer"
+	"github.com/inovacc/mod/internal/trace"
+	"github.com/inovacc/mod/internal/trace/traceviewer"
 	"strings"
 )
 

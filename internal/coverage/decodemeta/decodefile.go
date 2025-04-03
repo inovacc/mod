@@ -14,10 +14,10 @@ import (
 	"bufio"
 	"encoding/binary"
 	"fmt"
+	"github.com/inovacc/mod/internal/coverage"
+	"github.com/inovacc/mod/internal/coverage/slicereader"
+	"github.com/inovacc/mod/internal/coverage/stringtab"
 	"hash/fnv"
-	"internal/coverage"
-	"internal/coverage/slicereader"
-	"internal/coverage/stringtab"
 	"io"
 	"os"
 )

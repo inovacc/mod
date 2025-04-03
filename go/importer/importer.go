@@ -13,12 +13,12 @@
 package importer
 
 import (
-	"go/build"
-	"go/internal/gccgoimporter"
-	"go/internal/gcimporter"
-	"go/internal/srcimporter"
-	"go/token"
-	"go/types"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/go/internal/gccgoimporter"
+	"github.com/inovacc/mod/go/internal/gcimporter"
+	"github.com/inovacc/mod/go/internal/srcimporter"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/go/types"
 	"io"
 	"runtime"
 )

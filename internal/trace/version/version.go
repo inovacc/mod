@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"internal/trace/event"
-	"internal/trace/event/go122"
+	"github.com/inovacc/mod/internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event/go122"
 )
 
 // Version represents the version of a trace file.

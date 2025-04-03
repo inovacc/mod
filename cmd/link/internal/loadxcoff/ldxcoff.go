@@ -13,7 +13,7 @@ import (
 	"github.com/inovacc/mod/cmd/internal/sys"
 	"github.com/inovacc/mod/cmd/link/internal/loader"
 	"github.com/inovacc/mod/cmd/link/internal/sym"
-	"internal/xcoff"
+	"github.com/inovacc/mod/internal/xcoff"
 )
 
 // ldSection is an XCOFF section with its symbols.

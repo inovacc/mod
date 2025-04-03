@@ -5,7 +5,7 @@
 package fortran
 
 import (
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

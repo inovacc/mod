@@ -6,9 +6,9 @@ package typecheck
 
 import (
 	"fmt"
+	"github.com/inovacc/mod/internal/types/errors"
 	"go/constant"
 	"go/token"
-	"internal/types/errors"
 	"strings"
 
 	"github.com/inovacc/mod/cmd/compile/internal/base"

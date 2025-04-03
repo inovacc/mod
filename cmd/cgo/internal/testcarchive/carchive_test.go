@@ -16,7 +16,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/inovacc/mod/cmd/cgo/internal/cgotest"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"io"
 	"log"
 	"os"

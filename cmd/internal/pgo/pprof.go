@@ -10,7 +10,7 @@ package pgo
 import (
 	"errors"
 	"fmt"
-	"internal/profile"
+	"github.com/inovacc/mod/internal/profile"
 	"io"
 	"sort"
 )

@@ -12,12 +12,12 @@ import (
 	"regexp"
 	"strings"
 
-	"internal/trace"
-	"internal/trace/event"
-	"internal/trace/event/go122"
-	"internal/trace/raw"
-	"internal/trace/version"
-	"internal/txtar"
+	"github.com/inovacc/mod/internal/trace"
+	"github.com/inovacc/mod/internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event/go122"
+	"github.com/inovacc/mod/internal/trace/raw"
+	"github.com/inovacc/mod/internal/trace/version"
+	"github.com/inovacc/mod/internal/txtar"
 )
 
 func Main(f func(*Trace)) {

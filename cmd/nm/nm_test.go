@@ -5,9 +5,9 @@
 package main
 
 import (
-	"internal/obscuretestdata"
-	"internal/platform"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/obscuretestdata"
+	"github.com/inovacc/mod/internal/platform"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"path/filepath"
 	"runtime"

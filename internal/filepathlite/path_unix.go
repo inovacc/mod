@@ -7,8 +7,8 @@
 package filepathlite
 
 import (
-	"internal/bytealg"
-	"internal/stringslite"
+	"github.com/inovacc/mod/internal/bytealg"
+	"github.com/inovacc/mod/internal/stringslite"
 )
 
 const (

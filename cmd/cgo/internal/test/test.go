@@ -959,7 +959,7 @@ import "C"
 import (
 	"context"
 	"fmt"
-	"internal/asan"
+	"github.com/inovacc/mod/internal/asan"
 	"math"
 	"math/rand"
 	"os"

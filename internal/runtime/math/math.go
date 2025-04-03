@@ -4,7 +4,7 @@
 
 package math
 
-import "internal/goarch"
+import "github.com/inovacc/mod/internal/goarch"
 
 const MaxUintptr = ^uintptr(0)
 

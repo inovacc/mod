@@ -7,9 +7,9 @@ package decodecounter
 import (
 	"encoding/binary"
 	"fmt"
-	"internal/coverage"
-	"internal/coverage/slicereader"
-	"internal/coverage/stringtab"
+	"github.com/inovacc/mod/internal/coverage"
+	"github.com/inovacc/mod/internal/coverage/slicereader"
+	"github.com/inovacc/mod/internal/coverage/stringtab"
 	"io"
 	"os"
 	"strconv"

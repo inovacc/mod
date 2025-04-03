@@ -5,8 +5,8 @@
 package sys
 
 import (
-	"internal/goarch"
-	"internal/goos"
+	"github.com/inovacc/mod/internal/goarch"
+	"github.com/inovacc/mod/internal/goos"
 )
 
 // AIX and OpenBSD require a larger stack for syscalls.

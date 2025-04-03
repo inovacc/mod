@@ -7,8 +7,8 @@ package traceviewer
 import (
 	"encoding/json"
 	"fmt"
-	"internal/trace"
-	"internal/trace/traceviewer/format"
+	"github.com/inovacc/mod/internal/trace"
+	"github.com/inovacc/mod/internal/trace/traceviewer/format"
 	"io"
 	"strconv"
 	"time"

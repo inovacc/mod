@@ -6,7 +6,7 @@ package swig
 
 import (
 	"github.com/inovacc/mod/cmd/internal/quoted"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

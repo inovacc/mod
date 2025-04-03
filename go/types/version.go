@@ -7,7 +7,7 @@ package types
 import (
 	"fmt"
 	"github.com/inovacc/mod/go/version"
-	"internal/goversion"
+	"github.com/inovacc/mod/internal/goversion"
 )
 
 // A goVersion is a Go language version string of the form "go1.%d"

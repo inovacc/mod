@@ -33,8 +33,8 @@ package cformat
 import (
 	"cmp"
 	"fmt"
-	"internal/coverage"
-	"internal/coverage/cmerge"
+	"github.com/inovacc/mod/internal/coverage"
+	"github.com/inovacc/mod/internal/coverage/cmerge"
 	"io"
 	"maps"
 	"slices"

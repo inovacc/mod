@@ -7,6 +7,8 @@
 package ast_test
 
 import (
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/format"
 	"strings"
 	"testing"
 )

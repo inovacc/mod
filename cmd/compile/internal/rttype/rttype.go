@@ -16,7 +16,7 @@ import (
 	"github.com/inovacc/mod/cmd/compile/internal/objw"
 	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"github.com/inovacc/mod/cmd/internal/obj"
-	"internal/abi"
+	"github.com/inovacc/mod/internal/abi"
 	"reflect"
 )
 

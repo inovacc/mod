@@ -9,7 +9,7 @@ package objfile
 import (
 	"debug/dwarf"
 	"fmt"
-	"internal/xcoff"
+	"github.com/inovacc/mod/internal/xcoff"
 	"io"
 	"unicode"
 )

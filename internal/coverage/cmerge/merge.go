@@ -9,7 +9,7 @@ package cmerge
 
 import (
 	"fmt"
-	"internal/coverage"
+	"github.com/inovacc/mod/internal/coverage"
 	"math"
 )
 

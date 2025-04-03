@@ -6,7 +6,7 @@ package go122
 
 import (
 	"fmt"
-	"internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event"
 )
 
 const (
