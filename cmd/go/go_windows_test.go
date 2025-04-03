@@ -5,7 +5,6 @@
 package main_test
 
 import (
-	"internal/testenv"
 	"os"
 	"path/filepath"
 	"strings"

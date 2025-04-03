@@ -5,7 +5,7 @@
 package main
 
 import (
-	"github.com/inovacc/mod/cmd/go/internal/base"
+	"github.com/inovacc/mod/cmd/go/base"
 	"os"
 	"strings"
 	"testing"

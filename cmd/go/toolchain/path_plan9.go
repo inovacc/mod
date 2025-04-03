@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/inovacc/mod/cmd/go/internal/gover"
+	"github.com/inovacc/mod/cmd/go/gover"
 )
 
 // pathDirs returns the directories in the system search path.

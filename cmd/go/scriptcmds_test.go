@@ -7,7 +7,7 @@ package main_test
 import (
 	"errors"
 	"fmt"
-	"github.com/inovacc/mod/cmd/go/internal/work"
+	"github.com/inovacc/mod/cmd/go/work"
 	"github.com/inovacc/mod/cmd/internal/script"
 	"github.com/inovacc/mod/cmd/internal/script/scripttest"
 	"os"

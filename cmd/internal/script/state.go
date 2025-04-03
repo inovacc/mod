@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"internal/txtar"
+	"github.com/inovacc/mod/internal/txtar"
 	"io"
 	"io/fs"
 	"os"

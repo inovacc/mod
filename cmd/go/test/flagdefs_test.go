@@ -7,7 +7,7 @@ package test
 import (
 	"github.com/inovacc/mod/cmd/go/cfg"
 	"github.com/inovacc/mod/cmd/go/test/internal/genflags"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"maps"
 	"os"
 	"testing"

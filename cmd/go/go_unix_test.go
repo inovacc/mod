@@ -9,7 +9,7 @@ package main_test
 import (
 	"bufio"
 	"context"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"io"
 	"os"
 	"os/exec"

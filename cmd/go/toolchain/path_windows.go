@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/inovacc/mod/cmd/go/internal/gover"
+	"github.com/inovacc/mod/cmd/go/gover"
 )
 
 var pathExts = sync.OnceValue(func() []string {

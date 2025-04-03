@@ -9,8 +9,8 @@ package envcmd
 import (
 	"bytes"
 	"fmt"
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"internal/testenv"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

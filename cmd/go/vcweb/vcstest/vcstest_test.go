@@ -8,7 +8,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/inovacc/mod/cmd/go/internal/vcweb"
+	"github.com/inovacc/mod/cmd/go/vcweb"
 	"io"
 	"io/fs"
 	"log"

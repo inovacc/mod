@@ -7,8 +7,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"go/build"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"path/filepath"
 	"slices"

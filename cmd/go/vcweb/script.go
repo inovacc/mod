@@ -11,7 +11,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/inovacc/mod/cmd/internal/script"
-	"internal/txtar"
+	"github.com/inovacc/mod/internal/txtar"
 	"io"
 	"log"
 	"net/http"

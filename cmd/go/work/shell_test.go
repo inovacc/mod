@@ -8,6 +8,7 @@ package work
 
 import (
 	"bytes"
+	"github.com/inovacc/mod/internal/testenv"
 	"strings"
 	"testing"
 	"unicode"

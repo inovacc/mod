@@ -6,9 +6,8 @@ package main_test
 
 import (
 	"flag"
-	"go/format"
-	"internal/diff"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/diff"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"strings"
 	"testing"

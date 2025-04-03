@@ -5,7 +5,7 @@
 package main_test
 
 import (
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"sync/atomic"
 	"testing"
 )

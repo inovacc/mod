@@ -11,7 +11,8 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"internal/txtar"
+	"github.com/inovacc/mod/cmd/go/modfetch/codehost"
+	"github.com/inovacc/mod/internal/txtar"
 	"io"
 	"io/fs"
 	"log"
@@ -24,7 +25,6 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/inovacc/mod/cmd/go/internal/modfetch/codehost"
 	"github.com/inovacc/mod/cmd/internal/par"
 
 	"golang.org/x/mod/module"

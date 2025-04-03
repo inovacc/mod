@@ -15,8 +15,11 @@ import (
 	"context"
 	_ "embed"
 	"flag"
-	"internal/testenv"
-	"internal/txtar"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/gover"
+	"github.com/inovacc/mod/cmd/go/vcweb/vcstest"
+	"github.com/inovacc/mod/internal/testenv"
+	"github.com/inovacc/mod/internal/txtar"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -25,9 +28,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"github.com/inovacc/mod/cmd/go/internal/gover"
-	"github.com/inovacc/mod/cmd/go/internal/vcweb/vcstest"
 	"github.com/inovacc/mod/cmd/internal/script"
 	"github.com/inovacc/mod/cmd/internal/script/scripttest"
 

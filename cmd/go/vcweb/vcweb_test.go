@@ -5,6 +5,7 @@
 package vcweb_test
 
 import (
+	"github.com/inovacc/mod/cmd/go/vcweb"
 	"io"
 	"log"
 	"net/http"

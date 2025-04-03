@@ -5,7 +5,7 @@
 package load
 
 import (
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
+	"github.com/inovacc/mod/cmd/go/cfg"
 	"testing"
 )
 

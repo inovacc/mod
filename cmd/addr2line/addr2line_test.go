@@ -7,7 +7,7 @@ package main
 import (
 	"bufio"
 	"bytes"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"path/filepath"
 	"runtime"

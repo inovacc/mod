@@ -8,8 +8,7 @@
 
 package p
 
-type F
-{ // ERRORx "expected type|type declaration"
+type F { // ERRORx "expected type|type declaration"
 float64
 } // ERRORx "expected declaration|non-declaration statement"
 
@@ -19,8 +18,7 @@ func _[T F | int](x T) {
 
 // test case from issue
 
-type FloatType
-{ // ERRORx "expected type|type declaration"
+type FloatType { // ERRORx "expected type|type declaration"
 float32 | float64
 } // ERRORx "expected declaration|non-declaration statement"
 

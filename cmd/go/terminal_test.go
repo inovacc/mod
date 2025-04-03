@@ -6,8 +6,6 @@ package main_test
 
 import (
 	"errors"
-	"internal/testenv"
-	"internal/testpty"
 	"io"
 	"os"
 	"testing"

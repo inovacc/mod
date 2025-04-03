@@ -7,7 +7,7 @@ package base
 import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/go/cfg"
-	"go/build"
+	"github.com/inovacc/mod/go/build"
 	"os"
 	"path/filepath"
 
