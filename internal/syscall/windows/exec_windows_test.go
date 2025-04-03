@@ -8,7 +8,7 @@ package windows_test
 
 import (
 	"fmt"
-	"internal/syscall/windows"
+	"github.com/inovacc/mod/internal/syscall/windows"
 	"os"
 	"os/exec"
 	"syscall"

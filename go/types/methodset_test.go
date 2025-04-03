@@ -9,10 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	"go/ast"
-	"go/parser"
-	"go/token"
-	. "go/types"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
+	. "github.com/inovacc/mod/go/types"
 )
 
 func TestNewMethodSet(t *testing.T) {

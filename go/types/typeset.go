@@ -8,8 +8,8 @@
 package types
 
 import (
-	"go/token"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/token"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"slices"
 	"strings"
 )

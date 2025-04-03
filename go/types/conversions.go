@@ -10,8 +10,8 @@
 package types
 
 import (
-	"go/constant"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/constant"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"unicode"
 )
 

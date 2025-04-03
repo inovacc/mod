@@ -7,10 +7,11 @@
 package types_test
 
 import (
-	"go/ast"
-	"go/token"
-	"go/types"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/go/types"
+	"github.com/inovacc/mod/internal/testenv"
+
 	"testing"
 )
 

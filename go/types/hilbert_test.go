@@ -14,7 +14,7 @@ import (
 	"os"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 var (

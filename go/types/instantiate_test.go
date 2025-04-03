@@ -7,7 +7,7 @@
 package types_test
 
 import (
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 	"strings"
 	"testing"
 )

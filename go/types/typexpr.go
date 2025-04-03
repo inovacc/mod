@@ -8,9 +8,9 @@ package types
 
 import (
 	"fmt"
-	"go/ast"
-	"go/constant"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"strings"
 )
 

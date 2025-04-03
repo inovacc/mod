@@ -5,9 +5,9 @@
 package types
 
 import (
-	"go/ast"
-	"go/parser"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"testing"
 )
 

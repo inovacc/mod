@@ -6,7 +6,7 @@ package types
 
 import (
 	"fmt"
-	"go/version"
+	"github.com/inovacc/mod/go/version"
 	"internal/goversion"
 )
 

@@ -10,8 +10,8 @@ import (
 	"github.com/inovacc/mod/go/ast"
 	"github.com/inovacc/mod/go/constant"
 	"github.com/inovacc/mod/go/token"
-	"internal/buildcfg"
-	. "internal/types/errors"
+
+	. "github.com/inovacc/mod/internal/types/errors"
 	"slices"
 )
 

@@ -8,16 +8,16 @@ package types_test
 
 import (
 	"fmt"
-	"go/ast"
-	"go/parser"
-	"go/token"
-	"go/types"
-	"internal/godebug"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/go/types"
+	"github.com/inovacc/mod/internal/godebug"
+	"github.com/inovacc/mod/internal/testenv"
 	"strings"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 func testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, expr string, typ Type, typStr, valStr string) {

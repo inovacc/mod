@@ -5,16 +5,16 @@
 package types_test
 
 import (
-	"go/ast"
-	"go/parser"
-	"go/token"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/testenv"
 	"path"
 	"path/filepath"
 	"testing"
 	"time"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 func TestSelf(t *testing.T) {

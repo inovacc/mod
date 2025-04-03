@@ -3,7 +3,7 @@
 package registry
 
 import (
-	"internal/syscall/windows/sysdll"
+	"github.com/inovacc/mod/internal/syscall/windows/sysdll"
 	"syscall"
 	"unsafe"
 )

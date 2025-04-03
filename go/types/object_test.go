@@ -6,11 +6,11 @@ package types_test
 
 import (
 	"fmt"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"strings"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 func TestIsAlias(t *testing.T) {

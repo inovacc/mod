@@ -8,7 +8,7 @@
 package types
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"testing"
 )
 

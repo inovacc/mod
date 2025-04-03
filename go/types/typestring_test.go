@@ -5,10 +5,10 @@
 package types_test
 
 import (
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 const filename = "<src>"

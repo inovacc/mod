@@ -10,7 +10,7 @@ import (
 	"github.com/inovacc/mod/go/ast"
 	"github.com/inovacc/mod/go/constant"
 	"github.com/inovacc/mod/go/token"
-	. "internal/types/errors"
+	. "github.com/inovacc/mod/internal/types/errors"
 )
 
 // If e is a valid function instantiation, indexExpr returns true.

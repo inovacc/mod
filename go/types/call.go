@@ -9,7 +9,7 @@ package types
 import (
 	"github.com/inovacc/mod/go/ast"
 	"github.com/inovacc/mod/go/token"
-	. "internal/types/errors"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"strings"
 )
 

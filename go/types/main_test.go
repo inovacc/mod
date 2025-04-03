@@ -8,8 +8,8 @@
 package types_test
 
 import (
-	"go/build"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/build"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"testing"
 )

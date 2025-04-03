@@ -6,14 +6,14 @@ package types_test
 
 import (
 	"fmt"
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	"reflect"
 	"regexp"
 	"strings"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 // TestScopeLookupParent ensures that (*Scope).LookupParent returns

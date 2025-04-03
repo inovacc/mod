@@ -5,12 +5,12 @@
 package types_test
 
 import (
-	"go/token"
+	"github.com/inovacc/mod/go/token"
 	"path/filepath"
 	"runtime"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 // BenchmarkLookupFieldOrMethod measures types.LookupFieldOrMethod performance.

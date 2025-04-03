@@ -10,10 +10,10 @@
 package types
 
 import (
-	"go/ast"
-	"go/constant"
-	"go/token"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
+	. "github.com/inovacc/mod/internal/types/errors"
 )
 
 // builtin type-checks a call to the built-in specified by id and

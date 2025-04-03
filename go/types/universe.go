@@ -10,7 +10,7 @@
 package types
 
 import (
-	"go/constant"
+	"github.com/inovacc/mod/go/constant"
 	"strings"
 )
 

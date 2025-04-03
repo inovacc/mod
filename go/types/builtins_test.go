@@ -9,7 +9,7 @@ package types_test
 
 import (
 	"fmt"
-	"go/ast"
+	"github.com/inovacc/mod/go/ast"
 	"testing"
 
 	. "go/types"

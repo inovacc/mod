@@ -17,11 +17,11 @@ package types_test
 
 import (
 	"fmt"
-	"go/ast"
-	"go/format"
-	"go/parser"
-	"go/token"
-	"go/types"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/format"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/go/types"
 	"log"
 	"regexp"
 	"slices"

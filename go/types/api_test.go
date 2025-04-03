@@ -7,18 +7,18 @@ package types_test
 import (
 	"errors"
 	"fmt"
-	"go/ast"
-	"go/importer"
-	"go/parser"
-	"go/token"
-	"internal/goversion"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/importer"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/goversion"
+	"github.com/inovacc/mod/internal/testenv"
 	"slices"
 	"strings"
 	"sync"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 	"runtime"
 )
 

@@ -11,7 +11,7 @@ import (
 	"cmp"
 	"container/heap"
 	"fmt"
-	. "internal/types/errors"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"slices"
 	"sort"
 )

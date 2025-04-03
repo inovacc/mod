@@ -12,10 +12,10 @@ package types
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
-	"go/constant"
-	"go/token"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/go/token"
+	. "github.com/inovacc/mod/internal/types/errors"
 )
 
 // An operandMode specifies the (addressing) mode of an operand.

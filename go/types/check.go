@@ -11,8 +11,8 @@ import (
 	"github.com/inovacc/mod/go/ast"
 	"github.com/inovacc/mod/go/constant"
 	"github.com/inovacc/mod/go/token"
-	"internal/godebug"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/internal/godebug"
+	. "github.com/inovacc/mod/internal/types/errors"
 	"sync/atomic"
 )
 

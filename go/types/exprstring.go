@@ -9,7 +9,7 @@ package types
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
+	"github.com/inovacc/mod/go/ast"
 )
 
 // ExprString returns the (possibly shortened) string representation for x.

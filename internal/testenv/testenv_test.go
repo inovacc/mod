@@ -5,8 +5,8 @@
 package testenv_test
 
 import (
-	"internal/platform"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/platform"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"path/filepath"
 	"runtime"

@@ -5,7 +5,7 @@
 package windows_test
 
 import (
-	"internal/syscall/windows"
+	"github.com/inovacc/mod/internal/syscall/windows"
 	"os"
 	"path/filepath"
 	"syscall"

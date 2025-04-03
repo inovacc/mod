@@ -5,8 +5,8 @@
 package types_test
 
 import (
-	"go/ast"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/token"
 	"strconv"
 	"testing"
 )

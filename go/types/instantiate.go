@@ -13,9 +13,9 @@ package types
 import (
 	"errors"
 	"fmt"
-	"go/token"
-	"internal/buildcfg"
-	. "internal/types/errors"
+	"github.com/inovacc/mod/go/token"
+	"github.com/inovacc/mod/internal/buildcfg"
+	. "github.com/inovacc/mod/internal/types/errors"
 )
 
 // A genericType implements access to its type parameters.

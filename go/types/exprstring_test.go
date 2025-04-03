@@ -5,10 +5,10 @@
 package types_test
 
 import (
-	"go/parser"
+	"github.com/inovacc/mod/go/parser"
 	"testing"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 var testExprs = []testEntry{

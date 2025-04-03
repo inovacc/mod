@@ -11,8 +11,8 @@
 package types
 
 import (
-	"go/ast"
-	"go/constant"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/constant"
 )
 
 func (check *Checker) record(x *operand) {
