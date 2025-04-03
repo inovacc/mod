@@ -7,16 +7,15 @@ package modload
 import (
 	"context"
 	"flag"
-	"internal/testenv"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/vcweb/vcstest"
+	"github.com/inovacc/mod/internal/testenv"
 	"log"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 	"testing"
-
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"github.com/inovacc/mod/cmd/go/internal/vcweb/vcstest"
 
 	"golang.org/x/mod/module"
 )

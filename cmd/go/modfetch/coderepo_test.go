@@ -10,8 +10,11 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"flag"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/modfetch/codehost"
+	"github.com/inovacc/mod/cmd/go/vcweb/vcstest"
+	"github.com/inovacc/mod/internal/testenv"
 	"hash"
-	"internal/testenv"
 	"io"
 	"log"
 	"os"
@@ -20,10 +23,6 @@ import (
 	"strings"
 	"testing"
 	"time"
-
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"github.com/inovacc/mod/cmd/go/internal/modfetch/codehost"
-	"github.com/inovacc/mod/cmd/go/internal/vcweb/vcstest"
 
 	"golang.org/x/mod/sumdb/dirhash"
 )

@@ -8,12 +8,11 @@ package main
 
 import (
 	"bytes"
+	"github.com/inovacc/mod/cmd/go/test/internal/genflags"
 	"log"
 	"os"
 	"os/exec"
 	"text/template"
-
-	"github.com/inovacc/mod/cmd/go/internal/test/internal/genflags"
 )
 
 func main() {

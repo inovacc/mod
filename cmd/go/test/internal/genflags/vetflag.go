@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/inovacc/mod/cmd/go/internal/base"
+	"github.com/inovacc/mod/cmd/go/base"
 	"os/exec"
 	"regexp"
 	"sort"

@@ -15,7 +15,7 @@ import (
 	"github.com/inovacc/mod/cmd/go/modindex"
 	"github.com/inovacc/mod/cmd/go/search"
 	"github.com/inovacc/mod/cmd/go/str"
-	"go/build"
+	"github.com/inovacc/mod/go/build"
 	"io/fs"
 	"os"
 	pathpkg "path"

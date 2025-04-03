@@ -8,7 +8,6 @@ package work
 
 import (
 	"bytes"
-	"internal/testenv"
 	"strings"
 	"testing"
 	"unicode"

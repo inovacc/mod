@@ -22,16 +22,15 @@ import (
 	"encoding/hex"
 	"flag"
 	"fmt"
-	"internal/testenv"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/modfetch"
+	"github.com/inovacc/mod/cmd/go/modload"
+	"github.com/inovacc/mod/internal/testenv"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
-
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"github.com/inovacc/mod/cmd/go/internal/modfetch"
-	"github.com/inovacc/mod/cmd/go/internal/modload"
 
 	"golang.org/x/mod/module"
 )

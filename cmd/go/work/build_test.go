@@ -5,7 +5,10 @@
 package work
 
 import (
-	"internal/testenv"
+	"github.com/inovacc/mod/cmd/go/base"
+	"github.com/inovacc/mod/cmd/go/cfg"
+	"github.com/inovacc/mod/cmd/go/load"
+	"github.com/inovacc/mod/internal/testenv"
 	"io/fs"
 	"os"
 	"path/filepath"
@@ -13,10 +16,6 @@ import (
 	"runtime"
 	"strings"
 	"testing"
-
-	"github.com/inovacc/mod/cmd/go/internal/base"
-	"github.com/inovacc/mod/cmd/go/internal/cfg"
-	"github.com/inovacc/mod/cmd/go/internal/load"
 )
 
 func TestRemoveDevNull(t *testing.T) {

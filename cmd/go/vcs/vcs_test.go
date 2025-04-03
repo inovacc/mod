@@ -7,13 +7,12 @@ package vcs
 import (
 	"errors"
 	"fmt"
-	"internal/testenv"
+	"github.com/inovacc/mod/cmd/go/web"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
-
-	"github.com/inovacc/mod/cmd/go/internal/web"
 )
 
 func init() {
