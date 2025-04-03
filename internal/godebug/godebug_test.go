@@ -6,9 +6,9 @@ package godebug_test
 
 import (
 	"fmt"
-	. "github.com/inovacc/mod/internal/godebug"
-	"github.com/inovacc/mod/internal/race"
-	"github.com/inovacc/mod/internal/testenv"
+	. "internal/godebug"
+	"internal/race"
+	"internal/testenv"
 	"os"
 	"os/exec"
 	"runtime/metrics"
@@ -102,7 +102,7 @@ func TestPanicNilRace(t *testing.T) {
 
 func TestCmdBisect(t *testing.T) {
 	testenv.MustHaveGoBuild(t)
-	out, err := exec.Command("go", "run", "cmd/vendor/golang.org/x/tools/cmd/bisect", "GODEBUG=buggy=1#PATTERN", os.Args[0], "-test.run=^TestBisectTestCase$").CombinedOutput()
+	out, err := exec.Command("go", "run", "github.com/inovacc/mod/cmd/vendor/golang.org/x/tools/cmd/bisect", "GODEBUG=buggy=1#PATTERN", os.Args[0], "-test.run=^TestBisectTestCase$").CombinedOutput()
 	if err != nil {
 		t.Fatalf("exec bisect: %v\n%s", err, out)
 	}

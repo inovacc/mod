@@ -8,7 +8,7 @@
 
 //go:build go1.21
 
-package p
+package orderedmap
 
 func f() {
 	for _ = range 10 /* ERROR "requires go1.22 or later" */ {

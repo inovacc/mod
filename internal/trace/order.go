@@ -7,6 +7,10 @@ package trace
 import (
 	"fmt"
 	"strings"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
+	"internal/trace/version"
 )
 
 // ordering emulates Go scheduler state for both validation and

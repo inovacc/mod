@@ -5,7 +5,7 @@
 package pkgbits_test
 
 import (
-	"github.com/inovacc/mod/internal/pkgbits"
+	"internal/pkgbits"
 	"strings"
 	"testing"
 )

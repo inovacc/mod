@@ -4,7 +4,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package receivers
+package p
 
 // TODO(gri) add more tests checking the various restrictions on receivers
 

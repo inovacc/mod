@@ -11,6 +11,10 @@ import (
 	"fmt"
 	"math"
 	"strings"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
+	"internal/trace/version"
 )
 
 // maxArgs is the maximum number of arguments for "plain" events,

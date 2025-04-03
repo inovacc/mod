@@ -8,6 +8,9 @@ import (
 	"cmp"
 	"encoding/binary"
 	"fmt"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
 )
 
 type batchCursor struct {

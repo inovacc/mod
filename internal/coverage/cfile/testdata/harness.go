@@ -7,7 +7,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage/slicewriter"
+	"internal/coverage/slicewriter"
 	"io"
 	"log"
 	"os"

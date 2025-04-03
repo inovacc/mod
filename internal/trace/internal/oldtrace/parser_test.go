@@ -6,7 +6,7 @@ package oldtrace
 
 import (
 	"bytes"
-	"github.com/inovacc/mod/internal/trace/version"
+	"internal/trace/version"
 	"os"
 	"path/filepath"
 	"strings"

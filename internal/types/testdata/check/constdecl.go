@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package constdecl
+package orderedmap
 
 import "math"
 import "unsafe"
@@ -11,27 +11,27 @@ var v int
 
 // Const decls must be initialized by constants.
 const _ = v /* ERROR "not constant" */
-const _ = math /* ERROR "not constant" */ .Sin(0)
+const _ = math. /* ERROR "not constant" */ Sin(0)
 const _ = int /* ERROR "not an expression" */
 
 func _() {
 	const _ = v /* ERROR "not constant" */
-	const _ = math /* ERROR "not constant" */ .Sin(0)
+	const _ = math. /* ERROR "not constant" */ Sin(0)
 	const _ = int /* ERROR "not an expression" */
 }
 
 // Identifier and expression arity must match.
-const _ /* ERROR "missing init expr for _" */
+const _        /* ERROR "missing init expr for _" */
 const _ = 1, 2 /* ERROR "extra init expr 2" */
 
 const _ /* ERROR "missing init expr for _" */ int
 const _ int = 1, 2 /* ERROR "extra init expr 2" */
 
 const (
-	_ /* ERROR "missing init expr for _" */
+	_        /* ERROR "missing init expr for _" */
 	_ = 1, 2 /* ERROR "extra init expr 2" */
 
-	_ /* ERROR "missing init expr for _" */ int
+	_/* ERROR "missing init expr for _" */ int
 	_ int = 1, 2 /* ERROR "extra init expr 2" */
 )
 
@@ -52,17 +52,17 @@ const (
 )
 
 func _() {
-	const _ /* ERROR "missing init expr for _" */
+	const _        /* ERROR "missing init expr for _" */
 	const _ = 1, 2 /* ERROR "extra init expr 2" */
 
 	const _ /* ERROR "missing init expr for _" */ int
 	const _ int = 1, 2 /* ERROR "extra init expr 2" */
 
 	const (
-		_ /* ERROR "missing init expr for _" */
+		_        /* ERROR "missing init expr for _" */
 		_ = 1, 2 /* ERROR "extra init expr 2" */
 
-		_ /* ERROR "missing init expr for _" */ int
+		_/* ERROR "missing init expr for _" */ int
 		_ int = 1, 2 /* ERROR "extra init expr 2" */
 	)
 
@@ -87,13 +87,13 @@ func _() {
 // Caused panic because the constant value was not set up (gri - 7/8/2014).
 func _() {
 	const (
-	    x string = missing /* ERROR "undefined" */
-	    y = x + ""
+		x string = missing /* ERROR "undefined" */
+		y        = x + ""
 	)
 }
 
 // Test case for constants depending on function literals (see also #22992).
-const A /* ERROR "initialization cycle" */ = unsafe.Sizeof(func() { _ = A })
+const A = /* ERROR "initialization cycle" */ unsafe.Sizeof(func() { _ = A })
 
 func _() {
 	// The function literal below must not see a.
@@ -113,7 +113,9 @@ const (
 	/* some gap */
 	_ // ERROR "overflows"
 	/* some gap */
-	/* some gap */ _ /* ERROR "overflows" */; _ /* ERROR "overflows" */
+	/* some gap */
+	_ /* ERROR "overflows" */
+	_ /* ERROR "overflows" */
 	/* some gap */
 	_ = 255 + iota
 	_ = byte /* ERROR "overflows" */ (255) + iota

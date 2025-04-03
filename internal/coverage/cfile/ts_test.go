@@ -7,9 +7,9 @@ package cfile
 import (
 	"encoding/json"
 	"flag"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/goexperiment"
-	"github.com/inovacc/mod/internal/testenv"
+	"internal/coverage"
+	"internal/goexperiment"
+	"internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

@@ -4,7 +4,7 @@
 
 // stand-alone test to ensure case is triggered
 
-package issue26390
+package p
 
 type A = T
 

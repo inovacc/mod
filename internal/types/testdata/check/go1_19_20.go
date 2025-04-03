@@ -8,7 +8,7 @@
 
 //go:build go1.20
 
-package p
+package orderedmap
 
 type Slice []byte
 type Array [8]byte

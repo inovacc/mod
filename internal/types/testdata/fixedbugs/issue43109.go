@@ -7,4 +7,4 @@
 
 package p
 
-import . "/foo" // ERROR "could not import /foo"
+// ERROR "could not import /foo"

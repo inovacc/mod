@@ -30,6 +30,9 @@ package trace
 import (
 	"errors"
 	"fmt"
+	"internal/trace/event"
+	"internal/trace/event/go122"
+	"internal/trace/internal/oldtrace"
 	"io"
 )
 

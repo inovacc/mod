@@ -4,7 +4,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package aliasTypes
+package p
 
 type _ = int
 type _ /* ERROR "generic type alias requires GODEBUG=gotypesalias=1" */ [P any] = int

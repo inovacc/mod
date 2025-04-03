@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"flag"
-	"github.com/inovacc/mod/internal/diff"
-	"github.com/inovacc/mod/internal/testenv"
+	"internal/diff"
+	"internal/testenv"
 	"os"
 	"os/exec"
 	"testing"
@@ -26,7 +26,7 @@ func TestGenerated(t *testing.T) {
 	// Here we use 'go run cmd/dist' instead of 'go tool dist' in case the
 	// installed cmd/dist is stale or missing. We don't want to miss a
 	// skew in the data due to a stale binary.
-	cmd := testenv.Command(t, "go", "run", "cmd/dist", "list", "-json", "-broken")
+	cmd := testenv.Command(t, "go", "run", "github.com/inovacc/mod/cmd/dist", "list", "-json", "-broken")
 
 	// cmd/dist requires GOROOT to be set explicitly in the environment.
 	cmd.Env = append(cmd.Environ(), "GOROOT="+testenv.GOROOT(t))

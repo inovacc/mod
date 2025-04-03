@@ -6,7 +6,7 @@
 
 // Check Go language version-specific errors.
 
-package p
+package orderedmap
 
 type Slice []byte
 type Array [8]byte

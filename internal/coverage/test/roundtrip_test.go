@@ -6,7 +6,10 @@ package test
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
+	"internal/coverage"
+	"internal/coverage/decodemeta"
+	"internal/coverage/encodemeta"
+	"internal/coverage/slicewriter"
 	"io"
 	"os"
 	"path/filepath"

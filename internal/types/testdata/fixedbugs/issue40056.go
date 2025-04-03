@@ -8,7 +8,7 @@ func _() {
 	NewS /* ERROR "cannot infer T" */ ().M()
 }
 
-type S struct {}
+type S struct{}
 
 func NewS[T any]() *S { panic(0) }
 

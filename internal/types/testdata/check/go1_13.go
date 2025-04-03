@@ -6,11 +6,11 @@
 
 // Check Go language version-specific errors.
 
-package p
+package orderedmap
 
 // interface embedding
 
-type I interface { m() }
+type I interface{ m() }
 
 type _ interface {
 	m()

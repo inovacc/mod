@@ -10,11 +10,11 @@ package cfile
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/encodecounter"
-	"github.com/inovacc/mod/internal/coverage/encodemeta"
-	"github.com/inovacc/mod/internal/coverage/rtcov"
 	"hash/fnv"
+	"internal/coverage"
+	"internal/coverage/encodecounter"
+	"internal/coverage/encodemeta"
+	"internal/coverage/rtcov"
 	"io"
 	"os"
 	"path/filepath"

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package issue46403
+package p
 
 func _() {
 	// a should be used, despite the parser error below.

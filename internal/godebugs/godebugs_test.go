@@ -5,8 +5,8 @@
 package godebugs_test
 
 import (
-	"github.com/inovacc/mod/internal/godebugs"
-	"github.com/inovacc/mod/internal/testenv"
+	"internal/godebugs"
+	"internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

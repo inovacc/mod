@@ -6,8 +6,8 @@ package cmerge_test
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/cmerge"
+	"internal/coverage"
+	"internal/coverage/cmerge"
 	"testing"
 )
 

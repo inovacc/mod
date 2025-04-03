@@ -10,6 +10,7 @@ import (
 )
 
 func TestSliceWriter(t *testing.T) {
+
 	sleq := func(t *testing.T, got []byte, want []byte) {
 		t.Helper()
 		if len(got) != len(want) {

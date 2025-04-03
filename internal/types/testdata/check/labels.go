@@ -5,7 +5,7 @@
 // This file is a modified concatenation of the files
 // $GOROOT/test/label.go and $GOROOT/test/label1.go.
 
-package labels
+package orderedmap
 
 var x int
 
@@ -14,8 +14,7 @@ L1 /* ERROR "label L1 declared and not used" */ :
 	for {
 	}
 L2 /* ERROR "label L2 declared and not used" */ :
-	select {
-	}
+	select {}
 L3 /* ERROR "label L3 declared and not used" */ :
 	switch {
 	}
@@ -38,12 +37,13 @@ L7:
 		break L8 /* ERROR "invalid break label L8" */
 	}
 
-// A label must be directly associated with a switch, select, or
-// for statement; it cannot be the label of a labeled statement.
+	// A label must be directly associated with a switch, select, or
+	// for statement; it cannot be the label of a labeled statement.
 
-L7a /* ERROR "declared and not used" */ : L7b:
+L7a /* ERROR "declared and not used" */ :
+L7b:
 	for {
-		break L7a /* ERROR "invalid break label L7a" */
+		break L7a    /* ERROR "invalid break label L7a" */
 		continue L7a /* ERROR "invalid continue label L7a" */
 		continue L7b
 	}
@@ -71,7 +71,8 @@ L10:
 	}
 
 	goto L10a
-L10a: L10b:
+L10a:
+L10b:
 	select {
 	default:
 		break L10a /* ERROR "invalid break label L10a" */
@@ -193,7 +194,7 @@ _: // multiple blank labels are ok
 func f5() {
 _:
 	for {
-		break _ /* ERROR "invalid break label _" */
+		break _    /* ERROR "invalid break label _" */
 		continue _ /* ERROR "invalid continue label _" */
 	}
 }

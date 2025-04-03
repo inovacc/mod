@@ -7,14 +7,15 @@ package p
 import "unsafe"
 
 type E [1 << 30]complex128
+
 var a [1 << 30]E
-var _ = unsafe.Sizeof(a /* ERROR "too large" */ )
+var _ = unsafe.Sizeof(a /* ERROR "too large" */)
 
 var s struct {
 	_ [1 << 30]E
 	x int
 }
-var _ = unsafe.Offsetof(s /* ERROR "too large" */ .x)
+var _ = unsafe.Offsetof(s. /* ERROR "too large" */ x)
 
 // Test case from issue (modified so it also triggers on 32-bit platforms).
 
@@ -32,5 +33,5 @@ func _() {
 	var t T
 	_ = unsafe.Sizeof(a)
 	_ = unsafe.Sizeof(s)
-	_ = unsafe.Sizeof(t /* ERROR "too large" */ )
+	_ = unsafe.Sizeof(t /* ERROR "too large" */)
 }

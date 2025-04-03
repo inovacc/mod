@@ -6,9 +6,9 @@ package test
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/decodecounter"
-	"github.com/inovacc/mod/internal/coverage/encodecounter"
+	"internal/coverage"
+	"internal/coverage/decodecounter"
+	"internal/coverage/encodecounter"
 	"io"
 	"os"
 	"path/filepath"

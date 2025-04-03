@@ -10,7 +10,6 @@
 //
 // Note: This can't be part of the parent traceviewer package as that would
 // throw. go_bootstrap cannot depend on the cgo version of package net in ./make.bash.
-
 package format
 
 type Data struct {

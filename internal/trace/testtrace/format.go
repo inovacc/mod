@@ -7,7 +7,7 @@ package testtrace
 import (
 	"bytes"
 	"fmt"
-	"github.com/inovacc/mod/github.com/inovacc/mod/internal/trace/raw"
+	"github.com/inovacc/mod/internal/trace/raw"
 	"github.com/inovacc/mod/internal/txtar"
 	"io"
 )

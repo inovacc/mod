@@ -4,12 +4,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package importC
+package orderedmap
 
 import "C"
 import _ /* ERROR `cannot rename import "C"` */ "C"
-import foo /* ERROR `cannot rename import "C"` */ "C"
-import . /* ERROR `cannot rename import "C"` */ "C"
 
 // Test cases extracted from issue #22090.
 

@@ -6,7 +6,7 @@
 
 // Check Go language version-specific errors.
 
-package p
+package orderedmap
 
 // numeric literals
 const (

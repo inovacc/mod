@@ -2,16 +2,16 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package methodsets
+package orderedmap
 
-type T0 struct {}
+type T0 struct{}
 
-func (T0) v0() {}
+func (T0) v0()  {}
 func (*T0) p0() {}
 
-type T1 struct {} // like T0 with different method names
+type T1 struct{} // like T0 with different method names
 
-func (T1) v1() {}
+func (T1) v1()  {}
 func (*T1) p1() {}
 
 type T2 interface {
@@ -29,10 +29,10 @@ type T3 struct {
 func _() {
 	var (
 		_ func(T0) = T0.v0
-		_ = T0.p0 /* ERROR "invalid method expression T0.p0 (needs pointer receiver (*T0).p0)" */
+		_          = T0.p0 /* ERROR "invalid method expression T0.p0 (needs pointer receiver (*T0).p0)" */
 
-		_ func (*T0) = (*T0).v0
-		_ func (*T0) = (*T0).p0
+		_ func(*T0) = (*T0).v0
+		_ func(*T0) = (*T0).p0
 
 		// T1 is like T0
 
@@ -59,42 +59,42 @@ func _() {
 func _() {
 	var (
 		v0 T0
-		_ func() = v0.v0
-		_ func() = v0.p0
+		_  func() = v0.v0
+		_  func() = v0.p0
 	)
 
 	var (
 		p0 *T0
-		_ func() = p0.v0
-		_ func() = p0.p0
+		_  func() = p0.v0
+		_  func() = p0.p0
 	)
 
 	// T1 is like T0
 
 	var (
 		v2 T2
-		_ func() = v2.v2
-		_ func() = v2.p2
+		_  func() = v2.v2
+		_  func() = v2.p2
 	)
 
 	var (
 		v4 T3
-		_ func() = v4.v0
-		_ func() = v4.p0
-		_ func() = v4.v1
-		_ func() = v4.p1
-		_ func() = v4.v2
-		_ func() = v4.p2
+		_  func() = v4.v0
+		_  func() = v4.p0
+		_  func() = v4.v1
+		_  func() = v4.p1
+		_  func() = v4.v2
+		_  func() = v4.p2
 	)
 
 	var (
 		p4 *T3
-		_ func() = p4.v0
-		_ func() = p4.p0
-		_ func() = p4.v1
-		_ func() = p4.p1
-		_ func() = p4.v2
-		_ func() = p4.p2
+		_  func() = p4.v0
+		_  func() = p4.p0
+		_  func() = p4.v1
+		_  func() = p4.p1
+		_  func() = p4.v2
+		_  func() = p4.p2
 	)
 }
 
@@ -191,14 +191,14 @@ func _() {
 func issue5918() {
 	var (
 		err error
-		_ = err.Error()
-		_ func() string = err.Error
-		_ func(error) string = error.Error
+		_                      = err.Error()
+		_   func() string      = err.Error
+		_   func(error) string = error.Error
 
-		perr = &err
-		_ = perr.Error /* ERROR "type *error is pointer to interface, not interface" */ ()
-		_ func() string = perr.Error /* ERROR "type *error is pointer to interface, not interface" */
-		_ func(*error) string = (*error).Error /* ERROR "type *error is pointer to interface, not interface" */
+		perr                     = &err
+		_                        = perr.Error /* ERROR "type *error is pointer to interface, not interface" */ ()
+		_    func() string       = perr.Error     /* ERROR "type *error is pointer to interface, not interface" */
+		_    func(*error) string = (*error).Error /* ERROR "type *error is pointer to interface, not interface" */
 	)
 
 	type T *interface{ m() int }

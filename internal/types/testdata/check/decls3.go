@@ -4,7 +4,7 @@
 
 // embedded types
 
-package decls3
+package orderedmap
 
 import "unsafe"
 import "fmt"
@@ -13,9 +13,12 @@ import "fmt"
 
 func _() {
 	type (
-		T1 struct { X int }
-		T2 struct { X int }
-		T3 struct { T1; T2 } // X is embedded twice at the same level via T1->X, T2->X
+		T1 struct{ X int }
+		T2 struct{ X int }
+		T3 struct {
+			T1
+			T2
+		} // X is embedded twice at the same level via T1->X, T2->X
 	)
 
 	var t T3
@@ -24,10 +27,13 @@ func _() {
 
 func _() {
 	type (
-		T1 struct { X int }
-		T2 struct { T1 }
-		T3 struct { T1 }
-		T4 struct { T2; T3 } // X is embedded twice at the same level via T2->T1->X, T3->T1->X
+		T1 struct{ X int }
+		T2 struct{ T1 }
+		T3 struct{ T1 }
+		T4 struct {
+			T2
+			T3
+		} // X is embedded twice at the same level via T2->T1->X, T3->T1->X
 	)
 
 	var t T4
@@ -36,11 +42,14 @@ func _() {
 
 func issue4355() {
 	type (
-	    T1 struct {X int}
-	    T2 struct {T1}
-	    T3 struct {T2}
-	    T4 struct {T2}
-	    T5 struct {T3; T4} // X is embedded twice at the same level via T3->T2->T1->X, T4->T2->T1->X
+		T1 struct{ X int }
+		T2 struct{ T1 }
+		T3 struct{ T2 }
+		T4 struct{ T2 }
+		T5 struct {
+			T3
+			T4
+		} // X is embedded twice at the same level via T3->T2->T1->X, T4->T2->T1->X
 	)
 
 	var t T5
@@ -51,7 +60,10 @@ func _() {
 	type State int
 	type A struct{ State }
 	type B struct{ fmt.State }
-	type T struct{ A; B }
+	type T struct {
+		A
+		B
+	}
 
 	var t T
 	_ = t.State /* ERROR "ambiguous selector t.State" */
@@ -60,7 +72,7 @@ func _() {
 // Embedded fields can be predeclared types.
 
 func _() {
-	type T0 struct{
+	type T0 struct {
 		int
 		float32
 		f int
@@ -70,7 +82,7 @@ func _() {
 	_ = x.float32
 	_ = x.f
 
-	type T1 struct{
+	type T1 struct {
 		T0
 	}
 	var y T1
@@ -98,17 +110,19 @@ func _() {
 
 	// unsafe.Pointers are treated like regular pointers when embedded
 	type T2 struct {
-		unsafe /* ERROR "cannot be unsafe.Pointer" */ .Pointer
-		*/* ERROR "cannot be unsafe.Pointer" */ unsafe.Pointer /* ERROR "Pointer redeclared" */
-		UP /* ERROR "cannot be unsafe.Pointer" */
-		* /* ERROR "cannot be unsafe.Pointer" */ UP /* ERROR "UP redeclared" */
+		unsafe. /* ERROR "cannot be unsafe.Pointer" */ Pointer
+		* /* ERROR "cannot be unsafe.Pointer" */ unsafe.Pointer /* ERROR "Pointer redeclared" */
+		UP                                                      /* ERROR "cannot be unsafe.Pointer" */
+		* /* ERROR "cannot be unsafe.Pointer" */ UP             /* ERROR "UP redeclared" */
 	}
 }
 
 // Named types that are pointers.
 
 type S struct{ x int }
+
 func (*S) m() {}
+
 type P *S
 
 func _() {
@@ -220,7 +234,7 @@ func _() {
 	_ = S2{}.S1
 	_ = S2{}.B
 	_ = S2{}.C
-	_ = S2{}.D /* ERROR "no field or method" */
+	_ = S2{}.D  /* ERROR "no field or method" */
 	_ = S3{}.S1 /* ERROR "ambiguous selector S3{}.S1" */
 	_ = S3{}.A
 	_ = S3{}.B /* ERROR "ambiguous selector S3{}.B" */

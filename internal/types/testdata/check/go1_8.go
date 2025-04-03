@@ -6,7 +6,7 @@
 
 // Check Go language version-specific errors.
 
-package p
+package orderedmap
 
 // type alias declarations
 type any = /* ERROR "type alias requires go1.9 or later" */ interface{}

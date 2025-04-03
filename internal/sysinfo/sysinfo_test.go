@@ -5,6 +5,7 @@
 package sysinfo_test
 
 import (
+	. "internal/sysinfo"
 	"testing"
 )
 

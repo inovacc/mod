@@ -13,6 +13,11 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"internal/trace"
+	"internal/trace/raw"
+	"internal/trace/testtrace"
+	"internal/trace/version"
 )
 
 var (

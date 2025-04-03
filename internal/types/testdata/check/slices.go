@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // Package slices implements various slice algorithms.
-package slices
+package orderedmap
 
 // Map turns a []T1 to a []T2 using a mapping function.
 func Map[T1, T2 any](s []T1, f func(T1) T2) []T2 {
@@ -57,7 +57,7 @@ func reducer(x float64, y int) float64 {
 
 var reduced1 = Reduce[int, float64](input, 0, reducer)
 var reduced2 = Reduce(input, 1i /* ERROR "overflows" */, reducer) // using type inference
-var reduced3 = Reduce(input, 1, reducer) // using type inference
+var reduced3 = Reduce(input, 1, reducer)                          // using type inference
 
 func filter(x int) bool {
 	return x&1 != 0
@@ -65,4 +65,3 @@ func filter(x int) bool {
 
 var filtered1 = Filter[int](input, filter)
 var filtered2 = Filter(input, filter) // using type inference
-

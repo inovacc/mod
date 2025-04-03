@@ -4,7 +4,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package aliasTypes
+package p
 
 type _ = /* ERROR "type alias requires go1.9 or later" */ int
 type _[P /* ERROR "generic type alias requires go1.23 or later" */ interface{}] = int

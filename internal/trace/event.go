@@ -10,6 +10,10 @@ import (
 	"math"
 	"strings"
 	"time"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
+	"internal/trace/version"
 )
 
 // EventKind indicates the kind of event this is.

@@ -5,8 +5,8 @@
 package cformat_test
 
 import (
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/cformat"
+	"internal/coverage"
+	"internal/coverage/cformat"
 	"slices"
 	"strings"
 	"testing"

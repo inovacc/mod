@@ -15,6 +15,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/inovacc/mod/internal/cfg"
 	"github.com/inovacc/mod/internal/goarch"
 	"github.com/inovacc/mod/internal/platform"
 	"os"

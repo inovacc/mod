@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package assignability
+package p
 
 // See the end of this package for the declarations
 // of the types and variables used in these tests.

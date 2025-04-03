@@ -6,6 +6,7 @@ package buildcfg
 
 import (
 	"fmt"
+	"github.com/inovacc/mod/internal/goexperiment"
 	"reflect"
 	"strings"
 )

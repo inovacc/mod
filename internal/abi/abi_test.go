@@ -5,8 +5,8 @@
 package abi_test
 
 import (
-	"github.com/inovacc/mod/internal/abi"
-	"github.com/inovacc/mod/internal/testenv"
+	"internal/abi"
+	"internal/testenv"
 	"path/filepath"
 	"strings"
 	"testing"

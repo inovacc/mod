@@ -17,12 +17,13 @@ type Bazer[t any] interface {
 
 type Int int
 
-func (n Int) baz(int) {}
+func (n Int) baz(int)          {}
 func (n Int) foo(b Barer[int]) { b.bar(n) }
 
-type F[t any] interface { f(G[t]) }
-type G[t any] interface { g(H[t]) }
-type H[t any] interface { F[t] }
+type F[t any] interface{ f(G[t]) }
+type G[t any] interface{ g(H[t]) }
+type H[t any] interface{ F[t] }
 
 type T struct{}
+
 func (n T) f(b G[T]) { b.g(n) }

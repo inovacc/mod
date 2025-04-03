@@ -6,10 +6,10 @@ package cfile
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/goexperiment"
-	"github.com/inovacc/mod/internal/platform"
-	"github.com/inovacc/mod/internal/testenv"
+	"internal/coverage"
+	"internal/goexperiment"
+	"internal/platform"
+	"internal/testenv"
 	"os"
 	"os/exec"
 	"path/filepath"

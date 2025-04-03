@@ -13,6 +13,9 @@ import (
 	"io"
 	"slices"
 	"strings"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
 )
 
 // generation contains all the trace data for a single

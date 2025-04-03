@@ -4,11 +4,11 @@
 
 // constant conversions
 
-package const1
+package orderedmap
 
 import "math"
 
-const(
+const (
 	mi = ^int(0)
 	mu = ^uint(0)
 	mp = ^uintptr(0)
@@ -19,19 +19,19 @@ const(
 )
 
 const (
-	minInt8 = -1<<(8<<iota - 1)
+	minInt8 = -1 << (8<<iota - 1)
 	minInt16
 	minInt32
 	minInt64
-	minInt = -1<<(8<<logSizeofInt - 1)
+	minInt = -1 << (8<<logSizeofInt - 1)
 )
 
 const (
-	maxInt8 = 1<<(8<<iota - 1) - 1
+	maxInt8 = 1<<(8<<iota-1) - 1
 	maxInt16
 	maxInt32
 	maxInt64
-	maxInt = 1<<(8<<logSizeofInt - 1) - 1
+	maxInt = 1<<(8<<logSizeofInt-1) - 1
 )
 
 const (
@@ -44,7 +44,7 @@ const (
 )
 
 const (
-	smallestFloat32 = 1.0 / (1<<(127 - 1 + 23))
+	smallestFloat32 = 1.0 / (1 << (127 - 1 + 23))
 	// TODO(gri) The compiler limits integers to 512 bit and thus
 	//           we cannot compute the value (1<<(1023 - 1 + 52))
 	//           without overflow. For now we match the compiler.
@@ -59,7 +59,7 @@ const (
 )
 
 const (
-	maxFloat32 = 1<<127 * (1<<24 - 1) / (1.0<<23)
+	maxFloat32 = 1 << 127 * (1<<24 - 1) / (1.0 << 23)
 	// TODO(gri) The compiler limits integers to 512 bit and thus
 	//           we cannot compute the value 1<<1023
 	//           without overflow. For now we match the compiler.
@@ -223,9 +223,9 @@ const (
 )
 
 const (
-	_ float32 = minInt64
-	_ float64 = minInt64
-	_ complex64 = minInt64
+	_ float32    = minInt64
+	_ float64    = minInt64
+	_ complex64  = minInt64
 	_ complex128 = minInt64
 
 	_ = float32(minInt64)
@@ -235,9 +235,9 @@ const (
 )
 
 const (
-	_ float32 = maxUint64
-	_ float64 = maxUint64
-	_ complex64 = maxUint64
+	_ float32    = maxUint64
+	_ float64    = maxUint64
+	_ complex64  = maxUint64
 	_ complex128 = maxUint64
 
 	_ = float32(maxUint64)
@@ -248,7 +248,7 @@ const (
 
 // TODO(gri) find smaller deltas below
 
-const delta32 = maxFloat32/(1 << 23)
+const delta32 = maxFloat32 / (1 << 23)
 
 const (
 	_ float32 = - /* ERROR "overflow" */ (maxFloat32 + delta32)
@@ -267,7 +267,7 @@ const (
 	_ = assert(float32(smallestFloat64/2) == 0)
 )
 
-const delta64 = maxFloat64/(1 << 52)
+const delta64 = maxFloat64 / (1 << 52)
 
 const (
 	_ float64 = - /* ERROR "overflow" */ (maxFloat64 + delta64)
@@ -312,17 +312,17 @@ const (
 
 // Initialization of typed constant and conversion are the same:
 const (
-	f32 = 1 + smallestFloat32
+	f32         = 1 + smallestFloat32
 	x32 float32 = f32
-	y32 = float32(f32)
-	_ = assert(x32 - y32 == 0)
+	y32         = float32(f32)
+	_           = assert(x32-y32 == 0)
 )
 
 const (
-	f64 = 1 + smallestFloat64
+	f64         = 1 + smallestFloat64
 	x64 float64 = f64
-	y64 = float64(f64)
-	_ = assert(x64 - y64 == 0)
+	y64         = float64(f64)
+	_           = assert(x64-y64 == 0)
 )
 
 const (

@@ -1,4 +1,4 @@
-package chans
+package orderedmap
 
 import "runtime"
 
@@ -22,7 +22,7 @@ func Ranger[T any]() (*Sender[T], *Receiver[T]) {
 // A sender is used to send values to a Receiver.
 type Sender[T any] struct {
 	values chan<- T
-	done <-chan bool
+	done   <-chan bool
 }
 
 // Send sends a value to the receiver. It returns whether any more
@@ -45,7 +45,7 @@ func (s *Sender[T]) Close() {
 // A Receiver receives values from a Sender.
 type Receiver[T any] struct {
 	values <-chan T
-	done chan<- bool
+	done   chan<- bool
 }
 
 // Next returns the next value from the channel. The bool result

@@ -4,7 +4,7 @@
 
 // Composite literals with parameterized types
 
-package comp_literals
+package orderedmap
 
 type myStruct struct {
 	f int
@@ -12,11 +12,11 @@ type myStruct struct {
 
 type slice[E any] []E
 
-func struct_literals[S struct{f int}|myStruct]() {
+func struct_literals[S struct{ f int } | myStruct]() {
 	_ = S{}
 	_ = S{0}
 	_ = S{f: 0}
 
-        _ = slice[int]{1, 2, 3}
-        _ = slice[S]{{}, {0}, {f:0}}
+	_ = slice[int]{1, 2, 3}
+	_ = slice[S]{{}, {0}, {f: 0}}
 }

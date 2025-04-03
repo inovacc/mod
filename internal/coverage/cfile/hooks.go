@@ -4,7 +4,7 @@
 
 package cfile
 
-import "github.com/inovacc/mod/internal/runtime/exithook"
+import "internal/runtime/exithook"
 
 // InitHook is invoked from the main package "init" routine in
 // programs built with "-cover". This function is intended to be

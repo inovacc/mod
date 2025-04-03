@@ -28,6 +28,7 @@ package traceviewer
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/inovacc/mod/internal/trace"
 	"log"
 	"math"
 	"net/http"

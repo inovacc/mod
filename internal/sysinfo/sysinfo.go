@@ -7,7 +7,7 @@
 package sysinfo
 
 import (
-	"github.com/inovacc/mod/internal/cpu"
+	"internal/cpu"
 	"sync"
 )
 

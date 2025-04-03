@@ -5,6 +5,8 @@
 package trace_test
 
 import (
+	"internal/trace"
+	"internal/trace/testtrace"
 	"io"
 	"os"
 	"path/filepath"

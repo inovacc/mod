@@ -5,7 +5,7 @@
 package abi
 
 import (
-	"github.com/inovacc/mod/internal/goarch"
+	"internal/goarch"
 	"unsafe"
 )
 

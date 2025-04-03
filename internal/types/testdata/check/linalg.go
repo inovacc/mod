@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package linalg
+package orderedmap
 
 // Numeric is type bound that matches any numeric type.
 // It would likely be in a constraints package in the standard library.
@@ -54,29 +54,29 @@ type Complex interface {
 // // OrderedAbs is a helper type that defines an Abs method for
 // // ordered numeric types.
 // type OrderedAbs[T OrderedNumeric] T
-// 
+//
 // func (a OrderedAbs[T]) Abs() OrderedAbs[T] {
 // 	if a < 0 {
 // 		return -a
 // 	}
 // 	return a
 // }
-// 
+//
 // // ComplexAbs is a helper type that defines an Abs method for
 // // complex types.
 // type ComplexAbs[T Complex] T
-// 
+//
 // func (a ComplexAbs[T]) Abs() ComplexAbs[T] {
 // 	r := float64(real(a))
 // 	i := float64(imag(a))
 // 	d := math.Sqrt(r * r + i * i)
 // 	return ComplexAbs[T](complex(d, 0))
 // }
-// 
+//
 // func OrderedAbsDifference[T OrderedNumeric](a, b T) T {
 // 	return T(AbsDifference(OrderedAbs[T](a), OrderedAbs[T](b)))
 // }
-// 
+//
 // func ComplexAbsDifference[T Complex](a, b T) T {
 // 	return T(AbsDifference(ComplexAbs[T](a), ComplexAbs[T](b)))
 // }

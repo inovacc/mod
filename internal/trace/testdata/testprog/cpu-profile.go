@@ -12,6 +12,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"internal/profile"
 	"log"
 	"os"
 	"runtime"

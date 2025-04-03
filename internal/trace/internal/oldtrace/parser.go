@@ -5,7 +5,7 @@
 // Package oldtrace implements a parser for Go execution traces from versions
 // 1.11–1.21.
 //
-// The package started as a copy of Go 1.19's github.com/inovacc/mod/internal/trace, but has been
+// The package started as a copy of Go 1.19's internal/trace, but has been
 // optimized to be faster while using less memory and fewer allocations. It has
 // been further modified for the specific purpose of converting traces to the
 // new 1.22+ format.
@@ -17,8 +17,8 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/inovacc/mod/internal/trace/event"
-	"github.com/inovacc/mod/internal/trace/version"
+	"internal/trace/event"
+	"internal/trace/version"
 	"io"
 	"math"
 	"slices"
@@ -167,7 +167,7 @@ func newParser(r io.Reader, ver version.Version) (*parser, error) {
 // be the version of the trace. This can be achieved by using
 // version.ReadHeader.
 func Parse(r io.Reader, vers version.Version) (Trace, error) {
-	// We accept the version as an argument because github.com/inovacc/mod/internal/trace will have
+	// We accept the version as an argument because internal/trace will have
 	// already read the version to determine which parser to use.
 	p, err := newParser(r, vers)
 	if err != nil {

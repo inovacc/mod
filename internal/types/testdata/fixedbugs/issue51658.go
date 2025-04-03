@@ -9,7 +9,7 @@
 package p
 
 type F { // ERRORx "expected type|type declaration"
-	float64
+float64
 } // ERRORx "expected declaration|non-declaration statement"
 
 func _[T F | int](x T) {
@@ -19,12 +19,12 @@ func _[T F | int](x T) {
 // test case from issue
 
 type FloatType { // ERRORx "expected type|type declaration"
-	float32 | float64
+float32 | float64
 } // ERRORx "expected declaration|non-declaration statement"
 
 type IntegerType interface {
 	int8 | int16 | int32 | int64 | int |
-		uint8 | uint16 | uint32 | uint64 | uint
+	uint8 | uint16 | uint32 | uint64 | uint
 }
 
 type ComplexType interface {

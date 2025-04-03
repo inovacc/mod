@@ -7,6 +7,9 @@ package version
 import (
 	"fmt"
 	"io"
+
+	"github.com/inovacc/mod/internal/trace/event"
+	"github.com/inovacc/mod/internal/trace/event/go122"
 )
 
 // Version represents the version of a trace file.

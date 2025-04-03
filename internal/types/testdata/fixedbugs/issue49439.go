@@ -15,11 +15,11 @@ type T3 /* ERROR "invalid recursive type" */ [P interface{ ~struct{ f T3[int] } 
 
 // valid cycle in M
 type N[P M[P]] struct{}
-type M[Q any] struct { F *M[Q] }
+type M[Q any] struct{ F *M[Q] }
 
 // "crazy" case
 type TC[P [unsafe.Sizeof(func() {
-        type T [P [unsafe.Sizeof(func(){})]byte] struct{}
+	type T[P [unsafe.Sizeof(func() {})]byte] struct{}
 })]byte] struct{}
 
 // test case from issue

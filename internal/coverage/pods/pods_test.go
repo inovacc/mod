@@ -6,9 +6,9 @@ package pods_test
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/pods"
 	"hash/fnv"
+	"internal/coverage"
+	"internal/coverage/pods"
 	"os"
 	"path/filepath"
 	"runtime"

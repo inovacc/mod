@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package p
+package orderedmap
 
 import "unsafe"
 
@@ -26,7 +26,6 @@ func _() {
 	u.f(t)
 	u.f(u)
 }
-
 
 // Test case for issues #6589, #33656.
 
@@ -60,7 +59,6 @@ var y interface {
 }
 
 var _ = x == y
-
 
 // Test case for issue 6638.
 

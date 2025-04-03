@@ -19,8 +19,8 @@
 package main
 
 import (
-	"github.com/inovacc/mod/internal/trace/event/go122"
-	testgen "github.com/inovacc/mod/internal/trace/internal/testgen/go122"
+	"internal/trace/event/go122"
+	testgen "internal/trace/internal/testgen/go122"
 )
 
 func main() {

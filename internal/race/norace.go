@@ -7,7 +7,7 @@
 package race
 
 import (
-	"github.com/inovacc/mod/internal/abi"
+	"internal/abi"
 	"unsafe"
 )
 

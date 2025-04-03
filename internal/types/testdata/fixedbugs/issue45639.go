@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package P
+package p
 
 // For now, a lone type parameter is not permitted as RHS in a type declaration (issue #45639).
 // // It is not permitted to declare a local type whose underlying

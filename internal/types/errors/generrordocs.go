@@ -16,17 +16,17 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
-	"go/importer"
-	"go/parser"
-	"go/token"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/importer"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"log"
 	"os"
 	"path"
 	"strings"
 	"text/template"
 
-	. "go/types"
+	. "github.com/inovacc/mod/go/types"
 )
 
 func main() {

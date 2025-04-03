@@ -8,7 +8,7 @@
 
 //go:build go1.22
 
-package p
+package orderedmap
 
 func f() {
 	for _ = range /* ok because of upgrade to 1.22 */ 10 {

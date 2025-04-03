@@ -4,7 +4,7 @@
 
 package x
 
-import "github.com/inovacc/mod/internal/abi"
+import "internal/abi"
 
 func Fn0() // defined in assembly
 

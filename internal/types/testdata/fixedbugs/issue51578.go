@@ -4,7 +4,9 @@
 
 package p
 
-var _ = (*interface /* ERROR "interface contains type constraints" */ {int})(nil)
+var _ = (*interface /* ERROR "interface contains type constraints" */ {
+	int
+})(nil)
 
 // abbreviated test case from issue
 

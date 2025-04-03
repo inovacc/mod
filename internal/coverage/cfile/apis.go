@@ -6,8 +6,8 @@ package cfile
 
 import (
 	"fmt"
-	"github.com/inovacc/mod/internal/coverage"
-	"github.com/inovacc/mod/internal/coverage/rtcov"
+	"internal/coverage"
+	"internal/coverage/rtcov"
 	"io"
 	"sync/atomic"
 	"unsafe"

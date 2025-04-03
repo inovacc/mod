@@ -11,6 +11,6 @@ func g() {
 }
 
 func f(i int) int {
-        i /* ERROR `invalid operation: i += "1" (mismatched types int and untyped string)` */ += "1"
-        return i
+	i /* ERROR `invalid operation: i += "1" (mismatched types int and untyped string)` */ += "1"
+	return i
 }

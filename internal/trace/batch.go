@@ -9,6 +9,9 @@ import (
 	"encoding/binary"
 	"fmt"
 	"io"
+
+	"internal/trace/event"
+	"internal/trace/event/go122"
 )
 
 // timestamp is an unprocessed timestamp.

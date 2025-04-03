@@ -10,6 +10,10 @@ import (
 	"io"
 	"slices"
 	"strings"
+
+	"internal/trace/event/go122"
+	"internal/trace/internal/oldtrace"
+	"internal/trace/version"
 )
 
 // Reader reads a byte stream, validates it, and produces trace events.
