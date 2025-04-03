@@ -5,8 +5,8 @@
 package walk
 
 import (
-	"go/constant"
-	"internal/abi"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/internal/abi"
 
 	"github.com/inovacc/mod/cmd/compile/internal/base"
 	"github.com/inovacc/mod/cmd/compile/internal/ir"

@@ -6,10 +6,10 @@ package main
 
 import (
 	"fmt"
-	"go/ast"
-	"go/parser"
-	"internal/diff"
-	"internal/testenv"
+	"github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/internal/diff"
+	"github.com/inovacc/mod/internal/testenv"
 	"strings"
 	"testing"
 )

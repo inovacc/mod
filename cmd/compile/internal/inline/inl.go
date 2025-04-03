@@ -28,8 +28,8 @@ package inline
 
 import (
 	"fmt"
-	"go/constant"
-	"internal/buildcfg"
+	"github.com/inovacc/mod/go/constant"
+	"github.com/inovacc/mod/internal/buildcfg"
 	"strconv"
 	"strings"
 

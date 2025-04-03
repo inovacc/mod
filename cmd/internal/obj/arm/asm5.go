@@ -34,7 +34,7 @@ import (
 	"fmt"
 	"github.com/inovacc/mod/cmd/internal/obj"
 	"github.com/inovacc/mod/cmd/internal/objabi"
-	"internal/buildcfg"
+	"github.com/inovacc/mod/internal/buildcfg"
 	"log"
 	"math"
 	"slices"

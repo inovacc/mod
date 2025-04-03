@@ -9,7 +9,7 @@ import (
 	"github.com/inovacc/mod/cmd/compile/internal/ir"
 	"github.com/inovacc/mod/cmd/compile/internal/types"
 	"github.com/inovacc/mod/cmd/internal/src"
-	"internal/types/errors"
+	"github.com/inovacc/mod/internal/types/errors"
 )
 
 func RangeExprType(t *types.Type) *types.Type {

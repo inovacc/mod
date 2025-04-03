@@ -9,6 +9,7 @@ package ast_test
 import (
 	"fmt"
 	. "github.com/inovacc/mod/go/ast"
+	"github.com/inovacc/mod/go/parser"
 	"github.com/inovacc/mod/go/token"
 	"sort"
 	"strings"

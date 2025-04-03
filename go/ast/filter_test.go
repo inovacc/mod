@@ -9,6 +9,8 @@ package ast_test
 import (
 	"github.com/inovacc/mod/go/ast"
 	"github.com/inovacc/mod/go/format"
+	"github.com/inovacc/mod/go/parser"
+	"github.com/inovacc/mod/go/token"
 	"strings"
 	"testing"
 )

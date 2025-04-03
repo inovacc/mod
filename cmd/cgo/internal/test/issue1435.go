@@ -8,7 +8,7 @@ package cgotest
 
 import (
 	"fmt"
-	"internal/testenv"
+	"github.com/inovacc/mod/internal/testenv"
 	"os"
 	"runtime"
 	"sort"

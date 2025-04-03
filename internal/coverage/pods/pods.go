@@ -7,7 +7,7 @@ package pods
 import (
 	"cmp"
 	"fmt"
-	"internal/coverage"
+	"github.com/inovacc/mod/internal/coverage"
 	"os"
 	"path/filepath"
 	"regexp"

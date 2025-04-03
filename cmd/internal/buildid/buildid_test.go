@@ -9,7 +9,7 @@ import (
 	"crypto/sha256"
 	"debug/elf"
 	"encoding/binary"
-	"internal/obscuretestdata"
+	"github.com/inovacc/mod/internal/obscuretestdata"
 	"os"
 	"reflect"
 	"strings"

@@ -9,9 +9,9 @@ package main
 import (
 	"cmp"
 	"fmt"
+	"github.com/inovacc/mod/internal/trace"
+	"github.com/inovacc/mod/internal/trace/traceviewer"
 	"html/template"
-	"internal/trace"
-	"internal/trace/traceviewer"
 	"log"
 	"net/http"
 	"slices"

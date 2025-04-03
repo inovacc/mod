@@ -9,7 +9,7 @@ import (
 	"debug/elf"
 	"errors"
 	"fmt"
-	"internal/xcoff"
+	"github.com/inovacc/mod/internal/xcoff"
 	"io"
 	"strconv"
 	"strings"
